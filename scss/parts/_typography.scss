@@ -1,0 +1,65 @@
+/**
+  * Typography by type-scale.com
+  */
+
+html {
+    font-size: $remsize;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: $font-normal;
+    text-rendering: optimizeLegibility;
+    line-height: 1.5;
+    font-size: $emsize;
+    color: $body-copy-color;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1.3em;
+    font-size: 1em;
+}
+
+.lead {
+    font-size: 1.1429em;
+    font-weight: $font-light;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 1.414em 0 0.5em;
+    font-weight: inherit;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3.157em;
+}
+
+h2 {
+    font-size: 2.369em;
+}
+
+h3 {
+    font-size: 1.777em;
+}
+
+h4 {
+    font-size: 1.333em;
+}
+
+h5 {
+    font-size: 1em;
+    font-weight: $font-bold;
+}
+
+small,
+h6 {
+    font-size: 0.75em;
+    color: darken($soft-gray, 20%);
+}

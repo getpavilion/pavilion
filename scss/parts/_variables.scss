@@ -1,0 +1,42 @@
+/**
+  * Component & Type sizing
+  */
+
+$remsize: 15px; /* Adjust this to adjust your rem sizes, 1rem equals the size you set here. */
+$emsize: 18px;  /* Adjust this to adjust your em shit. Typically typography. 1em equals the size you set here.*/
+
+
+/**
+  * Breakpoints
+  */
+
+$sm-screen: 768px; /* Small screens, like vertical tablets and shit. */
+$md-screen: 992px; /* Medium screens, like horizontal tablets and shit. */
+$lg-screen: 1200px; /* Large ass screens, like desktops and shit, or really big ass chines phones for older people. */
+$breakmargin: 20px; /* Margin along the sides for the containers, nevermind. */
+
+
+/**
+  * Colarzz
+  */
+
+$body-copy-color: #333;
+$soft-gray: #E1E1E1;
+$main-color: #007AFF;
+$accent-color: #2980b9;
+
+/**
+  * Border radius
+  */
+
+$small-radius: 3px; /* Used on buttons, form elements, etc */
+$large-radius: 10px; /* Not used, but will come in handy */
+
+/**
+  * Font-weights, make sure these follow the font-weights you have actually loaded.
+  */
+
+$font-light: 300;
+$font-normal: 400;
+$font-medium: 600;
+$font-bold: 700;

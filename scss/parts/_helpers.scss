@@ -1,0 +1,132 @@
+/* Helperclasses
+   ========================================================================== */
+
+/**
+  * show @ viewports and shit.
+  **/
+
+.show-xs,
+.show-sm,
+.show-md,
+.show-lg,
+.show-xs-block,
+.show-xs-inline,
+.show-xs-inline-block,
+.show-sm-block,
+.show-sm-inline,
+.show-sm-inline-block,
+.show-md-block,
+.show-md-inline,
+.show-md-inline-block,
+.show-lg-block,
+.show-lg-inline,
+.show-lg-inline-block {
+    display: none !important;
+}
+
+@media(max-width: $sm-screen - 1px) {
+    .show-xs, .show-xs-block {
+        display: block !important;
+    }
+    .show-xs-inline-block {
+        display: inline-block !important;
+    }
+    .show-xs-inline {
+        display: inline !important;
+    }
+}
+@media(min-width: $sm-screen) and (max-width: $md-screen) {
+    .show-sm, .show-sm-block {
+        display: block !important;
+    }
+    .show-sm-inline-block {
+        display: inline-block !important;
+    }
+    .show-sm-inline {
+        display: inline !important;
+    }
+}
+@media(min-width: $md-screen) and (max-width: $lg-screen) {
+    .show-md, .show-md-block {
+        display: block !important;
+    }
+    .show-md-inline-block {
+        display: inline-block !important;
+    }
+    .show-md-inline {
+        display: inline !important;
+    }
+}
+@media(min-width: $lg-screen) {
+    .show-lg, .show-lg-block {
+        display: block !important;
+    }
+    .show-lg-inline-block {
+        display: inline-block !important;
+    }
+    .show-lg-inline {
+        display: inline !important;
+    }
+}
+
+/**
+  * hide @ viewports and shit.
+  **/
+
+@media(max-width: $sm-screen - 1px) {
+    .hide-xs {
+        display: none !important;
+    }
+}
+@media(min-width: $sm-screen) and (max-width: $md-screen) {
+    .hide-sm {
+        display: none !important;
+    }
+}
+@media(min-width: $md-screen) and (max-width: $lg-screen) {
+    .hide-md {
+        display: none !important;
+    }
+}
+@media(min-width: $lg-screen) {
+    .hide-lg {
+        display: none !important;
+    }
+}
+
+/**
+  * Clearfix
+  */
+
+.clear-fix:before,
+.clear-fix:after {
+  content: " ";
+  display: table;
+}
+.clear-fix:after {
+  clear: both;
+}
+
+/**
+  * Text aligns and shit.
+  */
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-main-color {
+    color: $main-color;
+}
+
+.text-accent-color {
+    color: $accent-color;
+}

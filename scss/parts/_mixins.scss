@@ -1,0 +1,48 @@
+/* Mixins! Yeahhhhhhhhh.
+   ========================================================================== */
+
+/**
+  * Buttons
+  */
+
+@mixin button {
+    display: inline-block;
+    border: 2px solid;
+    border-radius: $small-radius;
+    font-family: inherit;
+    padding: 0.6rem 1.5rem 0.7rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    cursor: pointer;
+    &.uppercase {
+        font-weight: $font-bold;
+        font-size: 0.9rem;
+        letter-spacing: 1.5px;
+        padding: 0.7rem 2rem;
+        text-transform: uppercase;
+    }
+    i.fa {
+        margin: 0 0 0 0.3rem;
+        /* for font awesome icons in buttons, fix margin */
+    }
+    &:active {
+        transform: scale(0.97);
+    }
+}
+
+/**
+  * Clearfix, b'cus its handy, duh.
+  */
+
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}

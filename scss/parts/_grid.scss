@@ -1,0 +1,884 @@
+/* Border-boxing everythin'. B'cus duh. Oh and remove those goddamn outlines.
+   ========================================================================== */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:focus, *:visited {
+    outline: none !important;
+}
+
+/* Container sizes
+   ========================================================================== */
+
+
+/**
+ * The container had the size of the breakpoint minus 20px ($breakmargin).
+ * ".container-fluid" spans the full width.
+ */
+
+.container {
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    &:before {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
+}
+
+.container-fluid {
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    &:before {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
+}
+
+
+/**
+ * MediaQueries for containers.
+ */
+
+@media (min-width: $sm-screen) {
+    .container {
+        max-width: $sm-screen - $breakmargin;
+    }
+}
+
+@media (min-width: $md-screen) {
+    .container {
+        max-width: $md-screen - $breakmargin;
+    }
+}
+
+@media (min-width: $lg-screen) {
+    .container {
+        max-width: $lg-screen - $breakmargin;
+    }
+}
+
+
+/* Rows and columns NO FLEX
+   ========================================================================== */
+
+
+/**
+ * This is the real grid-system-shit.
+ */
+
+.row {
+    margin-right: -1rem;
+    margin-left: -1rem;
+    &:before {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
+    [class^="col-"] {
+        position: relative;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        width: 100%;
+        float: left;
+    }
+    .col-xs-20 {
+        width: 20%;
+    }
+    .col-xs-25 {
+        width: 25%;
+    }
+    .col-xs-33 {
+        width: 33.3333%;
+    }
+    .col-xs-40 {
+        width: 40%;
+    }
+    .col-xs-50 {
+        width: 50%;
+    }
+    .col-xs-60 {
+        width: 60%;
+    }
+    .col-xs-66 {
+        width: 66.6666%;
+    }
+    .col-xs-75 {
+        width: 75%;
+    }
+    .col-xs-80 {
+        width: 80%;
+    }
+    .col-xs-100 {
+        width: 100%;
+    }
+    @media(min-width: $sm-screen) {
+        .col-sm-20 {
+            width: 20%;
+        }
+        .col-sm-25 {
+            width: 25%;
+        }
+        .col-sm-33 {
+            width: 33.3333%;
+        }
+        .col-sm-40 {
+            width: 40%;
+        }
+        .col-sm-50 {
+            width: 50%;
+        }
+        .col-sm-60 {
+            width: 60%;
+        }
+        .col-sm-66 {
+            width: 66.6666%;
+        }
+        .col-sm-75 {
+            width: 75%;
+        }
+        .col-sm-80 {
+            width: 80%;
+        }
+        .col-sm-100 {
+            width: 100%;
+        }
+    }
+    @media(min-width: $md-screen) {
+        .col-md-20 {
+            width: 20%;
+        }
+        .col-md-25 {
+            width: 25%;
+        }
+        .col-md-33 {
+            width: 33.3333%;
+        }
+        .col-md-40 {
+            width: 40%;
+        }
+        .col-md-50 {
+            width: 50%;
+        }
+        .col-md-60 {
+            width: 60%;
+        }
+        .col-md-66 {
+            width: 66.6666%;
+        }
+        .col-md-75 {
+            width: 75%;
+        }
+        .col-md-80 {
+            width: 80%;
+        }
+        .col-md-100 {
+            width: 100%;
+        }
+    }
+    @media(min-width: $lg-screen) {
+        .col-lg-20 {
+            width: 20%;
+        }
+        .col-lg-25 {
+            width: 25%;
+        }
+        .col-lg-33 {
+            width: 33.3333%;
+        }
+        .col-lg-40 {
+            width: 40%;
+        }
+        .col-lg-50 {
+            width: 50%;
+        }
+        .col-lg-60 {
+            width: 60%;
+        }
+        .col-lg-66 {
+            width: 66.6666%;
+        }
+        .col-lg-75 {
+            width: 75%;
+        }
+        .col-lg-80 {
+            width: 80%;
+        }
+        .col-lg-100 {
+            width: 100%;
+        }
+    }
+}
+
+
+/* Rows and columns WITH FLEX
+   ========================================================================== */
+
+
+/**
+ * This is the real grid-system-shit.
+ */
+
+.row-flex {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-right: -1rem;
+    margin-left: -1rem;
+    &:before {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
+    .col {
+        position: relative;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        display: block;
+        flex: 1;
+    }
+    [class^="col-"] {
+        position: relative;
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .col-xs-20 {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+    .col-xs-25 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    .col-xs-33 {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+    .col-xs-40 {
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+    .col-xs-50 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .col-xs-60 {
+        flex: 0 0 60%;
+        max-width: 60%;
+    }
+    .col-xs-66 {
+        flex: 0 0 66.6666%;
+        max-width: 66.6666%;
+    }
+    .col-xs-75 {
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+    .col-xs-80 {
+        flex: 0 0 80%;
+        max-width: 80%;
+    }
+    .col-xs-100 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    @media(min-width: $sm-screen) {
+        .col-sm-20 {
+            flex: 0 0 20%;
+            max-width: 20%;
+        }
+        .col-sm-25 {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+        .col-sm-33 {
+            flex: 0 0 33.3333%;
+            max-width: 33.3333%;
+        }
+        .col-sm-40 {
+            flex: 0 0 40%;
+            max-width: 40%;
+        }
+        .col-sm-50 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        .col-sm-60 {
+            flex: 0 0 60%;
+            max-width: 60%;
+        }
+        .col-sm-66 {
+            flex: 0 0 66.6666%;
+            max-width: 66.6666%;
+        }
+        .col-sm-75 {
+            flex: 0 0 75%;
+            max-width: 75%;
+        }
+        .col-sm-80 {
+            flex: 0 0 80%;
+            max-width: 80%;
+        }
+        .col-sm-100 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+    @media(min-width: $md-screen) {
+        .col-md-20 {
+            flex: 0 0 20%;
+            max-width: 20%;
+        }
+        .col-md-25 {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+        .col-md-33 {
+            flex: 0 0 33.3333%;
+            max-width: 33.3333%;
+        }
+        .col-md-40 {
+            flex: 0 0 40%;
+            max-width: 40%;
+        }
+        .col-md-50 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        .col-md-60 {
+            flex: 0 0 60%;
+            max-width: 60%;
+        }
+        .col-md-66 {
+            flex: 0 0 66.6666%;
+            max-width: 66.6666%;
+        }
+        .col-md-75 {
+            flex: 0 0 75%;
+            max-width: 75%;
+        }
+        .col-md-80 {
+            flex: 0 0 80%;
+            max-width: 80%;
+        }
+        .col-md-100 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+    @media(min-width: $lg-screen) {
+        .col-lg-20 {
+            flex: 0 0 20%;
+            max-width: 20%;
+        }
+        .col-lg-25 {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+        .col-lg-33 {
+            flex: 0 0 33.3333%;
+            max-width: 33.3333%;
+        }
+        .col-lg-40 {
+            flex: 0 0 40%;
+            max-width: 40%;
+        }
+        .col-lg-50 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        .col-lg-60 {
+            flex: 0 0 60%;
+            max-width: 60%;
+        }
+        .col-lg-66 {
+            flex: 0 0 66.6666%;
+            max-width: 66.6666%;
+        }
+        .col-lg-75 {
+            flex: 0 0 75%;
+            max-width: 75%;
+        }
+        .col-lg-80 {
+            flex: 0 0 80%;
+            max-width: 80%;
+        }
+        .col-lg-100 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+
+/* Flex positioning helpers
+   ========================================================================== */
+
+
+/**
+ * On rows, so it applies to all items inside the row.
+ */
+
+.row-flex {
+    &.items-top {
+        align-items: flex-start;
+    }
+    &.items-center-v {
+        align-items: center;
+    }
+    &.items-bottom {
+        align-items: flex-end;
+    }
+    &.items-baseline {
+        align-items: baseline;
+    }
+    &.items-left {
+        justify-content: flex-start;
+    }
+    &.items-center-h {
+        justify-content: center;
+    }
+    &.items-right {
+        justify-content: flex-end;
+    }
+    &.items-spaced-around {
+        justify-content: space-around;
+    }
+    &.items-spaced-between {
+        justify-content: space-between;
+    }
+}
+
+
+/**
+ * On individual items.
+ */
+
+.row-flex {
+    [class^="col-"],
+    .col {
+        &.item-top {
+            align-self: flex-start;
+        }
+        &.item-center-v {
+            align-self: center;
+        }
+        &.item-bottom {
+            align-self: flex-end;
+        }
+        &.item-baseline {
+            align-self: baseline;
+        }
+        &.item-first {
+            order: -1;
+        }
+        &.item-last {
+            order: 1;
+        }
+    }
+}
+
+
+/* Offsets, b'cus offsetting shit is the shit
+   ========================================================================== */
+
+
+@media(max-width: $sm-screen - 1px) {
+    .offset-xs-20 {
+        margin-left: 20%;
+    }
+    .offset-xs-25 {
+        margin-left: 25%;
+    }
+    .offset-xs-33 {
+        margin-left: 33.3333%;
+    }
+    .offset-xs-40 {
+        margin-left: 40%;
+    }
+    .offset-xs-50 {
+        margin-left: 50%;
+    }
+    .offset-xs-60 {
+        margin-left: 60%;
+    }
+    .offset-xs-66 {
+        margin-left: 66.6666%;
+    }
+    .offset-xs-75 {
+        margin-left: 75%;
+    }
+    .offset-xs-80 {
+        margin-left: 80%;
+    }
+}
+
+@media(min-width: $sm-screen) {
+    .offset-sm-20 {
+        margin-left: 20%;
+    }
+    .offset-sm-25 {
+        margin-left: 25%;
+    }
+    .offset-sm-33 {
+        margin-left: 33.3333%;
+    }
+    .offset-sm-40 {
+        margin-left: 40%;
+    }
+    .offset-sm-50 {
+        margin-left: 50%;
+    }
+    .offset-sm-60 {
+        margin-left: 60%;
+    }
+    .offset-sm-66 {
+        margin-left: 66.6666%;
+    }
+    .offset-sm-75 {
+        margin-left: 75%;
+    }
+    .offset-sm-80 {
+        margin-left: 80%;
+    }
+}
+
+@media(min-width: $md-screen) {
+    .offset-md-20 {
+        margin-left: 20%;
+    }
+    .offset-md-25 {
+        margin-left: 25%;
+    }
+    .offset-md-33 {
+        margin-left: 33.3333%;
+    }
+    .offset-md-40 {
+        margin-left: 40%;
+    }
+    .offset-md-50 {
+        margin-left: 50%;
+    }
+    .offset-md-60 {
+        margin-left: 60%;
+    }
+    .offset-md-66 {
+        margin-left: 66.6666%;
+    }
+    .offset-md-75 {
+        margin-left: 75%;
+    }
+    .offset-md-80 {
+        margin-left: 80%;
+    }
+}
+
+@media(min-width: $lg-screen) {
+    .offset-lg-20 {
+        margin-left: 20%;
+    }
+    .offset-lg-25 {
+        margin-left: 25%;
+    }
+    .offset-lg-33 {
+        margin-left: 33.3333%;
+    }
+    .offset-lg-40 {
+        margin-left: 40%;
+    }
+    .offset-lg-50 {
+        margin-left: 50%;
+    }
+    .offset-lg-60 {
+        margin-left: 60%;
+    }
+    .offset-lg-66 {
+        margin-left: 66.6666%;
+    }
+    .offset-lg-75 {
+        margin-left: 75%;
+    }
+    .offset-lg-80 {
+        margin-left: 80%;
+    }
+}
+
+/* Push dem around yo.
+   ========================================================================== */
+
+@media(max-width: $sm-screen - 1px) {
+    .push-xs-20 {
+        left: 20%;
+    }
+    .push-xs-25 {
+        left: 25%;
+    }
+    .push-xs-33 {
+        left: 33.3333%;
+    }
+    .push-xs-40 {
+        left: 40%;
+    }
+    .push-xs-50 {
+        left: 50%;
+    }
+    .push-xs-60 {
+        left: 60%;
+    }
+    .push-xs-66 {
+        left: 66.6666%;
+    }
+    .push-xs-75 {
+        left: 75%;
+    }
+    .push-xs-80 {
+        left: 80%;
+    }
+}
+
+@media(min-width: $sm-screen) {
+    .push-sm-20 {
+        left: 20%;
+    }
+    .push-sm-25 {
+        left: 25%;
+    }
+    .push-sm-33 {
+        left: 33.3333%;
+    }
+    .push-sm-40 {
+        left: 40%;
+    }
+    .push-sm-50 {
+        left: 50%;
+    }
+    .push-sm-60 {
+        left: 60%;
+    }
+    .push-sm-66 {
+        left: 66.6666%;
+    }
+    .push-sm-75 {
+        left: 75%;
+    }
+    .push-sm-80 {
+        left: 80%;
+    }
+}
+
+@media(min-width: $md-screen) {
+    .push-md-20 {
+        left: 20%;
+    }
+    .push-md-25 {
+        left: 25%;
+    }
+    .push-md-33 {
+        left: 33.3333%;
+    }
+    .push-md-40 {
+        left: 40%;
+    }
+    .push-md-50 {
+        left: 50%;
+    }
+    .push-md-60 {
+        left: 60%;
+    }
+    .push-md-66 {
+        left: 66.6666%;
+    }
+    .push-md-75 {
+        left: 75%;
+    }
+    .push-md-80 {
+        left: 80%;
+    }
+}
+
+@media(min-width: $lg-screen) {
+    .push-lg-20 {
+        left: 20%;
+    }
+    .push-lg-25 {
+        left: 25%;
+    }
+    .push-lg-33 {
+        left: 33.3333%;
+    }
+    .push-lg-40 {
+        left: 40%;
+    }
+    .push-lg-50 {
+        left: 50%;
+    }
+    .push-lg-60 {
+        left: 60%;
+    }
+    .push-lg-66 {
+        left: 66.6666%;
+    }
+    .push-lg-75 {
+        left: 75%;
+    }
+    .push-lg-80 {
+        left: 80%;
+    }
+}
+
+/* But you can also pull!
+   ========================================================================== */
+
+@media(max-width: $sm-screen - 1px) {
+    .pull-xs-20 {
+        right: 20%;
+    }
+    .pull-xs-25 {
+        right: 25%;
+    }
+    .pull-xs-33 {
+        right: 33.3333%;
+    }
+    .pull-xs-40 {
+        right: 40%;
+    }
+    .pull-xs-50 {
+        right: 50%;
+    }
+    .pull-xs-60 {
+        right: 60%;
+    }
+    .pull-xs-66 {
+        right: 66.6666%;
+    }
+    .pull-xs-75 {
+        right: 75%;
+    }
+    .pull-xs-80 {
+        right: 80%;
+    }
+}
+
+@media(min-width: $sm-screen) {
+    .pull-sm-20 {
+        right: 20%;
+    }
+    .pull-sm-25 {
+        right: 25%;
+    }
+    .pull-sm-33 {
+        right: 33.3333%;
+    }
+    .pull-sm-40 {
+        right: 40%;
+    }
+    .pull-sm-50 {
+        right: 50%;
+    }
+    .pull-sm-60 {
+        right: 60%;
+    }
+    .pull-sm-66 {
+        right: 66.6666%;
+    }
+    .pull-sm-75 {
+        right: 75%;
+    }
+    .pull-sm-80 {
+        right: 80%;
+    }
+}
+
+@media(min-width: $md-screen) {
+    .pull-md-20 {
+        right: 20%;
+    }
+    .pull-md-25 {
+        right: 25%;
+    }
+    .pull-md-33 {
+        right: 33.3333%;
+    }
+    .pull-md-40 {
+        right: 40%;
+    }
+    .pull-md-50 {
+        right: 50%;
+    }
+    .pull-md-60 {
+        right: 60%;
+    }
+    .pull-md-66 {
+        right: 66.6666%;
+    }
+    .pull-md-75 {
+        right: 75%;
+    }
+    .pull-md-80 {
+        right: 80%;
+    }
+}
+
+@media(min-width: $lg-screen) {
+    .pull-lg-20 {
+        right: 20%;
+    }
+    .pull-lg-25 {
+        right: 25%;
+    }
+    .pull-lg-33 {
+        right: 33.3333%;
+    }
+    .pull-lg-40 {
+        right: 40%;
+    }
+    .pull-lg-50 {
+        right: 50%;
+    }
+    .pull-lg-60 {
+        right: 60%;
+    }
+    .pull-lg-66 {
+        right: 66.6666%;
+    }
+    .pull-lg-75 {
+        right: 75%;
+    }
+    .pull-lg-80 {
+        right: 80%;
+    }
+}
+

@@ -1,0 +1,112 @@
+/* Forms
+   ========================================================================== */
+
+
+/**
+ * Here you'll find basic styling for the forms.
+ * Only the most common form elements are styled, so the rest is up to you! Badum-tsssss.
+ */
+
+.form-default {
+    @include clearfix;
+    /* Clearfix the shit out of it */
+    width: 100%;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+label {
+    font-weight: $font-medium;
+    display: block;
+    &.checkbox,
+    &.radio {
+        padding-left: 2rem;
+        position: relative;
+        display: block;
+        margin-top: 0.3rem;
+        margin-bottom: 1.2rem;
+        cursor: pointer;
+        input {
+            position: absolute;
+            width: 1rem;
+            margin: 0;
+            left: 0;
+            &[type="checkbox"] {
+                top: 7px;
+            }
+            &[type="radio"] {
+                top: 5px;
+            }
+        }
+    }
+}
+
+.radio-wrapper {
+    margin-top: 0.3rem;
+    margin-bottom: 1.2rem;
+    display: block;
+    label {
+        margin-top: 0.3rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    font-weight: $font-normal;
+    background-color: transparent;
+    border: 2px solid $soft-gray;
+    border-radius: $small-radius;
+    box-shadow: none;
+    padding: 0.7rem 1rem;
+    margin-top: 0.3rem;
+    margin-bottom: 1.2rem;
+    line-height: inherit;
+    &::-webkit-input-placeholder {
+        color: darken($soft-gray, 20%);
+    }
+    &::-moz-input-placeholder {
+        color: darken($soft-gray, 20%);
+    }
+    &:-moz-input-placeholder {
+        color: darken($soft-gray, 20%);
+    }
+    &:-ms-input-placeholder {
+        color: darken($soft-gray, 20%);
+    }
+    &:focus {
+        border-color: $main-color;
+    }
+}
+
+textarea {
+    min-height: 150px;
+}
+
+select {
+    height: 3.4666666667rem;
+    cursor: pointer;
+}
+
+/**
+  * To make sections in forms
+  */
+
+hr {
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    border: 0;
+    border-top: 2px solid $soft-gray;
+    &.colored {
+        border-color: $main-color;
+    }
+}
