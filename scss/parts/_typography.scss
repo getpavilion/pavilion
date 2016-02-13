@@ -3,7 +3,10 @@
   */
 
 html {
-    font-size: $remsize;
+    font-size: $remsize_normal;
+    @media(max-width: $sm-screen) {
+        font-size: $remsize_small;
+    }
 }
 
 body {
@@ -11,8 +14,11 @@ body {
     font-weight: $font-normal;
     text-rendering: optimizeLegibility;
     line-height: 1.5;
-    font-size: $emsize;
+    font-size: $emsize_normal;
     color: $body-copy-color;
+    @media(max-width: $sm-screen) {
+        font-size: $emsize_small;
+    }
 }
 
 p {

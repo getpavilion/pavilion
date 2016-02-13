@@ -1,10 +1,12 @@
 /**
-  * Component & Type sizing
+  * Component & Type sizing, normal and small - for phones and shit.
   */
 
-$remsize: 15px; /* Adjust this to adjust your rem sizes, 1rem equals the size you set here. */
-$emsize: 18px;  /* Adjust this to adjust your em shit. Typically typography. 1em equals the size you set here.*/
+$remsize_normal: 15px; /* Adjust this to adjust your REM sizes on tablets and larger screens, 1REM equals the size you set here. */
+$emsize_normal: 18px;  /* Adjust this to adjust your EM shit on tablets and larger screens. Typically typography. 1EM equals the size you set here.*/
 
+$remsize_small: 10px; /* Adjust this to adjust your REM sizes on phones, 1rem equals the size you set here. */
+$emsize_small: 14px;  /* Adjust this to adjust your EM shit on phones. Typically typography. 1EM equals the size you set here.*/
 
 /**
   * Breakpoints
