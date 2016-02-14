@@ -60,9 +60,12 @@ label {
 input,
 select,
 textarea {
+    font-family: inherit;
+    font-weight: $font-normal;
+    font-size: inherit;
+    line-height: inherit;
     display: block;
     width: 100%;
-    font-weight: $font-normal;
     background-color: transparent;
     border: 2px solid $soft-gray;
     border-radius: $small-radius;
@@ -70,7 +73,6 @@ textarea {
     padding: 0.7rem 1rem;
     margin-top: 0.3rem;
     margin-bottom: 1.2rem;
-    line-height: inherit;
     &::-webkit-input-placeholder {
         color: darken($soft-gray, 20%);
     }
