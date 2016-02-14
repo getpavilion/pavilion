@@ -103,7 +103,7 @@
 }
 
 /**
-  * Text aligns and shit.
+  * Text aligns and shit, per viewport.
   */
 
 .text-center {
@@ -116,4 +116,52 @@
 
 .text-right {
     text-align: right;
+}
+
+@media(max-width: $sm-screen - 1px) {
+    .text-xs-center {
+        text-align: center;
+    }
+    .text-xs-left {
+        text-align: left;
+    }
+    .text-xs-right {
+        text-align: right;
+    }
+}
+
+@media(min-width: $sm-screen) and (max-width: $md-screen) {
+    .text-sm-center {
+        text-align: center;
+    }
+    .text-sm-left {
+        text-align: left;
+    }
+    .text-sm-right {
+        text-align: right;
+    }
+}
+
+@media(min-width: $md-screen) and (max-width: $lg-screen) {
+    .text-md-center {
+        text-align: center;
+    }
+    .text-md-left {
+        text-align: left;
+    }
+    .text-md-right {
+        text-align: right;
+    }
+}
+
+@media(min-width: $lg-screen) {
+    .text-lg-center {
+        text-align: center;
+    }
+    .text-lg-left {
+        text-align: left;
+    }
+    .text-lg-right {
+        text-align: right;
+    }
 }
