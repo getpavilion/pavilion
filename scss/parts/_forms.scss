@@ -98,7 +98,7 @@ select {
 }
 
 /**
-  * To make sections in forms
+  * A good old <hr> as a nice devider in forms
   */
 
 hr {
@@ -106,7 +106,4 @@ hr {
     margin-bottom: 1.2rem;
     border: 0;
     border-top: 2px solid $soft-gray;
-    &.colored {
-        border-color: $main-color;
-    }
 }
