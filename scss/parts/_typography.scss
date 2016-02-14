@@ -6,6 +6,7 @@ html {
     font-size: $remsize_normal;
     @media(max-width: $sm-screen) {
         font-size: $remsize_small;
+        /* Small font-size for component margins and paddings, see variables */
     }
 }
 
@@ -18,6 +19,7 @@ body {
     color: $body-copy-color;
     @media(max-width: $sm-screen) {
         font-size: $emsize_small;
+        /* Small font-size for typography, see variables */
     }
 }
 
@@ -67,5 +69,4 @@ h5 {
 small,
 h6 {
     font-size: 0.75em;
-    color: darken($soft-gray, 20%);
 }
