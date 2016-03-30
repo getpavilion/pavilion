@@ -46,9 +46,9 @@ $large-radius: 10px; /* Not used, but will come in handy */
   * Font-weights, you can set your own values to match your font.
   */
 
-$font-weight-light: lighter;
-$font-weight-normal: normal;
-$font-weight-bold: bold;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
 
 /**
   * Base font stack
