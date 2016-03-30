@@ -517,11 +517,17 @@
 
 
 @media(max-width: $sm-screen - 1px) {
+    .offset-xs-10 {
+        margin-left: 10%;
+    }
     .offset-xs-20 {
         margin-left: 20%;
     }
     .offset-xs-25 {
         margin-left: 25%;
+    }
+    .offset-xs-30 {
+        margin-left: 30%;
     }
     .offset-xs-33 {
         margin-left: 33.3333%;
@@ -547,11 +553,17 @@
 }
 
 @media(min-width: $sm-screen) {
+    .offset-sm-10 {
+        margin-left: 10%;
+    }
     .offset-sm-20 {
         margin-left: 20%;
     }
     .offset-sm-25 {
         margin-left: 25%;
+    }
+    .offset-sm-30 {
+        margin-left: 30%;
     }
     .offset-sm-33 {
         margin-left: 33.3333%;
@@ -577,11 +589,17 @@
 }
 
 @media(min-width: $md-screen) {
+    .offset-md-10 {
+        margin-left: 10%;
+    }
     .offset-md-20 {
         margin-left: 20%;
     }
     .offset-md-25 {
         margin-left: 25%;
+    }
+    .offset-md-30 {
+        margin-left: 30%;
     }
     .offset-md-33 {
         margin-left: 33.3333%;
@@ -607,11 +625,17 @@
 }
 
 @media(min-width: $lg-screen) {
+    .offset-lg-10 {
+        margin-left: 10%;
+    }
     .offset-lg-20 {
         margin-left: 20%;
     }
     .offset-lg-25 {
         margin-left: 25%;
+    }
+    .offset-lg-30 {
+        margin-left: 30%;
     }
     .offset-lg-33 {
         margin-left: 33.3333%;
@@ -640,11 +664,17 @@
    ========================================================================== */
 
 @media(max-width: $sm-screen - 1px) {
+    .push-xs-10 {
+        left: 10%;
+    }
     .push-xs-20 {
         left: 20%;
     }
     .push-xs-25 {
         left: 25%;
+    }
+    .push-xs-30 {
+        left: 30%;
     }
     .push-xs-33 {
         left: 33.3333%;
@@ -670,11 +700,17 @@
 }
 
 @media(min-width: $sm-screen) {
+    .push-sm-10 {
+        left: 10%;
+    }
     .push-sm-20 {
         left: 20%;
     }
     .push-sm-25 {
         left: 25%;
+    }
+    .push-sm-30 {
+        left: 30%;
     }
     .push-sm-33 {
         left: 33.3333%;
@@ -700,11 +736,17 @@
 }
 
 @media(min-width: $md-screen) {
+    .push-md-10 {
+        left: 10%;
+    }
     .push-md-20 {
         left: 20%;
     }
     .push-md-25 {
         left: 25%;
+    }
+    .push-md-30 {
+        left: 30%;
     }
     .push-md-33 {
         left: 33.3333%;
@@ -730,11 +772,17 @@
 }
 
 @media(min-width: $lg-screen) {
+    .push-lg-10 {
+        left: 10%;
+    }
     .push-lg-20 {
         left: 20%;
     }
     .push-lg-25 {
         left: 25%;
+    }
+    .push-lg-30 {
+        left: 30%;
     }
     .push-lg-33 {
         left: 33.3333%;
@@ -763,11 +811,17 @@
    ========================================================================== */
 
 @media(max-width: $sm-screen - 1px) {
+    .pull-xs-10 {
+        right: 10%;
+    }
     .pull-xs-20 {
         right: 20%;
     }
     .pull-xs-25 {
         right: 25%;
+    }
+    .pull-xs-30 {
+        right: 30%;
     }
     .pull-xs-33 {
         right: 33.3333%;
@@ -793,11 +847,17 @@
 }
 
 @media(min-width: $sm-screen) {
+    .pull-sm-10 {
+        right: 10%;
+    }
     .pull-sm-20 {
         right: 20%;
     }
     .pull-sm-25 {
         right: 25%;
+    }
+    .pull-sm-30 {
+        right: 30%;
     }
     .pull-sm-33 {
         right: 33.3333%;
@@ -823,11 +883,17 @@
 }
 
 @media(min-width: $md-screen) {
+    .pull-md-10 {
+        right: 10%;
+    }
     .pull-md-20 {
         right: 20%;
     }
     .pull-md-25 {
         right: 25%;
+    }
+    .pull-md-30 {
+        right: 30%;
     }
     .pull-md-33 {
         right: 33.3333%;
@@ -853,11 +919,17 @@
 }
 
 @media(min-width: $lg-screen) {
+    .pull-lg-10 {
+        right: 10%;
+    }
     .pull-lg-20 {
         right: 20%;
     }
     .pull-lg-25 {
         right: 25%;
+    }
+    .pull-lg-30 {
+        right: 30%;
     }
     .pull-lg-33 {
         right: 33.3333%;
