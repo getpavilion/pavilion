@@ -595,7 +595,7 @@
 /* Offsets, b'cus offsetting shit is the shit
    ========================================================================== */
 
-@media(max-width: $phone-landscape-size - 1px) {
+@media(max-width: $phone-landscape-size - 1) {
     .offset-pp-10 {
         margin-left: 10%;
     }
@@ -778,7 +778,7 @@
 /* Push dem around yo.
    ========================================================================== */
 
-@media(max-width: $phone-landscape-size - 1px) {
+@media(max-width: $phone-landscape-size - 1) {
     .push-pp-10 {
         left: 10%;
     }
@@ -961,7 +961,7 @@
 /* But you can also pull!
    ========================================================================== */
 
-@media(max-width: $phone-landscape-size - 1px) {
+@media(max-width: $phone-landscape-size - 1) {
     .pull-pp-10 {
         right: 10%;
     }
