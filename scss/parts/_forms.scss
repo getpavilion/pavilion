@@ -26,7 +26,7 @@ label {
     display: block;
     &.checkbox,
     &.radio {
-        padding-left: 2rem;
+        padding-left: 30px;
         position: relative;
         display: block;
         margin-top: 0.3rem;
@@ -34,14 +34,23 @@ label {
         cursor: pointer;
         input {
             position: absolute;
-            width: 1rem;
+            width: auto;
             margin: 0;
             left: 0;
+            cursor: pointer;
             &[type="checkbox"] {
-                top: 7px;
+                top: 0.25em;
+                appearance: checkbox;
+                @media (min-width: $tablet-portrait-size) {
+                    top: 0.4em;
+                }
             }
             &[type="radio"] {
-                top: 5px;
+                top: 0.15em;
+                appearance: radio;
+                @media (min-width: $tablet-portrait-size) {
+                    top: 0.3em;
+                }
             }
         }
     }
@@ -63,16 +72,17 @@ textarea {
     font-family: inherit;
     font-weight: $font-weight-normal;
     font-size: inherit;
-    line-height: inherit;
+    line-height: $line-height-normal * 1.65;
     display: block;
     width: 100%;
     background-color: transparent;
     border: 2px solid $soft-gray;
     border-radius: $small-radius;
     box-shadow: none;
-    padding: 0.7rem 1rem;
+    padding: 0 1rem;
     margin-top: 0.3rem;
     margin-bottom: 1.2rem;
+    appearance: none;
     &::-webkit-input-placeholder {
         color: darken($soft-gray, 20%);
     }
@@ -92,11 +102,20 @@ textarea {
 
 textarea {
     min-height: 150px;
+    padding: 0.7rem 1rem;
+    line-height: $line-height-normal;
 }
 
 select {
-    height: 3.4666666667rem;
     cursor: pointer;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Angle_down_font_awesome.svg/512px-Angle_down_font_awesome.svg.png");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-origin: content-box;
+    &::-ms-expand {
+        display: none;
+    }
 }
 
 /**
