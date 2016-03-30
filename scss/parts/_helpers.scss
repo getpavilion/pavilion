@@ -5,66 +5,81 @@
   * show @ viewports and shit.
   **/
 
-.show-xs,
-.show-sm,
-.show-md,
-.show-lg,
-.show-xs-block,
-.show-xs-inline,
-.show-xs-inline-block,
-.show-sm-block,
-.show-sm-inline,
-.show-sm-inline-block,
-.show-md-block,
-.show-md-inline,
-.show-md-inline-block,
-.show-lg-block,
-.show-lg-inline,
-.show-lg-inline-block {
+.show-pp,
+.show-pl,
+.show-tp,
+.show-tl,
+.show-dt,
+.show-pp-block,
+.show-pp-inline,
+.show-pp-inline-block,
+.show-pl-block,
+.show-pl-inline,
+.show-pl-inline-block,
+.show-tp-block,
+.show-tp-inline,
+.show-tp-inline-block,
+.show-tl-block,
+.show-tl-inline,
+.show-tl-inline-block,
+.show-dt-block,
+.show-dt-inline,
+.show-dt-inline-block {
     display: none !important;
 }
 
-@media(max-width: $sm-screen - 1px) {
-    .show-xs, .show-xs-block {
+@media(max-width: $phone-landscape-size - 1) {
+    .show-pp, .show-pp-block {
         display: block !important;
     }
-    .show-xs-inline-block {
+    .show-pp-inline-block {
         display: inline-block !important;
     }
-    .show-xs-inline {
+    .show-pp-inline {
         display: inline !important;
     }
 }
-@media(min-width: $sm-screen) and (max-width: $md-screen) {
-    .show-sm, .show-sm-block {
+@media(min-width: $phone-landscape-size) and (max-width: $tablet-portrait-size - 1) {
+    .show-pl, .show-pl-block {
         display: block !important;
     }
-    .show-sm-inline-block {
+    .show-pl-inline-block {
         display: inline-block !important;
     }
-    .show-sm-inline {
+    .show-pl-inline {
         display: inline !important;
     }
 }
-@media(min-width: $md-screen) and (max-width: $lg-screen) {
-    .show-md, .show-md-block {
+@media(min-width: $tablet-portrait-size) and (max-width: $tablet-landscape-size - 1) {
+    .show-tp, .show-tp-block {
         display: block !important;
     }
-    .show-md-inline-block {
+    .show-tp-inline-block {
         display: inline-block !important;
     }
-    .show-md-inline {
+    .show-tp-inline {
         display: inline !important;
     }
 }
-@media(min-width: $lg-screen) {
-    .show-lg, .show-lg-block {
+@media(min-width: $tablet-landscape-size) and (max-width: $desktop-size - 1) {
+    .show-tl, .show-tl-block {
         display: block !important;
     }
-    .show-lg-inline-block {
+    .show-tl-inline-block {
         display: inline-block !important;
     }
-    .show-lg-inline {
+    .show-tl-inline {
+        display: inline !important;
+    }
+}
+@media(min-width: $desktop-size) {
+    .show-dt, .show-dt-block {
+        display: block !important;
+    }
+    .show-dt-inline-block {
+        display: inline-block !important;
+    }
+    .show-dt-inline {
         display: inline !important;
     }
 }
@@ -73,23 +88,28 @@
   * hide @ viewports and shit.
   **/
 
-@media(max-width: $sm-screen - 1px) {
-    .hide-xs {
+@media(max-width: $phone-landscape-size - 1) {
+    .hide-pp {
         display: none !important;
     }
 }
-@media(min-width: $sm-screen) and (max-width: $md-screen) {
-    .hide-sm {
+@media(min-width: $phone-landscape-size) and (max-width: $tablet-portrait-size - 1) {
+    .hide-pl {
         display: none !important;
     }
 }
-@media(min-width: $md-screen) and (max-width: $lg-screen) {
-    .hide-md {
+@media(min-width: $tablet-portrait-size) and (max-width: $tablet-landscape-size - 1) {
+    .hide-tp {
         display: none !important;
     }
 }
-@media(min-width: $lg-screen) {
-    .hide-lg {
+@media(min-width: $tablet-landscape-size) and (max-width: $desktop-size - 1) {
+    .hide-tl {
+        display: none !important;
+    }
+}
+@media(min-width: $desktop-size) {
+    .hide-dt {
         display: none !important;
     }
 }
@@ -118,50 +138,62 @@
     text-align: right;
 }
 
-@media(max-width: $sm-screen - 1px) {
-    .text-xs-center {
+@media(max-width: $phone-landscape-size - 1) {
+    .text-pp-center {
         text-align: center;
     }
-    .text-xs-left {
+    .text-pp-left {
         text-align: left;
     }
-    .text-xs-right {
+    .text-pp-right {
         text-align: right;
     }
 }
 
-@media(min-width: $sm-screen) and (max-width: $md-screen) {
-    .text-sm-center {
+@media(min-width: $phone-landscape-size) and (max-width: $tablet-portrait-size - 1) {
+    .text-pl-center {
         text-align: center;
     }
-    .text-sm-left {
+    .text-pl-left {
         text-align: left;
     }
-    .text-sm-right {
+    .text-pl-right {
         text-align: right;
     }
 }
 
-@media(min-width: $md-screen) and (max-width: $lg-screen) {
-    .text-md-center {
+@media(min-width: $tablet-portrait-size) and (max-width: $tablet-landscape-size - 1) {
+    .text-tp-center {
         text-align: center;
     }
-    .text-md-left {
+    .text-tp-left {
         text-align: left;
     }
-    .text-md-right {
+    .text-tp-right {
         text-align: right;
     }
 }
 
-@media(min-width: $lg-screen) {
-    .text-lg-center {
+@media(min-width: $tablet-landscape-size) and (max-width: $desktop-size - 1) {
+    .text-tl-center {
         text-align: center;
     }
-    .text-lg-left {
+    .text-tl-left {
         text-align: left;
     }
-    .text-lg-right {
+    .text-tl-right {
+        text-align: right;
+    }
+}
+
+@media(min-width: $desktop-size) {
+    .text-dt-center {
+        text-align: center;
+    }
+    .text-dt-left {
+        text-align: left;
+    }
+    .text-dt-right {
         text-align: right;
     }
 }

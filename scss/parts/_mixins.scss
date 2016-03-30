@@ -17,7 +17,7 @@
     -moz-osx-font-smoothing: grayscale;
     cursor: pointer;
     &.uppercase {
-        font-weight: $font-bold;
+        font-weight: $font-weight-bold;
         font-size: 0.9rem;
         letter-spacing: 1.5px;
         padding: 0.7rem 2rem;

@@ -3,23 +3,21 @@
   */
 
 html {
-    font-size: $remsize_normal;
-    @media(max-width: $sm-screen) {
-        font-size: $remsize_small;
-        /* Small font-size for component margins and paddings, see variables */
+    font-size: $remsize-small; /* Small rem-size */
+    @media(min-width: $tablet-portrait-size) {
+        font-size: $remsize-normal; /* Regular font-size */
     }
 }
 
 body {
-    font-family: $font-family;
-    font-weight: $font-normal;
+    font-family: $base-font-family;
+    font-weight: $font-weight-normal;
     text-rendering: optimizeLegibility;
-    line-height: 1.5;
-    font-size: $emsize_normal;
+    line-height: $line-height-normal;
+    font-size: $emsize-small; /* Small font-size */
     color: $body-copy-color;
-    @media(max-width: $sm-screen) {
-        font-size: $emsize_small;
-        /* Small font-size for typography, see variables */
+    @media(min-width: $tablet-portrait-size) {
+        font-size: $emsize-normal; /* Regular font-size */
     }
 }
 
@@ -31,7 +29,7 @@ p {
 
 .lead {
     font-size: 1.1429em;
-    font-weight: $font-light;
+    font-weight: $font-weight-light;
 }
 
 h1,
@@ -63,7 +61,7 @@ h4 {
 
 h5 {
     font-size: 1em;
-    font-weight: $font-bold;
+    font-weight: $font-weight-bold;
 }
 
 small,

@@ -22,7 +22,7 @@ fieldset {
 }
 
 label {
-    font-weight: $font-bold;
+    font-weight: $font-weight-bold;
     display: block;
     &.checkbox,
     &.radio {
@@ -61,7 +61,7 @@ input,
 select,
 textarea {
     font-family: inherit;
-    font-weight: $font-normal;
+    font-weight: $font-weight-normal;
     font-size: inherit;
     line-height: inherit;
     display: block;
