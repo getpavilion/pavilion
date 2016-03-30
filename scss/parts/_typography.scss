@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    font-family: 'Work Sans', sans-serif;
+    font-family: $font-family;
     font-weight: $font-normal;
     text-rendering: optimizeLegibility;
     line-height: 1.5;
