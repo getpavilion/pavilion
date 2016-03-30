@@ -1,0 +1,11 @@
+/*
+ * Style lists to better fit the overal styles.
+ */
+
+ul {
+    margin-top: 0;
+    margin-bottom: 1.3em;
+    ul {
+        margin-bottom: 0;
+    }
+}

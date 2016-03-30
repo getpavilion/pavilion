@@ -14,6 +14,7 @@ body {
     font-weight: $font-weight-normal;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     line-height: $line-height-normal;
     font-size: $emsize-small; /* Small font-size */
     color: $body-copy-color;
@@ -45,6 +46,7 @@ h6 {
 }
 
 h1 {
+    margin-top: 0;
     font-size: 3.157em;
 }
 
