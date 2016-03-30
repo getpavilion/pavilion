@@ -22,7 +22,7 @@ fieldset {
 }
 
 label {
-    font-weight: $font-medium;
+    font-weight: $font-bold;
     display: block;
     &.checkbox,
     &.radio {
@@ -86,7 +86,7 @@ textarea {
         color: darken($soft-gray, 20%);
     }
     &:focus {
-        border-color: $main-color;
+        border-color: $primary-color;
     }
 }
 
