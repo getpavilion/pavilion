@@ -13,6 +13,7 @@ body {
     font-family: $base-font-family;
     font-weight: $font-weight-normal;
     text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
     line-height: $line-height-normal;
     font-size: $emsize-small; /* Small font-size */
     color: $body-copy-color;
