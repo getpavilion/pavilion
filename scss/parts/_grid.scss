@@ -27,55 +27,39 @@
  * ".container-fluid" spans the full width.
  */
 
-.container {
-    margin: 0 auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    &:before {
-        content: " ";
-        display: table;
-    }
-    &:after {
-        content: " ";
-        display: table;
-        clear: both;
-    }
+.container,
+.container-fluid,
+.container-pp,
+.container-pl,
+.container-tp,
+.container-tl {
+    @include container;
 }
-
-.container-fluid {
-    margin: 0 auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    &:before {
-        content: " ";
-        display: table;
-    }
-    &:after {
-        content: " ";
-        display: table;
-        clear: both;
-    }
-}
-
 
 /**
  * Media queries for containers, set container size per media query.
  */
 
-@media (min-width: $phone-landscape-size) { /* min-width: 480px */
-    .container {
+@media (min-width: $phone-landscape-size) { /* min-width: 540px */
+    .container,
+    .container-tl,
+    .container-tp,
+    .container-pl {
         max-width: $phone-landscape-size - $breakmargin;
     }
 }
 
 @media (min-width: $tablet-portrait-size) { /* min-width: 748px */
-    .container {
+    .container,
+    .container-tl,
+    .container-tp {
         max-width: $tablet-portrait-size - $breakmargin;
     }
 }
 
 @media (min-width: $tablet-landscape-size) { /* min-width: 991px */
-    .container {
+    .container,
+    .container-tl {
         max-width: $tablet-landscape-size - $breakmargin;
     }
 }
