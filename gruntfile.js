@@ -1,117 +1,116 @@
 module.exports = function(grunt) {
 
-    // Project configuration.
+    'use strict';
+
     grunt.initConfig({
+        // Package.json handling
         pkg: grunt.file.readJSON('package.json'),
 
-        // DEFAULT TASK
-        // ================================================================
+        // Clean the build and demo/css folder
+        clean: {
+            all: ['dist', 'demo/css']
+        },
 
-        // Watch files and process the above tasks
+        // Watch tasks: sass for development and gruntfile
         watch: {
-            options: {
-                livereload: false
-            },
             grunt: {
-                files: [
-                    'gruntfile.js'
-                ],
-                options: {
-                    reload: true
-                }
+                files: 'gruntfile.js',
+                options: { reload: true }
             },
             sass: {
-                files: [
-                    'scss/**/*.scss'
-                ],
-                tasks: [
-                    'sass',
-                    'autoprefixer'
-                ]
+                files: 'scss/**/*.scss',
+                tasks: 'sass'
             }
         },
 
-        // BUILD TASKS
-        // ================================================================
-        // Clear files and folders
-        clean: {
-            all: ['css']
-        },
-
-        // Compile Sass files to CSS
+        // SCSS processing
         sass: {
-            minify: {
+            mincss: {
                 options: {
                     noCache: true,
-                    sourcemap: 'none',
+                    sourcemap: 'file',
                     style: 'compressed'
                 },
                 files: {
-                    'css/pavilion.min.css': ['scss/*.scss', '!scss/_*.scss']
+                    'dist/pavilion.min.css': 'scss/pavilion.scss'
                 }
             },
-            default: {
+            normalcss: {
                 options: {
                     noCache: true,
                     sourcemap: 'none',
                     style: 'expanded'
                 },
                 files: {
-                    'css/pavilion.css': ['scss/*.scss', '!scss/_*.scss']
+                    'dist/pavilion.css': 'scss/pavilion.scss'
+                }
+            },
+            demo: {
+                options: {
+                    noCache: true,
+                    sourcemap: 'file',
+                    style: 'compressed'
+                },
+                files: {
+                    'demo/css/pavilion.min.css': 'scss/pavilion.scss'
                 }
             }
         },
-        // Parse CSS and add vendor-prefixed CSS properties using the Can I Use database.
+
+        // Prefix the build and demo folder
         autoprefixer: {
-            minify: {
+            mincss: {
                 options: {
                     browsers: [
-                        'last 1 versions'
+                        'last 2 versions'
                     ],
                     map: {
                         inline: false
                     }
                 },
                 files: {
-                    'css/pavilion.min.css': 'css/pavilion.min.css'
+                    'dist/pavilion.min.css': 'dist/pavilion.min.css'
                 }
             },
-            default: {
+            normalcss: {
                 options: {
                     browsers: [
-                        'last 1 versions'
+                        'last 2 versions'
                     ],
                     map: false
                 },
                 files: {
-                    'css/pavilion.css': 'css/pavilion.css'
+                    'dist/pavilion.css': 'dist/pavilion.css'
+                }
+            },
+            demo: {
+                options: {
+                    browsers: [
+                        'last 2 versions'
+                    ],
+                    map: false
+                },
+                files: {
+                    'demo/css/pavilion.min.css': 'demo/css/pavilion.min.css'
                 }
             }
         }
+
     });
 
-    // Default task
+    // Run default task, build everything and watch
     grunt.registerTask('default', [
-        'build',
+        'dist',
         'watch'
     ]);
 
-    // Build task
-    grunt.registerTask('build', [
+    // Only build
+    grunt.registerTask('dist', [
         'clean',
         'sass',
         'autoprefixer'
     ]);
 
-
-    // ================================================================
-    // LOAD TASKS
-    // ================================================================
-
-    // Automatically loading Grunt tasks
     require('load-grunt-tasks')(grunt);
-
-    // Display the elapsed execution time of Grunt tasks
     require('time-grunt')(grunt);
-
 };

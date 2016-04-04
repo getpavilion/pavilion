@@ -1,58 +1,43 @@
 {
-  "name": "Pavilion",
-  "version": "1.0.0",
-  "description": "A minimal CSS framework without the bloat.",
-  "homepage": "http://www.pavilion.io",
-  "license": "MIT",
-  "author": "Baasdesign <info@baasdesign.com>",
-  "main": "css/pavilion.min.css",
-  "repository": "getpavilion/pavilion",
-  "scripts": {
-    "start": "grunt",
-    "test": "grunt build"
-  },
-  "keywords": [
-    "bootstrap",
-    "css",
-    "css3",
-    "flexbox",
-    "front-end",
-    "framework",
-    "html",
-    "html5",
-    "kickstarter",
-    "less",
-    "responsive",
-    "mobile",
-    "mobile-first",
-    "postcss",
-    "responsive",
-    "scss"
-  ],
-  "ignore": [
-    "prepros.cfg",
-    ".gitignore",
-    "package.json"
-  ],
-  "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-autoprefixer": "^3.0.4",
-    "grunt-contrib-clean": "^1.0.0",
-    "grunt-contrib-connect": "^1.0.1",
-    "grunt-contrib-jshint": "^1.0.0",
-    "grunt-contrib-nodeunit": "^1.0.0",
-    "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-uglify": "^1.0.1",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-newer": "^1.1.2",
-    "grunt-notify": "^0.4.5",
-    "load-grunt-tasks": "^3.4.1",
-    "time-grunt": "^1.3.0"
-  },
-  "engines": {
-    "node": ">=0.12.0"
-  },
-  "bugs": {
-    "url": "https://github.com/getpavilion/pavilion/issues"
-  }
+    "name": "Pavilion",
+    "version": "1.0.0",
+    "description": "A minimal CSS framework without the bloat.",
+    "homepage": "http://www.pavilion.io",
+    "license": "MIT",
+    "author": "Baasdesign <info@baasdesign.com>",
+    "main": "dist/pavilion.min.css",
+    "repository": "getpavilion/pavilion",
+    "scripts": {
+        "start": "grunt",
+        "test": "grunt dev"
+    },
+    "keywords": [
+        "responsive",
+        "framework",
+        "minimal",
+        "bootstrap",
+        "scss"
+    ],
+    "ignore": [
+        "prepros.cfg",
+        ".gitignore",
+        "package.json"
+    ],
+    "devDependencies": {
+        "grunt": "^0.4.5",
+        "grunt-autoprefixer": "^3.0.4",
+        "grunt-contrib-clean": "^1.0.0",
+        "grunt-contrib-nodeunit": "^1.0.0",
+        "grunt-contrib-sass": "^1.0.0",
+        "grunt-contrib-watch": "^1.0.0",
+        "grunt-notify": "^0.4.5",
+        "load-grunt-tasks": "^3.4.1",
+        "time-grunt": "^1.3.0"
+    },
+    "engines": {
+        "node": ">=0.12.0"
+    },
+    "bugs": {
+        "url": "https://github.com/getpavilion/pavilion/issues"
+    }
 }
