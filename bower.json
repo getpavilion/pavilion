@@ -25,9 +25,13 @@
     ".gitignore",
     ".npmignore",
     "bower.json",
+    "package.json",
+    "gruntfile.js",
+    "Gruntfile.js",
     "CHANGELOG.md",
     "README.md",
-    "demo"
+    "demo",
+    "scss"
   ],
   "devDependencies": {
     "grunt": "^0.4.5",
