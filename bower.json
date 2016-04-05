@@ -19,6 +19,7 @@
   "ignore": [
     "prepros.cfg",
     ".gitignore",
-    ".npmignore"
+    ".npmignore",
+    ".travis.yml"
   ]
 }

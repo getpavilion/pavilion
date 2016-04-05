@@ -24,7 +24,8 @@
     "prepros.cfg",
     ".gitignore",
     "package.json",
-    "bower.json"
+    "bower.json",
+    ".travis.yml"
   ],
   "devDependencies": {
     "grunt": "^0.4.5",
@@ -39,6 +40,10 @@
   },
   "engines": {
     "node": ">=0.12.0"
+  },
+  "scripts": {
+    "start": "grunt",
+    "test": "grunt dist"
   },
   "bugs": {
     "url": "https://github.com/getpavilion/pavilion/issues"
