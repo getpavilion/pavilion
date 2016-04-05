@@ -7,7 +7,7 @@
  * Only the most common form elements are styled, so the rest is up to you!
  */
 
-.form-default {
+form {
     @include clearfix;
     /* Clearfix the shit out of it */
     width: 100%;
@@ -40,14 +40,12 @@ label {
             cursor: pointer;
             &[type="checkbox"] {
                 top: 0.25em;
-                appearance: checkbox;
                 @media (min-width: $tablet-portrait-size) {
                     top: 0.4em;
                 }
             }
             &[type="radio"] {
                 top: 0.15em;
-                appearance: radio;
                 @media (min-width: $tablet-portrait-size) {
                     top: 0.3em;
                 }
@@ -74,7 +72,7 @@ textarea {
     font-size: inherit;
     line-height: $line-height-normal * 1.65;
     display: block;
-    width: 100%;
+    width: 100% !important;
     background-color: transparent;
     border: 2px solid $soft-gray;
     border-radius: $small-radius;
@@ -82,7 +80,6 @@ textarea {
     padding: 0 1rem;
     margin-top: 0.3rem;
     margin-bottom: 1.2rem;
-    appearance: none;
     &::-webkit-input-placeholder {
         color: darken($soft-gray, 20%);
     }
@@ -107,6 +104,7 @@ textarea {
 }
 
 select {
+    appearance: none;
     cursor: pointer;
     background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Angle_down_font_awesome.svg/512px-Angle_down_font_awesome.svg.png");
     background-size: 20px;
