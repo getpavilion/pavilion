@@ -448,11 +448,15 @@ textarea {
 /* Border-boxing everythin'. B'cus duh. Oh and remove those goddamn outlines.
    ========================================================================== */
 * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 *:before,
 *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -719,18 +723,10 @@ textarea {
  * This is the real grid-system-shit.
  */
 .row-flex {
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex: 1;
+  flex-wrap: wrap;
+  flex-direction: row;
   margin-right: -1rem;
   margin-left: -1rem;
 }
@@ -748,324 +744,220 @@ textarea {
   padding-left: 1rem;
   padding-right: 1rem;
   display: block;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
 .row-flex [class^="col-"] {
   position: relative;
-  -webkit-flex: 0 0 100%;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
+  flex: 0 0 100%;
   max-width: 100%;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 .row-flex .col-pp-20 {
-  -webkit-flex: 0 0 20%;
-      -ms-flex: 0 0 20%;
-          flex: 0 0 20%;
+  flex: 0 0 20%;
   max-width: 20%;
 }
 .row-flex .col-pp-25 {
-  -webkit-flex: 0 0 25%;
-      -ms-flex: 0 0 25%;
-          flex: 0 0 25%;
+  flex: 0 0 25%;
   max-width: 25%;
 }
 .row-flex .col-pp-33 {
-  -webkit-flex: 0 0 33.3333%;
-      -ms-flex: 0 0 33.3333%;
-          flex: 0 0 33.3333%;
+  flex: 0 0 33.3333%;
   max-width: 33.3333%;
 }
 .row-flex .col-pp-40 {
-  -webkit-flex: 0 0 40%;
-      -ms-flex: 0 0 40%;
-          flex: 0 0 40%;
+  flex: 0 0 40%;
   max-width: 40%;
 }
 .row-flex .col-pp-50 {
-  -webkit-flex: 0 0 50%;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
+  flex: 0 0 50%;
   max-width: 50%;
 }
 .row-flex .col-pp-60 {
-  -webkit-flex: 0 0 60%;
-      -ms-flex: 0 0 60%;
-          flex: 0 0 60%;
+  flex: 0 0 60%;
   max-width: 60%;
 }
 .row-flex .col-pp-66 {
-  -webkit-flex: 0 0 66.6666%;
-      -ms-flex: 0 0 66.6666%;
-          flex: 0 0 66.6666%;
+  flex: 0 0 66.6666%;
   max-width: 66.6666%;
 }
 .row-flex .col-pp-75 {
-  -webkit-flex: 0 0 75%;
-      -ms-flex: 0 0 75%;
-          flex: 0 0 75%;
+  flex: 0 0 75%;
   max-width: 75%;
 }
 .row-flex .col-pp-80 {
-  -webkit-flex: 0 0 80%;
-      -ms-flex: 0 0 80%;
-          flex: 0 0 80%;
+  flex: 0 0 80%;
   max-width: 80%;
 }
 .row-flex .col-pp-100 {
-  -webkit-flex: 0 0 100%;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
+  flex: 0 0 100%;
   max-width: 100%;
 }
 @media (min-width: 540px) {
   .row-flex .col-pl-20 {
-    -webkit-flex: 0 0 20%;
-        -ms-flex: 0 0 20%;
-            flex: 0 0 20%;
+    flex: 0 0 20%;
     max-width: 20%;
   }
   .row-flex .col-pl-25 {
-    -webkit-flex: 0 0 25%;
-        -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
+    flex: 0 0 25%;
     max-width: 25%;
   }
   .row-flex .col-pl-33 {
-    -webkit-flex: 0 0 33.3333%;
-        -ms-flex: 0 0 33.3333%;
-            flex: 0 0 33.3333%;
+    flex: 0 0 33.3333%;
     max-width: 33.3333%;
   }
   .row-flex .col-pl-40 {
-    -webkit-flex: 0 0 40%;
-        -ms-flex: 0 0 40%;
-            flex: 0 0 40%;
+    flex: 0 0 40%;
     max-width: 40%;
   }
   .row-flex .col-pl-50 {
-    -webkit-flex: 0 0 50%;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
+    flex: 0 0 50%;
     max-width: 50%;
   }
   .row-flex .col-pl-60 {
-    -webkit-flex: 0 0 60%;
-        -ms-flex: 0 0 60%;
-            flex: 0 0 60%;
+    flex: 0 0 60%;
     max-width: 60%;
   }
   .row-flex .col-pl-66 {
-    -webkit-flex: 0 0 66.6666%;
-        -ms-flex: 0 0 66.6666%;
-            flex: 0 0 66.6666%;
+    flex: 0 0 66.6666%;
     max-width: 66.6666%;
   }
   .row-flex .col-pl-75 {
-    -webkit-flex: 0 0 75%;
-        -ms-flex: 0 0 75%;
-            flex: 0 0 75%;
+    flex: 0 0 75%;
     max-width: 75%;
   }
   .row-flex .col-pl-80 {
-    -webkit-flex: 0 0 80%;
-        -ms-flex: 0 0 80%;
-            flex: 0 0 80%;
+    flex: 0 0 80%;
     max-width: 80%;
   }
   .row-flex .col-pl-100 {
-    -webkit-flex: 0 0 100%;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
+    flex: 0 0 100%;
     max-width: 100%;
   }
 }
 @media (min-width: 768px) {
   .row-flex .col-tp-20 {
-    -webkit-flex: 0 0 20%;
-        -ms-flex: 0 0 20%;
-            flex: 0 0 20%;
+    flex: 0 0 20%;
     max-width: 20%;
   }
   .row-flex .col-tp-25 {
-    -webkit-flex: 0 0 25%;
-        -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
+    flex: 0 0 25%;
     max-width: 25%;
   }
   .row-flex .col-tp-33 {
-    -webkit-flex: 0 0 33.3333%;
-        -ms-flex: 0 0 33.3333%;
-            flex: 0 0 33.3333%;
+    flex: 0 0 33.3333%;
     max-width: 33.3333%;
   }
   .row-flex .col-tp-40 {
-    -webkit-flex: 0 0 40%;
-        -ms-flex: 0 0 40%;
-            flex: 0 0 40%;
+    flex: 0 0 40%;
     max-width: 40%;
   }
   .row-flex .col-tp-50 {
-    -webkit-flex: 0 0 50%;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
+    flex: 0 0 50%;
     max-width: 50%;
   }
   .row-flex .col-tp-60 {
-    -webkit-flex: 0 0 60%;
-        -ms-flex: 0 0 60%;
-            flex: 0 0 60%;
+    flex: 0 0 60%;
     max-width: 60%;
   }
   .row-flex .col-tp-66 {
-    -webkit-flex: 0 0 66.6666%;
-        -ms-flex: 0 0 66.6666%;
-            flex: 0 0 66.6666%;
+    flex: 0 0 66.6666%;
     max-width: 66.6666%;
   }
   .row-flex .col-tp-75 {
-    -webkit-flex: 0 0 75%;
-        -ms-flex: 0 0 75%;
-            flex: 0 0 75%;
+    flex: 0 0 75%;
     max-width: 75%;
   }
   .row-flex .col-tp-80 {
-    -webkit-flex: 0 0 80%;
-        -ms-flex: 0 0 80%;
-            flex: 0 0 80%;
+    flex: 0 0 80%;
     max-width: 80%;
   }
   .row-flex .col-tp-100 {
-    -webkit-flex: 0 0 100%;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
+    flex: 0 0 100%;
     max-width: 100%;
   }
 }
 @media (min-width: 991px) {
   .row-flex .col-tl-20 {
-    -webkit-flex: 0 0 20%;
-        -ms-flex: 0 0 20%;
-            flex: 0 0 20%;
+    flex: 0 0 20%;
     max-width: 20%;
   }
   .row-flex .col-tl-25 {
-    -webkit-flex: 0 0 25%;
-        -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
+    flex: 0 0 25%;
     max-width: 25%;
   }
   .row-flex .col-tl-33 {
-    -webkit-flex: 0 0 33.3333%;
-        -ms-flex: 0 0 33.3333%;
-            flex: 0 0 33.3333%;
+    flex: 0 0 33.3333%;
     max-width: 33.3333%;
   }
   .row-flex .col-tl-40 {
-    -webkit-flex: 0 0 40%;
-        -ms-flex: 0 0 40%;
-            flex: 0 0 40%;
+    flex: 0 0 40%;
     max-width: 40%;
   }
   .row-flex .col-tl-50 {
-    -webkit-flex: 0 0 50%;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
+    flex: 0 0 50%;
     max-width: 50%;
   }
   .row-flex .col-tl-60 {
-    -webkit-flex: 0 0 60%;
-        -ms-flex: 0 0 60%;
-            flex: 0 0 60%;
+    flex: 0 0 60%;
     max-width: 60%;
   }
   .row-flex .col-tl-66 {
-    -webkit-flex: 0 0 66.6666%;
-        -ms-flex: 0 0 66.6666%;
-            flex: 0 0 66.6666%;
+    flex: 0 0 66.6666%;
     max-width: 66.6666%;
   }
   .row-flex .col-tl-75 {
-    -webkit-flex: 0 0 75%;
-        -ms-flex: 0 0 75%;
-            flex: 0 0 75%;
+    flex: 0 0 75%;
     max-width: 75%;
   }
   .row-flex .col-tl-80 {
-    -webkit-flex: 0 0 80%;
-        -ms-flex: 0 0 80%;
-            flex: 0 0 80%;
+    flex: 0 0 80%;
     max-width: 80%;
   }
   .row-flex .col-tl-100 {
-    -webkit-flex: 0 0 100%;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
+    flex: 0 0 100%;
     max-width: 100%;
   }
 }
 @media (min-width: 1200px) {
   .row-flex .col-dt-20 {
-    -webkit-flex: 0 0 20%;
-        -ms-flex: 0 0 20%;
-            flex: 0 0 20%;
+    flex: 0 0 20%;
     max-width: 20%;
   }
   .row-flex .col-dt-25 {
-    -webkit-flex: 0 0 25%;
-        -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
+    flex: 0 0 25%;
     max-width: 25%;
   }
   .row-flex .col-dt-33 {
-    -webkit-flex: 0 0 33.3333%;
-        -ms-flex: 0 0 33.3333%;
-            flex: 0 0 33.3333%;
+    flex: 0 0 33.3333%;
     max-width: 33.3333%;
   }
   .row-flex .col-dt-40 {
-    -webkit-flex: 0 0 40%;
-        -ms-flex: 0 0 40%;
-            flex: 0 0 40%;
+    flex: 0 0 40%;
     max-width: 40%;
   }
   .row-flex .col-dt-50 {
-    -webkit-flex: 0 0 50%;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
+    flex: 0 0 50%;
     max-width: 50%;
   }
   .row-flex .col-dt-60 {
-    -webkit-flex: 0 0 60%;
-        -ms-flex: 0 0 60%;
-            flex: 0 0 60%;
+    flex: 0 0 60%;
     max-width: 60%;
   }
   .row-flex .col-dt-66 {
-    -webkit-flex: 0 0 66.6666%;
-        -ms-flex: 0 0 66.6666%;
-            flex: 0 0 66.6666%;
+    flex: 0 0 66.6666%;
     max-width: 66.6666%;
   }
   .row-flex .col-dt-75 {
-    -webkit-flex: 0 0 75%;
-        -ms-flex: 0 0 75%;
-            flex: 0 0 75%;
+    flex: 0 0 75%;
     max-width: 75%;
   }
   .row-flex .col-dt-80 {
-    -webkit-flex: 0 0 80%;
-        -ms-flex: 0 0 80%;
-            flex: 0 0 80%;
+    flex: 0 0 80%;
     max-width: 80%;
   }
   .row-flex .col-dt-100 {
-    -webkit-flex: 0 0 100%;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
+    flex: 0 0 100%;
     max-width: 100%;
   }
 }
@@ -1076,49 +968,31 @@ textarea {
  * On rows, so it applies to all items inside the row.
  */
 .row-flex.items-top {
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
 }
 .row-flex.items-center-v {
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .row-flex.items-bottom {
-  -webkit-align-items: flex-end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
 }
 .row-flex.items-baseline {
-  -webkit-align-items: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  align-items: baseline;
 }
 .row-flex.items-left {
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
 }
 .row-flex.items-center-h {
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 .row-flex.items-right {
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
 }
 .row-flex.items-spaced-around {
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
+  justify-content: space-around;
 }
 .row-flex.items-spaced-between {
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 /**
@@ -1126,39 +1000,27 @@ textarea {
  */
 .row-flex [class^="col-"].item-top,
 .row-flex .col.item-top {
-  -webkit-align-self: flex-start;
-      -ms-flex-item-align: start;
-          align-self: flex-start;
+  align-self: flex-start;
 }
 .row-flex [class^="col-"].item-center-v,
 .row-flex .col.item-center-v {
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
-          align-self: center;
+  align-self: center;
 }
 .row-flex [class^="col-"].item-bottom,
 .row-flex .col.item-bottom {
-  -webkit-align-self: flex-end;
-      -ms-flex-item-align: end;
-          align-self: flex-end;
+  align-self: flex-end;
 }
 .row-flex [class^="col-"].item-baseline,
 .row-flex .col.item-baseline {
-  -webkit-align-self: baseline;
-      -ms-flex-item-align: baseline;
-          align-self: baseline;
+  align-self: baseline;
 }
 .row-flex [class^="col-"].item-first,
 .row-flex .col.item-first {
-  -webkit-order: -1;
-      -ms-flex-order: -1;
-          order: -1;
+  order: -1;
 }
 .row-flex [class^="col-"].item-last,
 .row-flex .col.item-last {
-  -webkit-order: 1;
-      -ms-flex-order: 1;
-          order: 1;
+  order: 1;
 }
 
 /* Offsets, b'cus offsetting shit is the shit
@@ -1869,7 +1731,7 @@ body {
 }
 @media (min-width: 768px) {
   body {
-    font-size: 20px;
+    font-size: 18px;
     /* Regular font-size */
   }
 }
@@ -2164,8 +2026,7 @@ h6 {
   /* for font awesome icons in buttons, fix margin */
 }
 .button-default:active {
-  -webkit-transform: scale(0.97);
-          transform: scale(0.97);
+  transform: scale(0.97);
 }
 .button-default:hover, .button-default:visited, .button-default:focus {
   background-color: #44a074;
@@ -2198,8 +2059,7 @@ h6 {
   /* for font awesome icons in buttons, fix margin */
 }
 .button-outlined:active {
-  -webkit-transform: scale(0.97);
-          transform: scale(0.97);
+  transform: scale(0.97);
 }
 .button-outlined:hover, .button-outlined:visited, .button-outlined:focus {
   border-color: #44a074;
@@ -2232,8 +2092,7 @@ h6 {
   /* for font awesome icons in buttons, fix margin */
 }
 .button-stripped:active {
-  -webkit-transform: scale(0.97);
-          transform: scale(0.97);
+  transform: scale(0.97);
 }
 .button-stripped:hover {
   color: #44a074;
@@ -2248,13 +2107,25 @@ h6 {
 
 /*
  * Style lists to better fit the overal styles.
+ * Unordered lists, Ordered lists, Description lists + tags
  */
-ul {
-  margin-top: 0;
-  margin-bottom: 1.3em;
+ul, ol, dl {
+  margin: 0 0 1.3em 0;
+  padding: 0;
+  list-style-position: inside;
 }
-ul ul {
+ul li, ol li, dl li {
+  margin-bottom: 0.3em;
+}
+ul dt, ol dt, dl dt {
+  margin-top: 0.3em;
+}
+ul dd, ol dd, dl dd {
+  margin-left: 1.5rem;
+}
+ul ul, ul ol, ul dl, ol ul, ol ol, ol dl, dl ul, dl ol, dl dl {
   margin-bottom: 0;
+  padding-left: 1.5rem;
 }
 
 /* Forms
@@ -2347,9 +2218,7 @@ textarea {
   padding: 0 1rem;
   margin-top: 0.3rem;
   margin-bottom: 1.2rem;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 input::-webkit-input-placeholder,
 select::-webkit-input-placeholder,
@@ -2406,5 +2275,28 @@ hr {
 }
 
 /*
- * Minimal styling for tables
+ * Standard tables'n shit
  */
+table {
+  max-width: 100%;
+  width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+}
+table caption {
+  padding: 0.4rem 0;
+  text-align: left;
+}
+table > thead > tr > th {
+  text-align: left;
+  padding: 0.6rem 0;
+  vertical-align: top;
+  font-weight: 700;
+  border-bottom: 1px solid #E1E1E1;
+}
+table > tbody > tr > td {
+  text-align: left;
+  padding: 0.6rem 0;
+  vertical-align: top;
+  border-bottom: 1px solid #E1E1E1;
+}

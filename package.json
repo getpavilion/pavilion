@@ -1,6 +1,6 @@
 {
-    "name": "Pavilion",
-    "version": "1.0.0",
+    "name": "pavilion",
+    "version": "0.0.1",
     "description": "A minimal CSS framework without the bloat.",
     "homepage": "http://www.pavilion.io",
     "license": "MIT",
@@ -9,14 +9,16 @@
     "repository": "getpavilion/pavilion",
     "scripts": {
         "start": "grunt",
-        "test": "grunt dev"
+        "test": "grunt dist"
     },
     "keywords": [
         "responsive",
         "framework",
         "minimal",
         "bootstrap",
-        "scss"
+        "scss",
+        "css",
+        "web"
     ],
     "ignore": [
         "prepros.cfg",

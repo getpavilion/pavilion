@@ -1,21 +1,26 @@
 /*
  * Style lists to better fit the overal styles.
+ * Unordered lists, Ordered lists, Description lists + tags
  */
 
-ul {
-    margin-top: 0;
-    margin-bottom: 1.3em;
-    ul {
+ul, ol, dl {
+    margin: 0 0 1.3em 0;
+    padding: 0;
+    list-style-position: inside;
+
+    li {
+        margin-bottom: 0.3em;
+    }
+    dt {
+        margin-top: 0.3em;
+    }
+    dd {
+        margin-left: 1.5rem;
+    }
+
+    // Nested, add padding left for nesting
+    ul, ol, dl {
         margin-bottom: 0;
+        padding-left: 1.5rem;
     }
-}
-
-ol {
-    ol {
-
-    }
-}
-
-dl {
-
 }
