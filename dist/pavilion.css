@@ -448,15 +448,11 @@ textarea {
 /* Border-boxing everythin'. B'cus duh. Oh and remove those goddamn outlines.
    ========================================================================== */
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -723,10 +719,18 @@ textarea {
  * This is the real grid-system-shit.
  */
 .row-flex {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex: 1;
-  flex-wrap: wrap;
-  flex-direction: row;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin-right: -1rem;
   margin-left: -1rem;
 }
@@ -744,220 +748,324 @@ textarea {
   padding-left: 1rem;
   padding-right: 1rem;
   display: block;
-  flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 .row-flex [class^="col-"] {
   position: relative;
-  flex: 0 0 100%;
+  -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
   max-width: 100%;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 .row-flex .col-pp-20 {
-  flex: 0 0 20%;
+  -webkit-flex: 0 0 20%;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
   max-width: 20%;
 }
 .row-flex .col-pp-25 {
-  flex: 0 0 25%;
+  -webkit-flex: 0 0 25%;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
   max-width: 25%;
 }
 .row-flex .col-pp-33 {
-  flex: 0 0 33.3333%;
+  -webkit-flex: 0 0 33.3333%;
+      -ms-flex: 0 0 33.3333%;
+          flex: 0 0 33.3333%;
   max-width: 33.3333%;
 }
 .row-flex .col-pp-40 {
-  flex: 0 0 40%;
+  -webkit-flex: 0 0 40%;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
   max-width: 40%;
 }
 .row-flex .col-pp-50 {
-  flex: 0 0 50%;
+  -webkit-flex: 0 0 50%;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
   max-width: 50%;
 }
 .row-flex .col-pp-60 {
-  flex: 0 0 60%;
+  -webkit-flex: 0 0 60%;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
   max-width: 60%;
 }
 .row-flex .col-pp-66 {
-  flex: 0 0 66.6666%;
+  -webkit-flex: 0 0 66.6666%;
+      -ms-flex: 0 0 66.6666%;
+          flex: 0 0 66.6666%;
   max-width: 66.6666%;
 }
 .row-flex .col-pp-75 {
-  flex: 0 0 75%;
+  -webkit-flex: 0 0 75%;
+      -ms-flex: 0 0 75%;
+          flex: 0 0 75%;
   max-width: 75%;
 }
 .row-flex .col-pp-80 {
-  flex: 0 0 80%;
+  -webkit-flex: 0 0 80%;
+      -ms-flex: 0 0 80%;
+          flex: 0 0 80%;
   max-width: 80%;
 }
 .row-flex .col-pp-100 {
-  flex: 0 0 100%;
+  -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
   max-width: 100%;
 }
 @media (min-width: 540px) {
   .row-flex .col-pl-20 {
-    flex: 0 0 20%;
+    -webkit-flex: 0 0 20%;
+        -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
     max-width: 20%;
   }
   .row-flex .col-pl-25 {
-    flex: 0 0 25%;
+    -webkit-flex: 0 0 25%;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
     max-width: 25%;
   }
   .row-flex .col-pl-33 {
-    flex: 0 0 33.3333%;
+    -webkit-flex: 0 0 33.3333%;
+        -ms-flex: 0 0 33.3333%;
+            flex: 0 0 33.3333%;
     max-width: 33.3333%;
   }
   .row-flex .col-pl-40 {
-    flex: 0 0 40%;
+    -webkit-flex: 0 0 40%;
+        -ms-flex: 0 0 40%;
+            flex: 0 0 40%;
     max-width: 40%;
   }
   .row-flex .col-pl-50 {
-    flex: 0 0 50%;
+    -webkit-flex: 0 0 50%;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
     max-width: 50%;
   }
   .row-flex .col-pl-60 {
-    flex: 0 0 60%;
+    -webkit-flex: 0 0 60%;
+        -ms-flex: 0 0 60%;
+            flex: 0 0 60%;
     max-width: 60%;
   }
   .row-flex .col-pl-66 {
-    flex: 0 0 66.6666%;
+    -webkit-flex: 0 0 66.6666%;
+        -ms-flex: 0 0 66.6666%;
+            flex: 0 0 66.6666%;
     max-width: 66.6666%;
   }
   .row-flex .col-pl-75 {
-    flex: 0 0 75%;
+    -webkit-flex: 0 0 75%;
+        -ms-flex: 0 0 75%;
+            flex: 0 0 75%;
     max-width: 75%;
   }
   .row-flex .col-pl-80 {
-    flex: 0 0 80%;
+    -webkit-flex: 0 0 80%;
+        -ms-flex: 0 0 80%;
+            flex: 0 0 80%;
     max-width: 80%;
   }
   .row-flex .col-pl-100 {
-    flex: 0 0 100%;
+    -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
     max-width: 100%;
   }
 }
 @media (min-width: 768px) {
   .row-flex .col-tp-20 {
-    flex: 0 0 20%;
+    -webkit-flex: 0 0 20%;
+        -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
     max-width: 20%;
   }
   .row-flex .col-tp-25 {
-    flex: 0 0 25%;
+    -webkit-flex: 0 0 25%;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
     max-width: 25%;
   }
   .row-flex .col-tp-33 {
-    flex: 0 0 33.3333%;
+    -webkit-flex: 0 0 33.3333%;
+        -ms-flex: 0 0 33.3333%;
+            flex: 0 0 33.3333%;
     max-width: 33.3333%;
   }
   .row-flex .col-tp-40 {
-    flex: 0 0 40%;
+    -webkit-flex: 0 0 40%;
+        -ms-flex: 0 0 40%;
+            flex: 0 0 40%;
     max-width: 40%;
   }
   .row-flex .col-tp-50 {
-    flex: 0 0 50%;
+    -webkit-flex: 0 0 50%;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
     max-width: 50%;
   }
   .row-flex .col-tp-60 {
-    flex: 0 0 60%;
+    -webkit-flex: 0 0 60%;
+        -ms-flex: 0 0 60%;
+            flex: 0 0 60%;
     max-width: 60%;
   }
   .row-flex .col-tp-66 {
-    flex: 0 0 66.6666%;
+    -webkit-flex: 0 0 66.6666%;
+        -ms-flex: 0 0 66.6666%;
+            flex: 0 0 66.6666%;
     max-width: 66.6666%;
   }
   .row-flex .col-tp-75 {
-    flex: 0 0 75%;
+    -webkit-flex: 0 0 75%;
+        -ms-flex: 0 0 75%;
+            flex: 0 0 75%;
     max-width: 75%;
   }
   .row-flex .col-tp-80 {
-    flex: 0 0 80%;
+    -webkit-flex: 0 0 80%;
+        -ms-flex: 0 0 80%;
+            flex: 0 0 80%;
     max-width: 80%;
   }
   .row-flex .col-tp-100 {
-    flex: 0 0 100%;
+    -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
     max-width: 100%;
   }
 }
 @media (min-width: 991px) {
   .row-flex .col-tl-20 {
-    flex: 0 0 20%;
+    -webkit-flex: 0 0 20%;
+        -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
     max-width: 20%;
   }
   .row-flex .col-tl-25 {
-    flex: 0 0 25%;
+    -webkit-flex: 0 0 25%;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
     max-width: 25%;
   }
   .row-flex .col-tl-33 {
-    flex: 0 0 33.3333%;
+    -webkit-flex: 0 0 33.3333%;
+        -ms-flex: 0 0 33.3333%;
+            flex: 0 0 33.3333%;
     max-width: 33.3333%;
   }
   .row-flex .col-tl-40 {
-    flex: 0 0 40%;
+    -webkit-flex: 0 0 40%;
+        -ms-flex: 0 0 40%;
+            flex: 0 0 40%;
     max-width: 40%;
   }
   .row-flex .col-tl-50 {
-    flex: 0 0 50%;
+    -webkit-flex: 0 0 50%;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
     max-width: 50%;
   }
   .row-flex .col-tl-60 {
-    flex: 0 0 60%;
+    -webkit-flex: 0 0 60%;
+        -ms-flex: 0 0 60%;
+            flex: 0 0 60%;
     max-width: 60%;
   }
   .row-flex .col-tl-66 {
-    flex: 0 0 66.6666%;
+    -webkit-flex: 0 0 66.6666%;
+        -ms-flex: 0 0 66.6666%;
+            flex: 0 0 66.6666%;
     max-width: 66.6666%;
   }
   .row-flex .col-tl-75 {
-    flex: 0 0 75%;
+    -webkit-flex: 0 0 75%;
+        -ms-flex: 0 0 75%;
+            flex: 0 0 75%;
     max-width: 75%;
   }
   .row-flex .col-tl-80 {
-    flex: 0 0 80%;
+    -webkit-flex: 0 0 80%;
+        -ms-flex: 0 0 80%;
+            flex: 0 0 80%;
     max-width: 80%;
   }
   .row-flex .col-tl-100 {
-    flex: 0 0 100%;
+    -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
     max-width: 100%;
   }
 }
 @media (min-width: 1200px) {
   .row-flex .col-dt-20 {
-    flex: 0 0 20%;
+    -webkit-flex: 0 0 20%;
+        -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
     max-width: 20%;
   }
   .row-flex .col-dt-25 {
-    flex: 0 0 25%;
+    -webkit-flex: 0 0 25%;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
     max-width: 25%;
   }
   .row-flex .col-dt-33 {
-    flex: 0 0 33.3333%;
+    -webkit-flex: 0 0 33.3333%;
+        -ms-flex: 0 0 33.3333%;
+            flex: 0 0 33.3333%;
     max-width: 33.3333%;
   }
   .row-flex .col-dt-40 {
-    flex: 0 0 40%;
+    -webkit-flex: 0 0 40%;
+        -ms-flex: 0 0 40%;
+            flex: 0 0 40%;
     max-width: 40%;
   }
   .row-flex .col-dt-50 {
-    flex: 0 0 50%;
+    -webkit-flex: 0 0 50%;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
     max-width: 50%;
   }
   .row-flex .col-dt-60 {
-    flex: 0 0 60%;
+    -webkit-flex: 0 0 60%;
+        -ms-flex: 0 0 60%;
+            flex: 0 0 60%;
     max-width: 60%;
   }
   .row-flex .col-dt-66 {
-    flex: 0 0 66.6666%;
+    -webkit-flex: 0 0 66.6666%;
+        -ms-flex: 0 0 66.6666%;
+            flex: 0 0 66.6666%;
     max-width: 66.6666%;
   }
   .row-flex .col-dt-75 {
-    flex: 0 0 75%;
+    -webkit-flex: 0 0 75%;
+        -ms-flex: 0 0 75%;
+            flex: 0 0 75%;
     max-width: 75%;
   }
   .row-flex .col-dt-80 {
-    flex: 0 0 80%;
+    -webkit-flex: 0 0 80%;
+        -ms-flex: 0 0 80%;
+            flex: 0 0 80%;
     max-width: 80%;
   }
   .row-flex .col-dt-100 {
-    flex: 0 0 100%;
+    -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
     max-width: 100%;
   }
 }
@@ -968,31 +1076,49 @@ textarea {
  * On rows, so it applies to all items inside the row.
  */
 .row-flex.items-top {
-  align-items: flex-start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 .row-flex.items-center-v {
-  align-items: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .row-flex.items-bottom {
-  align-items: flex-end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 .row-flex.items-baseline {
-  align-items: baseline;
+  -webkit-align-items: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 .row-flex.items-left {
-  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 .row-flex.items-center-h {
-  justify-content: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .row-flex.items-right {
-  justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 .row-flex.items-spaced-around {
-  justify-content: space-around;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
 }
 .row-flex.items-spaced-between {
-  justify-content: space-between;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 /**
@@ -1000,27 +1126,39 @@ textarea {
  */
 .row-flex [class^="col-"].item-top,
 .row-flex .col.item-top {
-  align-self: flex-start;
+  -webkit-align-self: flex-start;
+      -ms-flex-item-align: start;
+          align-self: flex-start;
 }
 .row-flex [class^="col-"].item-center-v,
 .row-flex .col.item-center-v {
-  align-self: center;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
 }
 .row-flex [class^="col-"].item-bottom,
 .row-flex .col.item-bottom {
-  align-self: flex-end;
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
 }
 .row-flex [class^="col-"].item-baseline,
 .row-flex .col.item-baseline {
-  align-self: baseline;
+  -webkit-align-self: baseline;
+      -ms-flex-item-align: baseline;
+          align-self: baseline;
 }
 .row-flex [class^="col-"].item-first,
 .row-flex .col.item-first {
-  order: -1;
+  -webkit-order: -1;
+      -ms-flex-order: -1;
+          order: -1;
 }
 .row-flex [class^="col-"].item-last,
 .row-flex .col.item-last {
-  order: 1;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 /* Offsets, b'cus offsetting shit is the shit
@@ -1786,7 +1924,7 @@ h6 {
 }
 
 blockquote {
-  border-left: 4px solid #E1E1E1;
+  border-left: 4px solid #5DBA8E;
   padding: 0.2em 0 0.2em 1em;
   margin: 1em 0 1.3em 0;
 }
@@ -1810,6 +1948,8 @@ blockquote footer cite {
  * Code, User input and Pre's!
  */
 code {
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 0.95em;
   padding: 0 0.5em;
   background: #E1E1E1;
   border-radius: 3px;
@@ -1818,6 +1958,8 @@ code {
 }
 
 kbd {
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 0.95em;
   padding: 0 0.5em;
   background: #333;
   color: white;
@@ -1827,13 +1969,15 @@ kbd {
 }
 
 pre {
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 0.95em;
   display: block;
   padding: 0.7rem 1rem;
   line-height: 1.5;
   background-color: #E1E1E1;
   border-radius: 3px;
-  font-size: inherit;
   overflow: auto;
+  white-space: pre-line;
 }
 
 /* Helperclasses
@@ -2077,7 +2221,8 @@ pre {
   /* for font awesome icons in buttons, fix margin */
 }
 .button-default:active {
-  transform: scale(0.97);
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
 }
 .button-default:hover, .button-default:visited, .button-default:focus {
   background-color: #44a074;
@@ -2110,7 +2255,8 @@ pre {
   /* for font awesome icons in buttons, fix margin */
 }
 .button-outlined:active {
-  transform: scale(0.97);
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
 }
 .button-outlined:hover, .button-outlined:visited, .button-outlined:focus {
   border-color: #44a074;
@@ -2143,7 +2289,8 @@ pre {
   /* for font awesome icons in buttons, fix margin */
 }
 .button-stripped:active {
-  transform: scale(0.97);
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
 }
 .button-stripped:hover {
   color: #44a074;
@@ -2185,17 +2332,17 @@ ul ul, ul ol, ul dl, ol ul, ol ol, ol dl, dl ul, dl ol, dl dl {
  * Here you'll find basic styling for the forms.
  * Only the most common form elements are styled, so the rest is up to you!
  */
-.form-default {
+form {
   /* Clearfix the shit out of it */
   width: 100%;
   display: block;
   margin-bottom: 1rem;
 }
-.form-default:before, .form-default:after {
+form:before, form:after {
   content: " ";
   display: table;
 }
-.form-default:after {
+form:after {
   clear: both;
 }
 
@@ -2226,7 +2373,6 @@ label.checkbox input, label.radio input {
 }
 label.checkbox input[type="checkbox"], label.radio input[type="checkbox"] {
   top: 0.25em;
-  appearance: checkbox;
 }
 @media (min-width: 768px) {
   label.checkbox input[type="checkbox"], label.radio input[type="checkbox"] {
@@ -2235,7 +2381,6 @@ label.checkbox input[type="checkbox"], label.radio input[type="checkbox"] {
 }
 label.checkbox input[type="radio"], label.radio input[type="radio"] {
   top: 0.15em;
-  appearance: radio;
 }
 @media (min-width: 768px) {
   label.checkbox input[type="radio"], label.radio input[type="radio"] {
@@ -2261,7 +2406,7 @@ textarea {
   font-size: inherit;
   line-height: 2.475;
   display: block;
-  width: 100%;
+  width: 100% !important;
   background-color: transparent;
   border: 2px solid #E1E1E1;
   border-radius: 3px;
@@ -2269,7 +2414,6 @@ textarea {
   padding: 0 1rem;
   margin-top: 0.3rem;
   margin-bottom: 1.2rem;
-  appearance: none;
 }
 input::-webkit-input-placeholder,
 select::-webkit-input-placeholder,
@@ -2304,6 +2448,9 @@ textarea {
 }
 
 select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   cursor: pointer;
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Angle_down_font_awesome.svg/512px-Angle_down_font_awesome.svg.png");
   background-size: 20px;
@@ -2333,10 +2480,7 @@ table {
   width: 100%;
   background-color: transparent;
   border-collapse: collapse;
-}
-table caption {
-  padding: 0.4rem 0;
-  text-align: left;
+  margin-bottom: 1.3em;
 }
 table > thead > tr > th {
   text-align: left;
