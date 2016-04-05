@@ -1,6 +1,6 @@
 {
   "name": "pavilion",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A minimal CSS framework without the bloat.",
   "homepage": "http://www.pavilion.io",
   "license": "MIT",
@@ -40,10 +40,6 @@
   },
   "engines": {
     "node": ">=0.12.0"
-  },
-  "scripts": {
-    "start": "grunt",
-    "test": "grunt dist"
   },
   "bugs": {
     "url": "https://github.com/getpavilion/pavilion/issues"
