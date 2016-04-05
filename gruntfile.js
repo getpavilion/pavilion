@@ -19,7 +19,7 @@ module.exports = function(grunt) {
             },
             sass: {
                 files: 'scss/**/*.scss',
-                tasks: 'sass'
+                tasks: ['clean','sass', 'autoprefixer']
             }
         },
 
@@ -62,7 +62,7 @@ module.exports = function(grunt) {
             mincss: {
                 options: {
                     browsers: [
-                        'last 2 versions'
+                        'last 3 versions'
                     ],
                     map: {
                         inline: false
