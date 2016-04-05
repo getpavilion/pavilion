@@ -73,5 +73,53 @@ h6 {
 }
 
 blockquote {
-    // style here
+    border-left: 4px solid $soft-gray;
+    padding: 0.2em 0 0.2em 1em;
+    margin: 1em 0 1.3em 0;
+    ol:last-of-type,
+    p:last-of-type,
+    ul:last-of-type {
+        margin-bottom: 0;
+    }
+    footer {
+        &:before {
+            content: '\2014 \00A0';
+        }
+        margin-top: 0.5em;
+        font-size: 0.75em;
+        cite {
+            font-style: italic;
+        }
+    }
+}
+
+/*
+ * Code, User input and Pre's!
+ */
+
+code {
+    padding: 0 0.5em;
+    background: $soft-gray;
+    border-radius: $small-radius;
+    display: inline-block;
+    vertical-align: inherit;
+}
+
+kbd {
+    padding: 0 0.5em;
+    background: $body-copy-color;
+    color: white;
+    border-radius: $small-radius;
+    display: inline-block;
+    vertical-align: inherit;
+}
+
+pre {
+    display: block;
+    padding: 0.7rem 1rem;
+    line-height: $line-height-normal;
+    background-color: $soft-gray;
+    border-radius: $small-radius;
+    font-size: inherit;
+    overflow: auto;
 }
