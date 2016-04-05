@@ -23,7 +23,8 @@
   "ignore": [
     "prepros.cfg",
     ".gitignore",
-    "package.json"
+    "package.json",
+    "bower.json"
   ],
   "devDependencies": {
     "grunt": "^0.4.5",
