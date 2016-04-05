@@ -1,6 +1,6 @@
 {
   "name": "pavilion",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "A minimal CSS framework without the bloat.",
   "homepage": "http://www.pavilion.io",
   "license": "MIT",
@@ -24,8 +24,10 @@
     "prepros.cfg",
     ".gitignore",
     ".npmignore",
-    "package.json",
-    "bower.json"
+    "bower.json",
+    "CHANGELOG.md",
+    "README.md",
+    "demo"
   ],
   "devDependencies": {
     "grunt": "^0.4.5",
