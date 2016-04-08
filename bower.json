@@ -20,6 +20,7 @@
     "prepros.cfg",
     ".gitignore",
     ".npmignore",
-    ".travis.yml"
+    ".travis.yml",
+    "bower.json"
   ]
 }

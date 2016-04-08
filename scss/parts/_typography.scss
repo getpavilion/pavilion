@@ -72,6 +72,10 @@ h6 {
     font-size: 0.75em;
 }
 
+/*
+ * Blockquotes
+ */
+
 blockquote {
     border-left: 4px solid $primary-color;
     padding: 0.2em 0 0.2em 1em;
@@ -97,35 +101,32 @@ blockquote {
  * Code, User input and Pre's!
  */
 
-code {
+code, kbd, pre {
     font-family: $mono-font-family;
     font-size: 0.95em;
-    padding: 0 0.5em;
-    background: $soft-gray;
     border-radius: $small-radius;
+}
+
+code {
+    padding: 0 0.5em;
     display: inline-block;
+    background: $soft-gray;
     vertical-align: inherit;
 }
 
 kbd {
-    font-family: $mono-font-family;
-    font-size: 0.95em;
     padding: 0 0.5em;
-    background: $body-copy-color;
-    color: white;
-    border-radius: $small-radius;
     display: inline-block;
+    background: $body-copy-color;
     vertical-align: inherit;
+    color: white;
 }
 
 pre {
-    font-family: $mono-font-family;
-    font-size: 0.95em;
-    display: block;
     padding: 0.7rem 1rem;
-    line-height: $line-height-normal;
+    display: block;
     background-color: $soft-gray;
-    border-radius: $small-radius;
+    line-height: $line-height-normal;
     overflow: auto;
     white-space: pre-line;
 }

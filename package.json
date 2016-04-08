@@ -23,7 +23,6 @@
   "ignore": [
     "prepros.cfg",
     ".gitignore",
-    "package.json",
     "bower.json",
     ".travis.yml"
   ],
