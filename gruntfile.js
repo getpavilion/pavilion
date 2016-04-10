@@ -19,7 +19,7 @@ module.exports = function(grunt) {
             },
             sass: {
                 files: 'scss/**/*.scss',
-                tasks: ['clean','sass', 'autoprefixer']
+                tasks: 'dist'
             }
         },
 
@@ -94,6 +94,16 @@ module.exports = function(grunt) {
                     'demo/css/pavilion.min.css': 'demo/css/pavilion.min.css'
                 }
             }
+        },
+        comments: {
+            css: {
+                // Target-specific file lists and/or options go here.
+                options: {
+                    singleline: false,
+                    multiline: true
+                },
+                src: ['dist/pavilion.css'] // files to remove comments from
+            },
         }
 
     });
@@ -108,7 +118,8 @@ module.exports = function(grunt) {
     grunt.registerTask('dist', [
         'clean',
         'sass',
-        'autoprefixer'
+        'autoprefixer',
+        'comments'
     ]);
 
     require('load-grunt-tasks')(grunt);
