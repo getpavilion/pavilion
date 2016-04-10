@@ -1,5 +1,9 @@
-/*
- * Standard tables'n shit
+/* Tables
+   ========================================================================== */
+
+/**
+ * Here you'll find basic styling for the tables.
+ * Nothing special, just minimal and nice.
  */
 
 table {
@@ -26,6 +30,17 @@ table {
                 padding: 0.6rem 0;
                 vertical-align: top;
                 border-bottom: 1px solid $soft-gray;
+            }
+        }
+    }
+    > tfoot {
+        > tr {
+            > td {
+                font-weight: $font-weight-bold;
+                text-align: left;
+                padding: 0.6rem 0;
+                vertical-align: top;
+                border-bottom: none;
             }
         }
     }

@@ -2,8 +2,8 @@
    ========================================================================== */
 
 /**
-  * show @ viewports and shit.
-  **/
+  * show @ specific viewport.
+  */
 
 .show-pp,
 .show-pl,
@@ -85,8 +85,8 @@
 }
 
 /**
-  * hide @ viewports and shit.
-  **/
+  * hide @ specific viewport.
+  */
 
 @media(max-width: $phone-landscape-size - 1) {
     .hide-pp {
@@ -118,12 +118,12 @@
   * Clearfix
   */
 
-.clear-fix {
+.clearfix {
     @include clearfix;
 }
 
 /**
-  * Text aligns and shit, per viewport.
+  * Text aligns @ specific viewport
   */
 
 .text-center {

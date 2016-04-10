@@ -1,10 +1,12 @@
+/* Variables, the fun stuff!
+   ========================================================================== */
 /**
-  * Component & Type sizing, normal and small - for phones and shit.
+  * Component & Type sizing, normal and small.
   */
 /* Adjust this to adjust your REM sizes on tablets and larger screens, 1REM equals the size you set here. */
-/* Adjust this to adjust your EM shit on tablets and larger screens. Typically typography. 1EM equals the size you set here.*/
+/* Adjust this to adjust your EM sizes on tablets and larger screens. EM is used for typography. 1EM equals the size you set here.*/
 /* Adjust this to adjust your REM sizes on phones, 1REM equals the size you set here. */
-/* Adjust this to adjust your EM shit on phones. Typically typography. 1EM equals the size you set here.*/
+/* Adjust this to adjust your EM sizes on phones. EM is used for typography. 1EM equals the size you set here.*/
 /**
   * Line-height
   */
@@ -12,13 +14,13 @@
 /**
   * Breakpoints
   */
-/* Phone landscape minimum / Phone portrait maximum + 1 */
+/* Phone landscape minimum (= Phone portrait maximum + 1) */
 /* Tablet portrait minimum */
 /* Tablet landscape minimum */
 /* Desktop minimum */
 /* Margin that add ups to the breakpoints, you don't want to size down all the way tot he content area */
 /**
-  * Colarzz
+  * Colors and tints
   */
 /**
   * Border radius
@@ -31,16 +33,16 @@
 /**
   * Base font stack
   */
-/* Mixins! Yeahhhhhhhhh.
+/* Mixins
    ========================================================================== */
 /*
  * Container
  */
 /**
-  * Buttons
+  * Button
   */
 /**
-  * Clearfix, b'cus its handy, duh.
+  * Clearfix
   */
 /*! normalize.css v4.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -445,8 +447,12 @@ textarea {
   -webkit-appearance: none;
 }
 
-/* Border-boxing everythin'. B'cus duh. Oh and remove those goddamn outlines.
+/* Grid system & Layout items
    ========================================================================== */
+/**
+  * Border-box-sizing on all elements.
+  * Remove outlines on focus & visited for cleaner styling.
+  */
 * {
   box-sizing: border-box;
 }
@@ -460,14 +466,11 @@ textarea {
   outline: none !important;
 }
 
-/* Container sizes
-   ========================================================================== */
 /**
- * The container had the size of the breakpoint minus 20px ($breakmargin).
- * ".container-fluid" spans the full width.
- */
+  * Container base styles.
+  */
 .container,
-.container-fluid,
+.container-full-width,
 .container-pp,
 .container-pl,
 .container-tp,
@@ -477,7 +480,7 @@ textarea {
   padding-right: 1rem;
 }
 .container:before,
-.container-fluid:before,
+.container-full-width:before,
 .container-pp:before,
 .container-pl:before,
 .container-tp:before,
@@ -486,7 +489,7 @@ textarea {
   display: table;
 }
 .container:after,
-.container-fluid:after,
+.container-full-width:after,
 .container-pp:after,
 .container-pl:after,
 .container-tp:after,
@@ -497,10 +500,9 @@ textarea {
 }
 
 /**
- * Media queries for containers, set container size per media query.
- */
+  * Media queries for containers, set container size per media query.
+  */
 @media (min-width: 540px) {
-  /* min-width: 540px */
   .container,
   .container-tl,
   .container-tp,
@@ -509,7 +511,6 @@ textarea {
   }
 }
 @media (min-width: 768px) {
-  /* min-width: 748px */
   .container,
   .container-tl,
   .container-tp {
@@ -517,23 +518,19 @@ textarea {
   }
 }
 @media (min-width: 991px) {
-  /* min-width: 991px */
   .container,
   .container-tl {
     max-width: 971px;
   }
 }
 @media (min-width: 1200px) {
-  /* min-width: 1200px */
   .container {
     max-width: 1180px;
   }
 }
-/* Rows and columns NO FLEX
-   ========================================================================== */
 /**
- * This is the real grid-system-shit.
- */
+  * Rows & Columns - No flexbox
+  */
 .row {
   margin-right: -1rem;
   margin-left: -1rem;
@@ -713,11 +710,9 @@ textarea {
   }
 }
 
-/* Rows and columns WITH FLEX
-   ========================================================================== */
 /**
- * This is the real grid-system-shit.
- */
+  * Rows & Columns - Flexbox
+  */
 .row-flex {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1070,11 +1065,10 @@ textarea {
   }
 }
 
-/* Flex positioning helpers
-   ========================================================================== */
 /**
- * On rows, so it applies to all items inside the row.
- */
+  * Flex positioning classes for flex containers.
+  * Targets all child flex items.
+  */
 .row-flex.items-top {
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
@@ -1122,7 +1116,7 @@ textarea {
 }
 
 /**
- * On individual items.
+ * Styles for individual flex-items
  */
 .row-flex [class^="col-"].item-top,
 .row-flex .col.item-top {
@@ -1161,8 +1155,9 @@ textarea {
           order: 1;
 }
 
-/* Offsets, b'cus offsetting shit is the shit
-   ========================================================================== */
+/**
+  * Offsets for columns
+  */
 @media (max-width: 539px) {
   .offset-pp-10 {
     margin-left: 10%;
@@ -1388,8 +1383,9 @@ textarea {
     margin-left: 80%;
   }
 }
-/* Push dem around yo.
-   ========================================================================== */
+/**
+  * Push classes for columns
+  */
 @media (max-width: 539px) {
   .push-pp-10 {
     left: 10%;
@@ -1615,8 +1611,9 @@ textarea {
     left: 80%;
   }
 }
-/* But you can also pull!
-   ========================================================================== */
+/**
+  * Pull classes for columns
+  */
 @media (max-width: 539px) {
   .pull-pp-10 {
     right: 10%;
@@ -1842,8 +1839,10 @@ textarea {
     right: 80%;
   }
 }
+/* Typography
+   ========================================================================== */
 /**
-  * Typography by type-scale.com
+  * Typography scale by type-scale.com
   */
 html {
   font-size: 10px;
@@ -1923,6 +1922,9 @@ h6 {
   font-size: 0.75em;
 }
 
+/*
+ * Blockquotes
+ */
 blockquote {
   border-left: 4px solid #5DBA8E;
   padding: 0.2em 0 0.2em 1em;
@@ -1945,37 +1947,34 @@ blockquote footer cite {
 }
 
 /*
- * Code, User input and Pre's!
+ * Code, User input and Pre
  */
-code {
+code, kbd, pre {
   font-family: "Lucida Console", Monaco, monospace;
   font-size: 0.95em;
-  padding: 0 0.5em;
-  background: #E1E1E1;
   border-radius: 3px;
+}
+
+code {
+  padding: 0 0.5em;
   display: inline-block;
+  background: #E1E1E1;
   vertical-align: inherit;
 }
 
 kbd {
-  font-family: "Lucida Console", Monaco, monospace;
-  font-size: 0.95em;
   padding: 0 0.5em;
-  background: #333;
-  color: white;
-  border-radius: 3px;
   display: inline-block;
+  background: #333;
   vertical-align: inherit;
+  color: white;
 }
 
 pre {
-  font-family: "Lucida Console", Monaco, monospace;
-  font-size: 0.95em;
-  display: block;
   padding: 0.7rem 1rem;
-  line-height: 1.5;
+  display: block;
   background-color: #E1E1E1;
-  border-radius: 3px;
+  line-height: 1.5;
   overflow: auto;
   white-space: pre-line;
 }
@@ -1983,8 +1982,8 @@ pre {
 /* Helperclasses
    ========================================================================== */
 /**
-  * show @ viewports and shit.
-  **/
+  * show @ specific viewport.
+  */
 .show-pp,
 .show-pl,
 .show-tp,
@@ -2074,8 +2073,8 @@ pre {
   }
 }
 /**
-  * hide @ viewports and shit.
-  **/
+  * hide @ specific viewport.
+  */
 @media (max-width: 539px) {
   .hide-pp {
     display: none !important;
@@ -2104,16 +2103,16 @@ pre {
 /**
   * Clearfix
   */
-.clear-fix:before, .clear-fix:after {
+.clearfix:before, .clearfix:after {
   content: " ";
   display: table;
 }
-.clear-fix:after {
+.clearfix:after {
   clear: both;
 }
 
 /**
-  * Text aligns and shit, per viewport.
+  * Text aligns @ specific viewport
   */
 .text-center {
   text-align: center;
@@ -2195,8 +2194,7 @@ pre {
 /* Buttons, for the sake of completenesssss.....
    ========================================================================== */
 /**
-  * Wow...three buttons.
-  * We've got three button styles: default, outlined and...(drums)... stripped...ooh baby (badum-tss).
+  * We've got three button styles: default, outlined and...(drums)... stripped...whoooooh baby! (badum-tss).
   * All of the buttons include the standard button styles, look them up in the mixins.
   */
 .button-default {
@@ -2303,6 +2301,8 @@ pre {
   color: #41996f;
 }
 
+/* Lists: ul, ol, dl.
+   ========================================================================== */
 /*
  * Style lists to better fit the overal styles.
  * Unordered lists, Ordered lists, Description lists + tags
@@ -2326,14 +2326,13 @@ ul ul, ul ol, ul dl, ol ul, ol ol, ol dl, dl ul, dl ol, dl dl {
   padding-left: 1.5rem;
 }
 
-/* Forms
+/* Forms. Don't you hate styling forms? We've dunnit for you.
    ========================================================================== */
 /**
- * Here you'll find basic styling for the forms.
- * Only the most common form elements are styled, so the rest is up to you!
+ * Basic styling for the forms.
+ * Common form elements are styled, so the rest is up to you!
  */
 form {
-  /* Clearfix the shit out of it */
   width: 100%;
   display: block;
   margin-bottom: 1rem;
@@ -2346,12 +2345,19 @@ form:after {
   clear: both;
 }
 
+/**
+  * Fieldsets give a nice touch, they add extra margin's on the top and bottom.
+  * Good for readability.
+  */
 fieldset {
   border: 0;
   padding: 0;
   margin: 1rem 0;
 }
 
+/**
+  * Label styling and checkbox/radio styling inside labels.
+  */
 label {
   font-weight: 700;
   display: block;
@@ -2388,6 +2394,9 @@ label.checkbox input[type="radio"], label.radio input[type="radio"] {
   }
 }
 
+/**
+  * Wrapper for radio-button groups
+  */
 .radio-wrapper {
   margin-top: 0.3rem;
   margin-bottom: 1.2rem;
@@ -2398,6 +2407,9 @@ label.checkbox input[type="radio"], label.radio input[type="radio"] {
   margin-bottom: 0.5rem;
 }
 
+/**
+  * Global styling for inputs
+  */
 input,
 select,
 textarea {
@@ -2447,6 +2459,9 @@ textarea {
   line-height: 1.5;
 }
 
+/**
+  * Extra styles for the select input
+  */
 select {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -2472,8 +2487,11 @@ hr {
   border-top: 2px solid #E1E1E1;
 }
 
-/*
- * Standard tables'n shit
+/* Tables
+   ========================================================================== */
+/**
+ * Here you'll find basic styling for the tables.
+ * Nothing special, just minimal and nice.
  */
 table {
   max-width: 100%;
@@ -2494,4 +2512,11 @@ table > tbody > tr > td {
   padding: 0.6rem 0;
   vertical-align: top;
   border-bottom: 1px solid #E1E1E1;
+}
+table > tfoot > tr > td {
+  font-weight: 700;
+  text-align: left;
+  padding: 0.6rem 0;
+  vertical-align: top;
+  border-bottom: none;
 }

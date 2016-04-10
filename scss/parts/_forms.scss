@@ -1,25 +1,32 @@
-/* Forms
+/* Forms. Don't you hate styling forms? We've dunnit for you.
    ========================================================================== */
 
-
 /**
- * Here you'll find basic styling for the forms.
- * Only the most common form elements are styled, so the rest is up to you!
+ * Basic styling for the forms.
+ * Common form elements are styled, so the rest is up to you!
  */
 
 form {
     @include clearfix;
-    /* Clearfix the shit out of it */
     width: 100%;
     display: block;
     margin-bottom: 1rem;
 }
+
+/**
+  * Fieldsets give a nice touch, they add extra margin's on the top and bottom.
+  * Good for readability.
+  */
 
 fieldset {
     border: 0;
     padding: 0;
     margin: 1rem 0;
 }
+
+/**
+  * Label styling and checkbox/radio styling inside labels.
+  */
 
 label {
     font-weight: $font-weight-bold;
@@ -54,6 +61,10 @@ label {
     }
 }
 
+/**
+  * Wrapper for radio-button groups
+  */
+
 .radio-wrapper {
     margin-top: 0.3rem;
     margin-bottom: 1.2rem;
@@ -63,6 +74,10 @@ label {
         margin-bottom: 0.5rem;
     }
 }
+
+/**
+  * Global styling for inputs
+  */
 
 input,
 select,
@@ -102,6 +117,10 @@ textarea {
     padding: 0.7rem 1rem;
     line-height: $line-height-normal;
 }
+
+/**
+  * Extra styles for the select input
+  */
 
 select {
     appearance: none;

@@ -1,5 +1,10 @@
-/* Border-boxing everythin'. B'cus duh. Oh and remove those goddamn outlines.
+/* Grid system & Layout items
    ========================================================================== */
+
+/**
+  * Border-box-sizing on all elements.
+  * Remove outlines on focus & visited for cleaner styling.
+  */
 
 * {
     -webkit-box-sizing: border-box;
@@ -18,29 +23,25 @@
     outline: none !important;
 }
 
-/* Container sizes
-   ========================================================================== */
-
-
 /**
- * The container had the size of the breakpoint minus 20px ($breakmargin).
- * ".container-fluid" spans the full width.
- */
+  * Container base styles.
+  */
 
 .container,
-.container-fluid,
+.container-full-width,
 .container-pp,
 .container-pl,
 .container-tp,
 .container-tl {
-    @include container;
+    @include container; // see mixins
 }
 
-/**
- * Media queries for containers, set container size per media query.
- */
 
-@media (min-width: $phone-landscape-size) { /* min-width: 540px */
+/**
+  * Media queries for containers, set container size per media query.
+  */
+
+@media (min-width: $phone-landscape-size) {
     .container,
     .container-tl,
     .container-tp,
@@ -49,7 +50,7 @@
     }
 }
 
-@media (min-width: $tablet-portrait-size) { /* min-width: 748px */
+@media (min-width: $tablet-portrait-size) {
     .container,
     .container-tl,
     .container-tp {
@@ -57,27 +58,23 @@
     }
 }
 
-@media (min-width: $tablet-landscape-size) { /* min-width: 991px */
+@media (min-width: $tablet-landscape-size) {
     .container,
     .container-tl {
         max-width: $tablet-landscape-size - $breakmargin;
     }
 }
 
-@media (min-width: $desktop-size) { /* min-width: 1200px */
+@media (min-width: $desktop-size) {
     .container {
         max-width: $desktop-size - $breakmargin;
     }
 }
 
 
-/* Rows and columns NO FLEX
-   ========================================================================== */
-
-
 /**
- * This is the real grid-system-shit.
- */
+  * Rows & Columns - No flexbox
+  */
 
 .row {
     margin-right: -1rem;
@@ -258,14 +255,9 @@
     }
 }
 
-
-/* Rows and columns WITH FLEX
-   ========================================================================== */
-
-
 /**
- * This is the real grid-system-shit.
- */
+  * Rows & Columns - Flexbox
+  */
 
 .row-flex {
     display: flex;
@@ -507,14 +499,10 @@
     }
 }
 
-
-/* Flex positioning helpers
-   ========================================================================== */
-
-
 /**
- * On rows, so it applies to all items inside the row.
- */
+  * Flex positioning classes for flex containers.
+  * Targets all child flex items.
+  */
 
 .row-flex {
     &.items-top {
@@ -548,7 +536,7 @@
 
 
 /**
- * On individual items.
+ * Styles for individual flex-items
  */
 
 .row-flex {
@@ -576,8 +564,9 @@
 }
 
 
-/* Offsets, b'cus offsetting shit is the shit
-   ========================================================================== */
+/**
+  * Offsets for columns
+  */
 
 @media(max-width: $phone-landscape-size - 1) {
     .offset-pp-10 {
@@ -759,8 +748,10 @@
     }
 }
 
-/* Push dem around yo.
-   ========================================================================== */
+
+/**
+  * Push classes for columns
+  */
 
 @media(max-width: $phone-landscape-size - 1) {
     .push-pp-10 {
@@ -942,8 +933,9 @@
     }
 }
 
-/* But you can also pull!
-   ========================================================================== */
+/**
+  * Pull classes for columns
+  */
 
 @media(max-width: $phone-landscape-size - 1) {
     .pull-pp-10 {
