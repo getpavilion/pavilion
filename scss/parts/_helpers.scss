@@ -197,3 +197,32 @@
         text-align: right;
     }
 }
+
+/*
+ * Test classes for the grid and elements
+ */
+
+.show-elements {
+    outline: 1px solid rgba(#000, 0.3);
+    * {
+        outline: 1px solid rgba(blue, 0.4);
+    }
+}
+
+.test-block {
+    &:before {
+        content: "Test block";
+        margin: 0 auto;
+        display: block;
+        padding: 3rem 0;
+        text-align: center;
+        opacity: 0.6;
+        vertical-align: middle;
+        background-color: $soft-gray;
+        border-radius: $small-radius;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
