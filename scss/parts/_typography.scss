@@ -48,30 +48,33 @@ h6 {
     line-height: 1.2;
 }
 
-h1 {
-    margin-top: 0;
+h1, .h1 {
+    &:not(.h1) {
+        margin-top: 0;
+    }
     font-size: 3.157em;
 }
 
-h2 {
+h2, .h2 {
     font-size: 2.369em;
 }
 
-h3 {
+h3, .h3 {
     font-size: 1.777em;
 }
 
-h4 {
+h4, .h4 {
     font-size: 1.333em;
 }
 
-h5 {
+h5, .h5 {
+    &:not(.h5) {
+        font-weight: $font-weight-bold;
+    }
     font-size: 1em;
-    font-weight: $font-weight-bold;
 }
 
-small,
-h6 {
+small, h6, .h6 {
     font-size: 0.75em;
 }
 
@@ -106,7 +109,7 @@ blockquote {
 
 code, kbd, pre {
     font-family: $mono-font-family;
-    font-size: 0.95em;
+    font-size: 0.9em;
     border-radius: $small-radius;
 }
 
@@ -114,14 +117,14 @@ code {
     padding: 0 0.5em;
     display: inline-block;
     background: $soft-gray;
-    vertical-align: inherit;
+    vertical-align: baseline;
 }
 
 kbd {
     padding: 0 0.5em;
     display: inline-block;
     background: $body-copy-color;
-    vertical-align: inherit;
+    vertical-align: baseline;
     color: white;
 }
 
@@ -131,5 +134,19 @@ pre {
     background-color: $soft-gray;
     line-height: $line-height-normal;
     overflow: auto;
-    white-space: pre-line;
+    white-space: pre-wrap;
+}
+
+/*
+ * Dropcap
+ */
+
+.dropcap:first-letter {
+    font-size: 3em;
+    float: left;
+    margin-top: 0;
+    margin-right: 0.5rem;
+    line-height: 1;
+    margin-left: -0.2rem;
+    text-transform: uppercase;
 }
