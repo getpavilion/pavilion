@@ -1,0 +1,71 @@
+/*
+ * Here you'll find the flexbox styles.
+ * The row & column styles for flexbox are to be found in _grid.scss
+ */
+
+.display-flex {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+/**
+  * Flex positioning classes for flex containers.
+  * Targets all child flex items.
+  */
+
+.row-flex,
+.display-flex {
+
+    /* On all items - add to parent container */
+
+    &.items-top {
+        align-items: flex-start;
+    }
+    &.items-center-v {
+        align-items: center;
+    }
+    &.items-bottom {
+        align-items: flex-end;
+    }
+    &.items-baseline {
+        align-items: baseline;
+    }
+    &.items-left {
+        justify-content: flex-start;
+    }
+    &.items-center-h {
+        justify-content: center;
+    }
+    &.items-right {
+        justify-content: flex-end;
+    }
+    &.items-spaced-around {
+        justify-content: space-around;
+    }
+    &.items-spaced-between {
+        justify-content: space-between;
+    }
+
+    /* On individual items */
+
+    .item-top {
+        align-self: flex-start;
+    }
+    .item-center-v {
+        align-self: center;
+    }
+    .item-bottom {
+        align-self: flex-end;
+    }
+    .item-baseline {
+        align-self: baseline;
+    }
+    .item-first {
+        order: -1;
+    }
+    .item-last {
+        order: 1;
+    }
+}
