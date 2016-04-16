@@ -77,8 +77,12 @@
   */
 
 .row {
-    margin-right: -1rem;
-    margin-left: -1rem;
+    margin-right: -1.5rem;
+    margin-left: -1.5rem;
+    @media(min-width: $tablet-portrait-size) {
+        margin-right: -1rem;
+        margin-left: -1rem;
+    }
     &:before {
         content: " ";
         display: table;
@@ -90,10 +94,14 @@
     }
     [class^="col-"] {
         position: relative;
-        padding-left: 1rem;
-        padding-right: 1rem;
         width: 100%;
         float: left;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+        @media(min-width: $tablet-portrait-size) {
+            padding-right: 1rem;
+            padding-left: 1rem;
+        }
     }
     .col-pp-20 {
         width: 20%;
@@ -264,8 +272,12 @@
     flex: 1;
     flex-wrap: wrap;
     flex-direction: row;
-    margin-right: -1rem;
-    margin-left: -1rem;
+    margin-right: -1.5rem;
+    margin-left: -1.5rem;
+    @media(min-width: $tablet-portrait-size) {
+        margin-right: -1rem;
+        margin-left: -1rem;
+    }
     &:before {
         content: " ";
         display: table;
@@ -277,17 +289,25 @@
     }
     .col {
         position: relative;
-        padding-left: 1rem;
-        padding-right: 1rem;
         display: block;
         flex: 1;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+        @media(min-width: $tablet-portrait-size) {
+            padding-right: 1rem;
+            padding-left: 1rem;
+        }
     }
     [class^="col-"] {
         position: relative;
         flex: 0 0 100%;
         max-width: 100%;
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+        @media(min-width: $tablet-portrait-size) {
+            padding-right: 1rem;
+            padding-left: 1rem;
+        }
     }
     .col-pp-20 {
         flex: 0 0 20%;
@@ -498,71 +518,6 @@
         }
     }
 }
-
-/**
-  * Flex positioning classes for flex containers.
-  * Targets all child flex items.
-  */
-
-.row-flex {
-    &.items-top {
-        align-items: flex-start;
-    }
-    &.items-center-v {
-        align-items: center;
-    }
-    &.items-bottom {
-        align-items: flex-end;
-    }
-    &.items-baseline {
-        align-items: baseline;
-    }
-    &.items-left {
-        justify-content: flex-start;
-    }
-    &.items-center-h {
-        justify-content: center;
-    }
-    &.items-right {
-        justify-content: flex-end;
-    }
-    &.items-spaced-around {
-        justify-content: space-around;
-    }
-    &.items-spaced-between {
-        justify-content: space-between;
-    }
-}
-
-
-/**
- * Styles for individual flex-items
- */
-
-.row-flex {
-    [class^="col-"],
-    .col {
-        &.item-top {
-            align-self: flex-start;
-        }
-        &.item-center-v {
-            align-self: center;
-        }
-        &.item-bottom {
-            align-self: flex-end;
-        }
-        &.item-baseline {
-            align-self: baseline;
-        }
-        &.item-first {
-            order: -1;
-        }
-        &.item-last {
-            order: 1;
-        }
-    }
-}
-
 
 /**
   * Offsets for columns
