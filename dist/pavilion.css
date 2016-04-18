@@ -1640,9 +1640,34 @@ p {
   font-size: 1em;
 }
 
-.lead {
-  font-size: 1.1429em;
-  font-weight: 300;
+.summary {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .summary {
+    font-size: 1.1429em;
+    font-weight: 300;
+  }
+}
+
+.split {
+  -webkit-column-count: 0;
+     -moz-column-count: 0;
+          column-count: 0;
+  -webkit-column-gap: 0;
+     -moz-column-gap: 0;
+          column-gap: 0;
+}
+@media (min-width: 768px) {
+  .split {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+    -webkit-column-gap: 1rem;
+       -moz-column-gap: 1rem;
+            column-gap: 1rem;
+  }
 }
 
 h1,
@@ -1681,6 +1706,9 @@ h5, .h5 {
 h5:not(.h5), .h5:not(.h5) {
   font-weight: 700;
 }
+h5 code, h5 kbd, h5 pre, .h5 code, .h5 kbd, .h5 pre {
+  font-weight: 400;
+}
 
 small, h6, .h6 {
   font-size: 0.75em;
@@ -1707,7 +1735,7 @@ blockquote footer cite {
 }
 code, kbd, pre {
   font-family: "Lucida Console", Monaco, monospace;
-  font-size: 0.9em;
+  font-size: 0.82em;
   border-radius: 3px;
 }
 
@@ -1733,6 +1761,9 @@ pre {
   line-height: 1.5;
   overflow: auto;
   white-space: pre-wrap;
+}
+pre code {
+  font-size: inherit;
 }
 .dropcap:first-letter {
   font-size: 3em;
