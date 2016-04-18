@@ -32,9 +32,22 @@ p {
     font-size: 1em;
 }
 
-.lead {
-    font-size: 1.1429em;
-    font-weight: $font-weight-light;
+.summary {
+    font-size: 1.1em;
+    font-weight: $font-weight-bold;
+    @media (min-width: $tablet-portrait-size) {
+        font-size: 1.1429em;
+        font-weight: $font-weight-light;
+    }
+}
+
+.split {
+    column-count: 0;
+    column-gap: 0;
+    @media (min-width: $tablet-portrait-size) {
+        column-count: 2;
+        column-gap: 1rem;
+    }
 }
 
 h1,
@@ -72,6 +85,9 @@ h5, .h5 {
         font-weight: $font-weight-bold;
     }
     font-size: 1em;
+    code, kbd, pre {
+        font-weight: $font-weight-normal;
+    }
 }
 
 small, h6, .h6 {
@@ -109,7 +125,7 @@ blockquote {
 
 code, kbd, pre {
     font-family: $mono-font-family;
-    font-size: 0.9em;
+    font-size: 0.82em;
     border-radius: $small-radius;
 }
 
@@ -135,6 +151,9 @@ pre {
     line-height: $line-height-normal;
     overflow: auto;
     white-space: pre-wrap;
+    code {
+        font-size: inherit;
+    }
 }
 
 /*
