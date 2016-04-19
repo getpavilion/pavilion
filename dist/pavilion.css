@@ -1641,11 +1641,11 @@ p {
 
 a {
   text-decoration: none;
-  color: #4283FB;
+  color: #426AFB;
   outline: none;
 }
 a:hover {
-  color: #0556ec;
+  color: #0537ec;
   outline: none;
 }
 .summary {
@@ -1720,7 +1720,7 @@ small, h6, .h6 {
   font-size: 0.75em;
 }
 blockquote {
-  border-left: 4px solid #4283FB;
+  border-left: 4px solid #426AFB;
   padding: 0.2em 0 0.2em 1em;
   margin: 1em 0 1.3em 0;
 }
@@ -1748,7 +1748,7 @@ code, kbd, pre {
 code {
   padding: 0 0.5em;
   display: inline-block;
-  background: #E1E1E1;
+  background: #EFEFEF;
   vertical-align: baseline;
 }
 
@@ -1762,13 +1762,14 @@ kbd {
 pre {
   padding: 0.7rem 1rem;
   display: block;
-  background-color: #E1E1E1;
+  background-color: #EFEFEF;
   line-height: 1.5;
   overflow: auto;
   white-space: pre-wrap;
 }
 pre code, pre kbd {
   font-size: inherit;
+  background-color: transparent;
 }
 .dropcap:first-letter {
   font-size: 3em;
@@ -1994,7 +1995,7 @@ figure {
   text-align: center;
   opacity: 0.6;
   vertical-align: middle;
-  background-color: #E1E1E1;
+  background-color: #EFEFEF;
   border-radius: 3px;
   margin-bottom: 1rem;
   overflow: hidden;
@@ -2013,8 +2014,8 @@ figure {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   cursor: pointer;
-  background-color: #4283FB;
-  border-color: #4283FB;
+  background-color: #426AFB;
+  border-color: #426AFB;
   color: white;
 }
 .button-default i.fa {
@@ -2025,12 +2026,12 @@ figure {
           transform: scale(0.97);
 }
 .button-default:hover, .button-default:visited, .button-default:focus {
-  background-color: #1062fa;
-  border-color: #1062fa;
+  background-color: #1043fa;
+  border-color: #1043fa;
 }
 .button-default:active {
-  background-color: #065cfa;
-  border-color: #065cfa;
+  background-color: #063bfa;
+  border-color: #063bfa;
 }
 
 .button-outlined {
@@ -2046,8 +2047,8 @@ figure {
   -moz-osx-font-smoothing: grayscale;
   cursor: pointer;
   background-color: transparent;
-  border-color: #4283FB;
-  color: #4283FB;
+  border-color: #426AFB;
+  color: #426AFB;
 }
 .button-outlined i.fa {
   margin: 0 0 0 0.3rem;
@@ -2057,12 +2058,12 @@ figure {
           transform: scale(0.97);
 }
 .button-outlined:hover, .button-outlined:visited, .button-outlined:focus {
-  border-color: #1062fa;
-  color: #1062fa;
+  border-color: #1043fa;
+  color: #1043fa;
 }
 .button-outlined:active {
-  border-color: #065cfa;
-  color: #065cfa;
+  border-color: #063bfa;
+  color: #063bfa;
 }
 
 .button-stripped {
@@ -2079,7 +2080,7 @@ figure {
   cursor: pointer;
   background-color: transparent;
   border-color: transparent;
-  color: #4283FB;
+  color: #426AFB;
 }
 .button-stripped i.fa {
   margin: 0 0 0 0.3rem;
@@ -2089,19 +2090,22 @@ figure {
           transform: scale(0.97);
 }
 .button-stripped:hover {
-  color: #1062fa;
+  color: #1043fa;
 }
 .button-stripped:visited, .button-stripped:focus {
   text-decoration: underline;
-  color: #1062fa;
+  color: #1043fa;
 }
 .button-stripped:active {
-  color: #065cfa;
+  color: #063bfa;
 }
 ul, ol, dl {
   margin: 0 0 1.3em 0;
   padding: 0;
   list-style-position: inside;
+}
+ul:not(ol), ol:not(ol), dl:not(ol) {
+  list-style-type: circle;
 }
 ul li, ol li, dl li {
   margin-bottom: 0.3em;
@@ -2110,11 +2114,12 @@ ul dt, ol dt, dl dt {
   margin-top: 0.3em;
 }
 ul dd, ol dd, dl dd {
-  margin-left: 1.5rem;
+  margin-left: 2rem;
 }
 ul ul, ul ol, ul dl, ol ul, ol ol, ol dl, dl ul, dl ol, dl dl {
-  margin-bottom: 0;
-  padding-left: 1.5rem;
+  margin: 0.5rem 0 0.4rem;
+  padding-left: 2rem;
+  font-size: 90%;
 }
 form {
   width: 100%;
@@ -2187,7 +2192,7 @@ textarea {
   display: block;
   width: 100%;
   background-color: transparent;
-  border: 1px solid #c8c8c8;
+  border: 1px solid #bcbcbc;
   border-radius: 3px;
   box-shadow: none;
   padding: 0 1rem;
@@ -2197,27 +2202,27 @@ textarea {
 input::-webkit-input-placeholder,
 select::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  color: #aeaeae;
+  color: #afafaf;
 }
 input::-moz-input-placeholder,
 select::-moz-input-placeholder,
 textarea::-moz-input-placeholder {
-  color: #aeaeae;
+  color: #afafaf;
 }
 input:-moz-input-placeholder,
 select:-moz-input-placeholder,
 textarea:-moz-input-placeholder {
-  color: #aeaeae;
+  color: #afafaf;
 }
 input:-ms-input-placeholder,
 select:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
-  color: #aeaeae;
+  color: #afafaf;
 }
 input:focus,
 select:focus,
 textarea:focus {
-  border-color: #4283FB;
+  border-color: #426AFB;
 }
 
 textarea {
@@ -2243,7 +2248,7 @@ hr {
   margin-top: 1.2rem;
   margin-bottom: 1.2rem;
   border: 0;
-  border-top: 2px solid #E1E1E1;
+  border-top: 2px solid #EFEFEF;
 }
 table {
   max-width: 100%;
@@ -2257,13 +2262,13 @@ table > thead > tr > th {
   padding: 0.6rem 0;
   vertical-align: top;
   font-weight: 700;
-  border-bottom: 1px solid #E1E1E1;
+  border-bottom: 1px solid #EFEFEF;
 }
 table > tbody > tr > td {
   text-align: left;
   padding: 0.6rem 0;
   vertical-align: top;
-  border-bottom: 1px solid #E1E1E1;
+  border-bottom: 1px solid #EFEFEF;
 }
 table > tfoot > tr > td {
   font-weight: 700;
