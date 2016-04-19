@@ -87,9 +87,9 @@ textarea {
     font-size: inherit;
     line-height: $line-height-normal * 1.65;
     display: block;
-    width: 100% !important;
+    width: 100%;
     background-color: transparent;
-    border: 2px solid $soft-gray;
+    border: 1px solid darken($soft-gray, 10%);
     border-radius: $small-radius;
     box-shadow: none;
     padding: 0 1rem;
