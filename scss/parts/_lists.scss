@@ -10,7 +10,9 @@ ul, ol, dl {
     margin: 0 0 1.3em 0;
     padding: 0;
     list-style-position: inside;
-
+    &:not(ol) {
+        list-style-type: circle;
+    }
     li {
         margin-bottom: 0.3em;
     }
@@ -18,12 +20,13 @@ ul, ol, dl {
         margin-top: 0.3em;
     }
     dd {
-        margin-left: 1.5rem;
+        margin-left: 2rem;
     }
 
     // Nested, add padding left for nesting
     ul, ol, dl {
-        margin-bottom: 0;
-        padding-left: 1.5rem;
+        margin: 0.5rem 0 0.4rem;
+        padding-left: 2rem;
+        font-size: 90%;
     }
 }
