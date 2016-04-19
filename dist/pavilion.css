@@ -1765,7 +1765,7 @@ pre {
   background-color: #EFEFEF;
   line-height: 1.5;
   overflow: auto;
-  white-space: pre-wrap;
+  white-space: pre;
 }
 pre code, pre kbd {
   font-size: inherit;
@@ -2264,11 +2264,14 @@ table > thead > tr > th {
   font-weight: 700;
   border-bottom: 1px solid #EFEFEF;
 }
-table > tbody > tr > td {
+table > tbody > tr > td, table > tbody > tr th {
   text-align: left;
   padding: 0.6rem 0;
   vertical-align: top;
   border-bottom: 1px solid #EFEFEF;
+}
+table > tbody > tr > td:not(td), table > tbody > tr th:not(td) {
+  font-weight: 700;
 }
 table > tfoot > tr > td {
   font-weight: 700;
