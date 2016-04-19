@@ -89,23 +89,23 @@ textarea {
     display: block;
     width: 100%;
     background-color: transparent;
-    border: 1px solid darken($soft-gray, 10%);
+    border: 1px solid darken($soft-gray, 20%);
     border-radius: $small-radius;
     box-shadow: none;
     padding: 0 1rem;
     margin-top: 0.3rem;
     margin-bottom: 1.2rem;
     &::-webkit-input-placeholder {
-        color: darken($soft-gray, 20%);
+        color: darken($soft-gray, 25%);
     }
     &::-moz-input-placeholder {
-        color: darken($soft-gray, 20%);
+        color: darken($soft-gray, 25%);
     }
     &:-moz-input-placeholder {
-        color: darken($soft-gray, 20%);
+        color: darken($soft-gray, 25%);
     }
     &:-ms-input-placeholder {
-        color: darken($soft-gray, 20%);
+        color: darken($soft-gray, 25%);
     }
     &:focus {
         border-color: $primary-color;
