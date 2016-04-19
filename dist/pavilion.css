@@ -1633,13 +1633,21 @@ body {
     font-size: 18px;
   }
 }
-
 p {
   margin-top: 0;
   margin-bottom: 1.3em;
   font-size: 1em;
 }
 
+a {
+  text-decoration: none;
+  color: #4283FB;
+  outline: none;
+}
+a:hover {
+  color: #0556ec;
+  outline: none;
+}
 .summary {
   font-size: 1.1em;
   font-weight: 700;
@@ -1650,7 +1658,6 @@ p {
     font-weight: 300;
   }
 }
-
 .split {
   -webkit-column-count: 0;
      -moz-column-count: 0;
@@ -1669,7 +1676,6 @@ p {
             column-gap: 1rem;
   }
 }
-
 h1,
 h2,
 h3,
@@ -1753,7 +1759,6 @@ kbd {
   vertical-align: baseline;
   color: white;
 }
-
 pre {
   padding: 0.7rem 1rem;
   display: block;
@@ -1762,7 +1767,7 @@ pre {
   overflow: auto;
   white-space: pre-wrap;
 }
-pre code {
+pre code, pre kbd {
   font-size: inherit;
 }
 .dropcap:first-letter {
@@ -1773,6 +1778,9 @@ pre code {
   line-height: 1;
   margin-left: -0.2rem;
   text-transform: uppercase;
+}
+figure {
+  margin: 0 0 3rem 0;
 }
 .show-pp,
 .show-pl,
@@ -2177,9 +2185,9 @@ textarea {
   font-size: inherit;
   line-height: 2.475;
   display: block;
-  width: 100% !important;
+  width: 100%;
   background-color: transparent;
-  border: 2px solid #E1E1E1;
+  border: 1px solid #c8c8c8;
   border-radius: 3px;
   box-shadow: none;
   padding: 0 1rem;
