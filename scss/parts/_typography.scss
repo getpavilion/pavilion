@@ -1,9 +1,9 @@
 /* Typography
    ========================================================================== */
 
-/**
-  * Typography scale by type-scale.com
-  */
+/*
+ * Base
+ */
 
 html {
     font-size: $remsize-small; /* Small rem-size */
@@ -26,12 +26,31 @@ body {
     }
 }
 
+/*
+ * Pargraphs & links
+ */
+
 p {
     margin-top: 0;
     margin-bottom: 1.3em;
     font-size: 1em;
 }
 
+a {
+    text-decoration: none;
+    color: $primary-color;
+    outline: none;
+    &:hover {
+        color: darken($primary-color, 15%);
+        outline: none;
+    }
+}
+
+/*
+ * Summary & Split
+ */
+
+/* Bumps up the font-size and decreases font-weight */
 .summary {
     font-size: 1.1em;
     font-weight: $font-weight-bold;
@@ -41,6 +60,8 @@ p {
     }
 }
 
+
+/* Breaks a text element into two columns until $phone-landscape-size is reached */
 .split {
     column-count: 0;
     column-gap: 0;
@@ -49,6 +70,10 @@ p {
         column-gap: 1rem;
     }
 }
+
+/*
+ * Headings & corresponding classes
+ */
 
 h1,
 h2,
@@ -95,7 +120,7 @@ small, h6, .h6 {
 }
 
 /*
- * Blockquotes
+ * Blockquotes & > footer
  */
 
 blockquote {
@@ -144,6 +169,7 @@ kbd {
     color: white;
 }
 
+/* Font-size for code and kbd inherit to prevent compounding */
 pre {
     padding: 0.7rem 1rem;
     display: block;
@@ -151,7 +177,7 @@ pre {
     line-height: $line-height-normal;
     overflow: auto;
     white-space: pre-wrap;
-    code {
+    code, kbd {
         font-size: inherit;
     }
 }
@@ -168,4 +194,12 @@ pre {
     line-height: 1;
     margin-left: -0.2rem;
     text-transform: uppercase;
+}
+
+/*
+ * Figure
+ */
+ 
+figure {
+    margin: 0 0 3rem 0;
 }
