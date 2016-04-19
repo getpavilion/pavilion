@@ -1,4 +1,4 @@
-/* Variables, the fun stuff!
+/* Variables
    ========================================================================== */
 
 /**
@@ -15,18 +15,18 @@ $emsize-small: 16px;  /* Adjust this to adjust your EM sizes on phones. EM is us
   * Line-height
   */
 
-$line-height-normal: 1.5;  /* Default line-height */
+$line-height-normal: 1.5; 
 
 /**
   * Breakpoints
   */
 
-$phone-landscape-size: 540px;    /* Phone landscape minimum (= Phone portrait maximum + 1) */
+$phone-landscape-size: 540px;    /* Phone landscape minimum */
 $tablet-portrait-size: 768px;    /* Tablet portrait minimum */
 $tablet-landscape-size: 991px;   /* Tablet landscape minimum */
 $desktop-size: 1200px;           /* Desktop minimum */
 
-$breakmargin: 20px;              /* Margin that add ups to the breakpoints, you don't want to size down all the way tot he content area */
+$breakmargin: 20px;              /* Margin added to the breakpoint */
 
 /**
   * Colors and tints

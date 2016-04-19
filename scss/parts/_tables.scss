@@ -25,11 +25,14 @@ table {
     }
     > tbody {
         > tr {
-            > td {
+            > td, th {
                 text-align: left;
                 padding: 0.6rem 0;
                 vertical-align: top;
                 border-bottom: 1px solid $soft-gray;
+                &:not(td) {
+                    font-weight: $font-weight-bold;
+                }
             }
         }
     }
