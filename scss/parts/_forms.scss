@@ -59,6 +59,18 @@ label {
             }
         }
     }
+    /* relative for file upload button */
+    &[class^="button-"] {
+        position: relative;
+        font-weight: $font-weight-normal;
+        margin-bottom: 1.2rem;
+        /* file type input */
+        [type="file"] {
+            visibility: hidden;
+            position: absolute;
+            opacity: 0;
+        }
+    }
 }
 
 /**
@@ -109,6 +121,13 @@ textarea {
     }
     &:focus {
         border-color: $primary-color;
+    }
+    /* file type input */
+    &[type="file"] {
+        margin: 0.8rem 0 2rem;
+        line-height: 0;
+        border: 0;
+        padding:0;
     }
 }
 
