@@ -1619,7 +1619,7 @@ html {
 }
 
 body {
-  font-family: "Segoe UI", "Ubuntu", "Helvetica Neue", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -2173,6 +2173,16 @@ label.checkbox input[type="radio"], label.radio input[type="radio"] {
     top: 0.3em;
   }
 }
+label[class^="button-"] {
+  position: relative;
+  font-weight: 400;
+  margin-bottom: 1.2rem;
+}
+label[class^="button-"] [type="file"] {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+}
 .radio-wrapper {
   margin-top: 0.3rem;
   margin-bottom: 1.2rem;
@@ -2223,6 +2233,14 @@ input:focus,
 select:focus,
 textarea:focus {
   border-color: #426AFB;
+}
+input[type="file"],
+select[type="file"],
+textarea[type="file"] {
+  margin: 0.8rem 0 2rem;
+  line-height: 0;
+  border: 0;
+  padding: 0;
 }
 
 textarea {
