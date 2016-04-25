@@ -2134,10 +2134,9 @@ fieldset {
   margin: 1rem 0;
 }
 fieldset legend {
-  font-weight: 300;
+  font-weight: 700;
   font-size: 1.333em;
   margin: 1.414em 0 0.5em;
-  line-height: 1.2;
   display: block;
   width: 100%;
 }
@@ -2145,6 +2144,8 @@ label {
   font-weight: 700;
   display: block;
   color: #333;
+  line-height: normal;
+  margin-bottom: 0.5em;
 }
 label[class^="checkbox"], label[class^="radio"] {
   padding-left: 25px;
@@ -2160,12 +2161,17 @@ label[class^="checkbox"] input, label[class^="radio"] input {
   width: auto;
   margin: 0;
   left: 0;
-  top: 0.4rem;
   cursor: pointer;
+}
+label[class^="checkbox"] input[type="checkbox"], label[class^="radio"] input[type="checkbox"] {
+  top: 0.3rem;
+}
+label[class^="checkbox"] input[type="radio"], label[class^="radio"] input[type="radio"] {
+  top: 0.2rem;
 }
 label[class^="checkbox"][class$="-inline"], label[class^="radio"][class$="-inline"] {
   display: inline-block;
-  margin-right: 1em;
+  margin-right: 1.2rem;
 }
 label[class^="button-"] {
   position: relative;
@@ -2194,33 +2200,12 @@ textarea {
   border-radius: 3px;
   box-shadow: none;
   padding: 0 1rem;
-  margin-top: 0.3rem;
   margin-bottom: 1.2rem;
 }
 input:focus,
 select:focus,
 textarea:focus {
   border-color: #426AFB;
-}
-input::-webkit-input-placeholder,
-select::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-  color: #afafaf;
-}
-input::-moz-input-placeholder,
-select::-moz-input-placeholder,
-textarea::-moz-input-placeholder {
-  color: #afafaf;
-}
-input:-moz-input-placeholder,
-select:-moz-input-placeholder,
-textarea:-moz-input-placeholder {
-  color: #afafaf;
-}
-input:-ms-input-placeholder,
-select:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
-  color: #afafaf;
 }
 input[type="file"],
 select[type="file"],
@@ -2229,6 +2214,26 @@ textarea[type="file"] {
   line-height: 0;
   border: 0;
   padding: 0;
+}
+input::-webkit-input-placeholder,
+select::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #a3a3a3;
+}
+input:-moz-placeholder,
+select:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #a3a3a3;
+}
+input::-moz-placeholder,
+select::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #a3a3a3;
+}
+input:-ms-input-placeholder,
+select:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #a3a3a3;
 }
 [class^="input-with-button"] {
   width: 100%;
@@ -2239,26 +2244,17 @@ textarea[type="file"] {
 [class^="input-with-button"] label {
   width: 100%;
   display: table-caption;
-  margin-bottom: 0.3em;
 }
 [class^="input-with-button"] .button-wrapper {
   display: table-cell;
   width: 1%;
   white-space: nowrap;
-  font-size: 0;
   position: relative;
 }
 [class^="input-with-button"] .button-wrapper .button-default,
 [class^="input-with-button"] .button-wrapper .button-outlined {
   margin: 0;
   min-width: 100%;
-  font-size: 16px;
-}
-@media (min-width: 768px) {
-  [class^="input-with-button"] .button-wrapper .button-default,
-  [class^="input-with-button"] .button-wrapper .button-outlined {
-    font-size: 18px;
-  }
 }
 [class^="input-with-button"] .button-wrapper .button-default:active,
 [class^="input-with-button"] .button-wrapper .button-outlined:active {
@@ -2330,6 +2326,42 @@ textarea[disabled="disabled"],
 textarea[disabled] {
   pointer-events: none;
   opacity: 0.5;
+}
+input[disabled="true"]::-webkit-input-placeholder, input[disabled="disabled"]::-webkit-input-placeholder, input[disabled]::-webkit-input-placeholder,
+select[disabled="true"]::-webkit-input-placeholder,
+select[disabled="disabled"]::-webkit-input-placeholder,
+select[disabled]::-webkit-input-placeholder,
+textarea[disabled="true"]::-webkit-input-placeholder,
+textarea[disabled="disabled"]::-webkit-input-placeholder,
+textarea[disabled]::-webkit-input-placeholder {
+  color: #bcbcbc;
+}
+input[disabled="true"]:-moz-placeholder, input[disabled="disabled"]:-moz-placeholder, input[disabled]:-moz-placeholder,
+select[disabled="true"]:-moz-placeholder,
+select[disabled="disabled"]:-moz-placeholder,
+select[disabled]:-moz-placeholder,
+textarea[disabled="true"]:-moz-placeholder,
+textarea[disabled="disabled"]:-moz-placeholder,
+textarea[disabled]:-moz-placeholder {
+  color: #bcbcbc;
+}
+input[disabled="true"]::-moz-placeholder, input[disabled="disabled"]::-moz-placeholder, input[disabled]::-moz-placeholder,
+select[disabled="true"]::-moz-placeholder,
+select[disabled="disabled"]::-moz-placeholder,
+select[disabled]::-moz-placeholder,
+textarea[disabled="true"]::-moz-placeholder,
+textarea[disabled="disabled"]::-moz-placeholder,
+textarea[disabled]::-moz-placeholder {
+  color: #bcbcbc;
+}
+input[disabled="true"]:-ms-input-placeholder, input[disabled="disabled"]:-ms-input-placeholder, input[disabled]:-ms-input-placeholder,
+select[disabled="true"]:-ms-input-placeholder,
+select[disabled="disabled"]:-ms-input-placeholder,
+select[disabled]:-ms-input-placeholder,
+textarea[disabled="true"]:-ms-input-placeholder,
+textarea[disabled="disabled"]:-ms-input-placeholder,
+textarea[disabled]:-ms-input-placeholder {
+  color: #bcbcbc;
 }
 table {
   max-width: 100%;
