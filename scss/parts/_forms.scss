@@ -19,10 +19,9 @@ fieldset {
     padding: 0;
     margin: 1rem 0;
     legend {
-        font-weight: $font-weight-light;
+        font-weight: $font-weight-bold;
         font-size: 1.333em;
         margin: 1.414em 0 0.5em;
-        line-height: 1.2;
         display: block;
         width: 100%;
     }
@@ -39,6 +38,8 @@ label {
     font-weight: $font-weight-bold;
     display: block;
     color: $body-copy-color;
+    line-height: normal;
+    margin-bottom: 0.5em;
     &[class^="checkbox"],
     &[class^="radio"] {
         padding-left: 25px;
@@ -53,13 +54,18 @@ label {
             width: auto;
             margin: 0;
             left: 0;
-            top: 0.4rem;
             cursor: pointer;
+            &[type="checkbox"] {
+                top: 0.3rem;
+            }
+            &[type="radio"] {
+                top: 0.2rem;
+            }
         }
         /* Inline radio & checkboxes */
         &[class$="-inline"] {
             display: inline-block;
-            margin-right: 1em;
+            margin-right: 1.2rem;
         }
     }
     /* Button-type file upload */
@@ -104,23 +110,9 @@ textarea {
     border-radius: $small-radius;
     box-shadow: none;
     padding: 0 1rem;
-    margin-top: 0.3rem;
     margin-bottom: 1.2rem;
     &:focus {
         border-color: $primary-color;
-    }
-    /* Placeholder styling */
-    &::-webkit-input-placeholder {
-        color: darken($soft-gray, 25%);
-    }
-    &::-moz-input-placeholder {
-        color: darken($soft-gray, 25%);
-    }
-    &:-moz-input-placeholder {
-        color: darken($soft-gray, 25%);
-    }
-    &:-ms-input-placeholder {
-        color: darken($soft-gray, 25%);
     }
     /* standard file type input */
     &[type="file"] {
@@ -128,6 +120,21 @@ textarea {
         line-height: 0;
         border: 0;
         padding: 0;
+    }
+    &::-webkit-input-placeholder {
+       color: darken($soft-gray, 30%);
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+       color: darken($soft-gray, 30%);  
+    }
+
+    &::-moz-placeholder {  /* Firefox 19+ */
+       color: darken($soft-gray, 30%);  
+    }
+
+    &:-ms-input-placeholder {  
+       color: darken($soft-gray, 30%);  
     }
 }
 
@@ -144,22 +151,16 @@ textarea {
     label {
         width: 100%;
         display: table-caption;
-        margin-bottom: 0.3em;
     }
     .button-wrapper {
         display: table-cell;
         width: 1%;
         white-space: nowrap;
-        font-size: 0;
         position: relative;
         .button-default,
         .button-outlined {
             margin: 0;
             min-width: 100%;
-            font-size: $emsize-small;
-            @media(min-width: $tablet-portrait-size) {
-                font-size: $emsize-normal;
-            }
             &:active {
                 transform: none;
             }
@@ -259,5 +260,20 @@ textarea {
     &[disabled] {
         pointer-events: none;
         opacity: 0.5;
+        &::-webkit-input-placeholder {
+            color: darken($soft-gray, 20%);
+        }
+        &:-moz-placeholder {
+            /* Firefox 18- */
+            color: darken($soft-gray, 20%);
+        }
+        &::-moz-placeholder {
+            /* Firefox 19+ */
+            color: darken($soft-gray, 20%);
+        }
+        &:-ms-input-placeholder {
+            color: darken($soft-gray, 20%);
+        }
     }
 }
+
