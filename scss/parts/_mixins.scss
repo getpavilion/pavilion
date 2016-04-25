@@ -1,9 +1,6 @@
-/* Mixins
-   ========================================================================== */
-
-/*
- * Container
- */
+/**
+  * Container
+  */
 
 @mixin container {
     margin: 0 auto;
@@ -36,7 +33,7 @@
     border-radius: $small-radius;
     font-family: inherit;
     padding: 0 1.5rem;
-    line-height: $line-height-normal * 1.65;
+    line-height: $line-height-normal * 1.58;
     margin-right: 1rem;
     margin-bottom: 1rem;
     -webkit-font-smoothing: antialiased;
@@ -48,6 +45,10 @@
     }
     &:active {
         transform: scale(0.97);
+    }
+    &[disabled="true"], &[disabled="disabled"], &[disabled] {
+        pointer-events: none;
+        opacity: 0.5;
     }
 }
 
@@ -64,4 +65,15 @@
     &:after {
         clear: both;
     }
+}
+
+/**
+  * Flexbox
+  */
+
+@mixin flexbox {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    flex-direction: row;
 }

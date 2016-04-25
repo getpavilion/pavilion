@@ -1,34 +1,14 @@
-/* Typography
-   ========================================================================== */
+/**
+  * Fix outlines on focus & visited
+  */
 
-/*
- * Base
- */
-
-html {
-    font-size: $remsize-small; /* Small rem-size */
-    @media(min-width: $tablet-portrait-size) {
-        font-size: $remsize-normal; /* Regular font-size */
-    }
+*:focus, *:visited {
+    outline: none !important;
 }
 
-body {
-    font-family: $base-font-family;
-    font-weight: $font-weight-normal;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    line-height: $line-height-normal;
-    font-size: $emsize-small; /* Small font-size */
-    color: $body-copy-color;
-    @media(min-width: $tablet-portrait-size) {
-        font-size: $emsize-normal; /* Regular font-size */
-    }
-}
-
-/*
- * Pargraphs & links
- */
+/**
+  * Pargraphs & links
+  */
 
 p {
     margin-top: 0;
@@ -37,18 +17,17 @@ p {
 }
 
 a {
-    text-decoration: none;
     color: $primary-color;
     outline: none;
-    &:hover {
+    &:hover, &:focus, &:visited {
         color: darken($primary-color, 15%);
         outline: none;
     }
 }
 
-/*
- * Summary & Split
- */
+/**
+  * Summary & Split
+  */
 
 /* Bumps up the font-size and decreases font-weight */
 .summary {
@@ -61,7 +40,10 @@ a {
 }
 
 
-/* Breaks a text element into two columns until $phone-landscape-size is reached */
+/** 
+  * Breaks a text element into two columns until $phone-landscape-size is reached
+  */
+  
 .split {
     column-count: 0;
     column-gap: 0;
@@ -71,9 +53,9 @@ a {
     }
 }
 
-/*
- * Headings & corresponding classes
- */
+/**
+  * Headings & corresponding classes
+  */
 
 h1,
 h2,
@@ -119,9 +101,9 @@ small, h6, .h6 {
     font-size: 0.75em;
 }
 
-/*
- * Blockquotes & > footer
- */
+/**
+  * Blockquotes with a footer
+  */
 
 blockquote {
     border-left: 4px solid $primary-color;
@@ -144,9 +126,9 @@ blockquote {
     }
 }
 
-/*
- * Code, User input and Pre
- */
+/**
+  * Code, user-input and pre elements
+  */
 
 code, kbd, pre {
     font-family: $mono-font-family;
@@ -169,7 +151,6 @@ kbd {
     color: white;
 }
 
-/* Font-size for code and kbd inherit to prevent compounding */
 pre {
     padding: 0.7rem 1rem;
     display: block;
@@ -183,9 +164,9 @@ pre {
     }
 }
 
-/*
- * Dropcap
- */
+/**
+  * Dropcap
+  */
 
 .dropcap:first-letter {
     font-size: 3em;
@@ -195,12 +176,4 @@ pre {
     line-height: 1;
     margin-left: -0.2rem;
     text-transform: uppercase;
-}
-
-/*
- * Figure
- */
- 
-figure {
-    margin: 0 0 3rem 0;
 }

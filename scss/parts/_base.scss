@@ -1,0 +1,40 @@
+/**
+  * Set the REM size on the HTML
+  * Smaller size on $tablet-portrait-size
+  */
+
+html {
+    font-size: $remsize-small; /* Small rem-size */
+    @media(min-width: $tablet-portrait-size) {
+        font-size: $remsize-normal; /* Regular font-size */
+    }
+}
+
+/*
+ * Body properties
+ * EM size is set here for typography
+ */
+
+body {
+    font-family: $base-font-family;
+    font-weight: $font-weight-normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: $line-height-normal;
+    color: $body-copy-color;
+    font-size: $emsize-small; /* Small font-size */
+    @media(min-width: $tablet-portrait-size) {
+        font-size: $emsize-normal; /* Regular font-size */
+    }
+}
+
+/**
+  * Border-box-sizing on all elements & pseudo elements
+  */
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}

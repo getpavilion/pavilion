@@ -1,8 +1,5 @@
-/* Helperclasses
-   ========================================================================== */
-
 /**
-  * show @ specific viewport.
+  * display-block @ specific viewport.
   */
 
 .show-pp,
@@ -85,7 +82,7 @@
 }
 
 /**
-  * hide @ specific viewport.
+  * display: none @ specific viewport.
   */
 
 @media(max-width: $phone-landscape-size - 1) {
@@ -198,9 +195,9 @@
     }
 }
 
-/*
- * Test classes for the grid and elements
- */
+/**
+  * Test classes for the grid and elements
+  */
 
 .show-elements {
     outline: 1px solid rgba(#000, 0.3);

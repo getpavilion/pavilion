@@ -16,7 +16,147 @@
 
 <body>
     <div class="container-tp">
-        <h3>I'm alive!</h3>
+        <form action="">
+            <fieldset>
+                <legend>Hallo</legend>
+                
+                <!-- First name -->
+                <label for="firstName">First name</label>
+                <input id="firstName" type="text" placeholder="'John'">
+                
+                <!-- Last name -->
+                <label for="lastName">Last name</label>
+                <input id="lastName" type="text" placeholder="'Doe'">
+                
+                <!-- Input with button left -->
+                <div class="input-with-button-left">
+                    <label for="lastName">Disabled</label>
+                    <span class="button-wrapper">
+                        <button class="button-default" disabled>Search</button>
+                    </span>
+                    <input id="lastName" type="text" placeholder="'Doe'" disabled>
+                </div>
+                
+                <!-- Input with button right -->
+                <div class="input-with-button-right">
+                    <label for="lastName">Last name</label>
+                    <input id="lastName" type="text" placeholder="'Doe'">
+                    <span class="button-wrapper">
+                        <button class="button-default">Send</button>
+                    </span>
+                </div>
+                
+                <!-- Select interests -->
+                <label for="selectInterests">Select interests</label>
+                <select name="interests" id="selectInterests">
+                    <option value="all" selected="true">All interests</option>
+                    <option value="drawing">Drawing</option>
+                    <option value="cooking">Cooking</option>
+                    <option value="gardening">Gardening</option>
+                </select>
+                
+            </fieldset>
+            <fieldset>
+            
+                <!-- Button file upload -->
+                <h5>Buttonized file upload</h5>
+                <label for="profileUpload" class="button-default">
+                    Upload profile pic
+                    <input id="profileUpload" type="file">
+                </label>
+                
+                <!-- Standard file upload -->
+                <label for="standardFileUpload">Standard fileupload</label>
+                <input type="file" id="standardFileUpload">
+                
+            </fieldset>
+            <fieldset>
+            
+                <h5>Checkboxes & Radiobuttons</h5>
+                <!-- Checkboxex block -->
+                <div class="input-row">
+                    <label for="recieveEmails1" class="checkbox">
+                        Donuts
+                        <input type="checkbox" id="recieveEmails1" checked="true">
+                    </label>
+                    <label for="recieveEmails2" class="checkbox">
+                        Cake
+                        <input type="checkbox" id="recieveEmails2" checked="true">
+                    </label>
+                    <label for="recieveEmails3" class="checkbox">
+                        Mashmellows
+                        <input type="checkbox" id="recieveEmails3" checked="true">
+                    </label>
+                    <label for="recieveEmails4" class="checkbox">
+                        Hotdogs
+                        <input type="checkbox" id="recieveEmails4" checked="true">
+                    </label>
+                </div>
+                
+                <!-- Radio buttons block -->
+                <div class="input-row">
+                    <label for="onceMonth" class="radio">
+                        Once a month
+                        <input type="radio" name="frequency" id="onceMonth">
+                    </label>
+                    <label for="twiceMonth" class="radio">
+                        Twice a month
+                        <input type="radio" name="frequency" id="twiceMonth">
+                    </label>
+                    <label for="onceWeek" class="radio">
+                        Once a week
+                        <input type="radio" name="frequency" id="onceWeek">
+                    </label>
+                </div>
+
+
+                <h5>Inline checkboxes</h5>
+                <!-- Checkboxex inline -->
+                <span class="input-row">
+                    <label for="recieveEmails1" class="checkbox-inline">
+                        Donuts
+                        <input type="checkbox" id="recieveEmails1" checked="true">
+                    </label>
+                    <label for="recieveEmails2" class="checkbox-inline">
+                        Cake
+                        <input type="checkbox" id="recieveEmails2" checked="true">
+                    </label>
+                    <label for="recieveEmails3" class="checkbox-inline">
+                        Mashmellows
+                        <input type="checkbox" id="recieveEmails3" checked="true">
+                    </label>
+                    <label for="recieveEmails4" class="checkbox-inline">
+                        Hotdogs
+                        <input type="checkbox" id="recieveEmails4" checked="true">
+                    </label>
+                </span>
+                
+                <h5>Inline radiobuttons</h5>
+                <!-- Radio buttons inline -->
+                <span class="input-row">
+                    <label for="onceMonth" class="radio-inline">
+                        Once a month
+                        <input type="radio" name="frequency" id="onceMonth">
+                    </label>
+                    <label for="twiceMonth" class="radio-inline">
+                        Twice a month
+                        <input type="radio" name="frequency" id="twiceMonth">
+                    </label>
+                    <label for="onceWeek" class="radio-inline">
+                        Once a week
+                        <input type="radio" name="frequency" id="onceWeek">
+                    </label>
+                </span>
+
+                <!-- Textarea -->
+                <label for="notes">Notes</label>
+                <textarea id="notes" name=""></textarea>
+                
+            </fieldset>
+            
+            <!-- Send button -->
+            <button type="submit" class="button-default">Send</button>
+        </form>
     </div>
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>

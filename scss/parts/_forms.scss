@@ -1,70 +1,72 @@
-/* Forms. Don't you hate styling forms? We've dunnit for you.
-   ========================================================================== */
-
 /**
- * Basic styling for the forms.
- * Common form elements are styled, so the rest is up to you!
+ * Basic styling for the forms
  */
 
 form {
-    @include clearfix;
     width: 100%;
     display: block;
     margin-bottom: 1rem;
 }
 
+
 /**
-  * Fieldsets give a nice touch, they add extra margin's on the top and bottom.
-  * Good for readability.
+  * Fieldsets for extra margin's on the top and bottom.
+  * Legends are used as headers, equal to a h4 element
   */
 
 fieldset {
     border: 0;
     padding: 0;
     margin: 1rem 0;
+    legend {
+        font-weight: $font-weight-light;
+        font-size: 1.333em;
+        margin: 1.414em 0 0.5em;
+        line-height: 1.2;
+        display: block;
+        width: 100%;
+    }
 }
 
 /**
-  * Label styling and checkbox/radio styling inside labels.
+  * Global label styles,
+  * Checkbox, Radiobutton - block/inline - , file upload.
+  * * * Checkbox & Radio's are wrapped in labels
+  * * * -moz-url-prefixes added to prevent weird alignment of radio and checkboxes
   */
 
 label {
     font-weight: $font-weight-bold;
     display: block;
-    &.checkbox,
-    &.radio {
-        padding-left: 30px;
+    color: $body-copy-color;
+    &[class^="checkbox"],
+    &[class^="radio"] {
+        padding-left: 25px;
+        margin-top: 0;
+        margin-bottom: 1.1rem;
         position: relative;
         display: block;
-        margin-top: 0.3rem;
-        margin-bottom: 1.2rem;
         cursor: pointer;
+        font-weight: $font-weight-normal;
         input {
             position: absolute;
             width: auto;
             margin: 0;
             left: 0;
+            top: 0.4rem;
             cursor: pointer;
-            &[type="checkbox"] {
-                top: 0.25em;
-                @media (min-width: $tablet-portrait-size) {
-                    top: 0.4em;
-                }
-            }
-            &[type="radio"] {
-                top: 0.15em;
-                @media (min-width: $tablet-portrait-size) {
-                    top: 0.3em;
-                }
-            }
+        }
+        /* Inline radio & checkboxes */
+        &[class$="-inline"] {
+            display: inline-block;
+            margin-right: 1em;
         }
     }
-    /* relative for file upload button */
+    /* Button-type file upload */
     &[class^="button-"] {
         position: relative;
         font-weight: $font-weight-normal;
         margin-bottom: 1.2rem;
-        /* file type input */
         [type="file"] {
             visibility: hidden;
             position: absolute;
@@ -73,22 +75,19 @@ label {
     }
 }
 
+
 /**
-  * Wrapper for radio-button groups
+  * Wrapper for radio & checkboxes
+  * This prevents float weirdness
   */
 
-.radio-wrapper {
-    margin-top: 0.3rem;
-    margin-bottom: 1.2rem;
+.input-row {
     display: block;
-    label {
-        margin-top: 0.3rem;
-        margin-bottom: 0.5rem;
-    }
 }
 
+
 /**
-  * Global styling for inputs
+  * Text input, select input, textarea, default file input
   */
 
 input,
@@ -107,6 +106,10 @@ textarea {
     padding: 0 1rem;
     margin-top: 0.3rem;
     margin-bottom: 1.2rem;
+    &:focus {
+        border-color: $primary-color;
+    }
+    /* Placeholder styling */
     &::-webkit-input-placeholder {
         color: darken($soft-gray, 25%);
     }
@@ -119,23 +122,93 @@ textarea {
     &:-ms-input-placeholder {
         color: darken($soft-gray, 25%);
     }
-    &:focus {
-        border-color: $primary-color;
-    }
-    /* file type input */
+    /* standard file type input */
     &[type="file"] {
         margin: 0.8rem 0 2rem;
         line-height: 0;
         border: 0;
-        padding:0;
+        padding: 0;
     }
 }
 
+
+/**
+  * Input with button left or right
+  */
+
+[class^="input-with-button"] {
+    width: 100%;
+    display: table;
+    margin-bottom: 1.2rem;
+    border-collapse: separate;
+    label {
+        width: 100%;
+        display: table-caption;
+        margin-bottom: 0.3em;
+    }
+    .button-wrapper {
+        display: table-cell;
+        width: 1%;
+        white-space: nowrap;
+        font-size: 0;
+        position: relative;
+        .button-default,
+        .button-outlined {
+            margin: 0;
+            min-width: 100%;
+            font-size: $emsize-small;
+            @media(min-width: $tablet-portrait-size) {
+                font-size: $emsize-normal;
+            }
+            &:active {
+                transform: none;
+            }
+        }
+    }
+    input[type="text"] {
+        width: 100%;
+        display: table-cell;
+        margin: 0;
+        position: relative;
+    }
+    /* fix border-radius on left */
+    &[class$="-left"] {
+        .button-wrapper {
+            .button-default,
+            .button-outlined {
+                border-radius: $small-radius 0 0 $small-radius;
+            }
+        }
+        input[type="text"] {
+            border-radius: 0 $small-radius $small-radius 0;
+        }
+    }
+    /* fix border-radius on right */
+    &[class$="-right"] {
+        .button-wrapper {
+            .button-default,
+            .button-outlined {
+                border-radius: 0 $small-radius $small-radius 0;
+            }
+        }
+        input[type="text"] {
+            border-radius: $small-radius 0 0 $small-radius;
+        }
+    }
+}
+
+
+/**
+  * Specific textarea styling
+  */
+
 textarea {
+    width: 100% !important;
     min-height: 150px;
     padding: 0.7rem 1rem;
     line-height: $line-height-normal;
 }
+
 
 /**
   * Extra styles for the select input
@@ -152,10 +225,18 @@ select {
     &::-ms-expand {
         display: none;
     }
+    @-moz-document url-prefix() {
+        /* firefox select line-height bugfix */
+        height: $emsize-small * $line-height-normal * 1.7;
+        @media(min-width: $tablet-portrait-size) {
+            height: $emsize-normal * $line-height-normal * 1.7;
+        }
+    }
 }
 
+
 /**
-  * A good old <hr> as a nice devider in forms
+  * Devider
   */
 
 hr {
@@ -163,4 +244,20 @@ hr {
     margin-bottom: 1.2rem;
     border: 0;
     border-top: 2px solid $soft-gray;
+}
+
+
+/**
+  * Disabled styles
+  */
+
+input,
+select,
+textarea {
+    &[disabled="true"],
+    &[disabled="disabled"],
+    &[disabled] {
+        pointer-events: none;
+        opacity: 0.5;
+    }
 }
