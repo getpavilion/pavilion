@@ -21,6 +21,8 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
     line-height: $line-height-normal;
     color: $body-copy-color;
     font-size: $emsize-small; /* Small font-size */
