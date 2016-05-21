@@ -172,6 +172,9 @@ pre {
     font-size: 3em;
     float: left;
     margin-top: 0;
+    @-moz-document url-prefix() {
+        margin-top: 9px; /* fix FireFox margin */
+    }
     margin-right: 0.5rem;
     line-height: 1;
     margin-left: -0.2rem;
