@@ -57,9 +57,15 @@ label {
             cursor: pointer;
             &[type="checkbox"] {
                 top: 0.3rem;
+                @-moz-document url-prefix() {
+                    top: 0.45rem;
+                }
             }
             &[type="radio"] {
                 top: 0.2rem;
+                @-moz-document url-prefix() {
+                    top: 0.4rem;
+                }
             }
         }
         /* Inline radio & checkboxes */
