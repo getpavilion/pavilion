@@ -1775,6 +1775,11 @@ pre code, pre kbd {
   margin-left: -0.2rem;
   text-transform: uppercase;
 }
+@-moz-document url-prefix() {
+  .dropcap:first-letter {
+    margin-top: 9px;
+  }
+}
 .show-pp,
 .show-pl,
 .show-tp,
@@ -2175,8 +2180,18 @@ label[class^="checkbox"] input, label[class^="radio"] input {
 label[class^="checkbox"] input[type="checkbox"], label[class^="radio"] input[type="checkbox"] {
   top: 0.3rem;
 }
+@-moz-document url-prefix() {
+  label[class^="checkbox"] input[type="checkbox"], label[class^="radio"] input[type="checkbox"] {
+    top: 0.45rem;
+  }
+}
 label[class^="checkbox"] input[type="radio"], label[class^="radio"] input[type="radio"] {
   top: 0.2rem;
+}
+@-moz-document url-prefix() {
+  label[class^="checkbox"] input[type="radio"], label[class^="radio"] input[type="radio"] {
+    top: 0.4rem;
+  }
 }
 label[class^="checkbox"][class$="-inline"], label[class^="radio"][class$="-inline"] {
   display: inline-block;
