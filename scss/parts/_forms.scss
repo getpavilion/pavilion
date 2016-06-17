@@ -40,63 +40,56 @@ label {
     color: $body-copy-color;
     line-height: normal;
     margin-bottom: 0.5em;
-    &[class^="checkbox"],
-    &[class^="radio"] {
-        padding-left: 25px;
-        margin-top: 0;
-        margin-bottom: 1.1rem;
-        position: relative;
-        display: table;
+}
+
+.checkbox, .radio {
+    padding-left: 25px;
+    margin-top: 0;
+    margin-bottom: 1.1rem;
+    position: relative;
+    display: table;
+    cursor: pointer;
+    font-weight: $font-weight-normal;
+    input {
+        position: absolute;
+        width: auto;
+        margin: 0;
+        left: 0;
         cursor: pointer;
-        font-weight: $font-weight-normal;
-        input {
-            position: absolute;
-            width: auto;
-            margin: 0;
-            left: 0;
-            cursor: pointer;
-            &[type="checkbox"] {
-                top: 0.3rem;
-                @-moz-document url-prefix() {
-                    top: 0.45rem;
-                }
-            }
-            &[type="radio"] {
-                top: 0.2rem;
-                @-moz-document url-prefix() {
-                    top: 0.4rem;
-                }
+        &[type="checkbox"] {
+            top: 0.3rem;
+            @-moz-document url-prefix() {
+                top: 0.45rem;
             }
         }
-        /* Inline radio & checkboxes */
-        &[class$="-inline"] {
-            display: inline-block;
-            margin-right: 1.2rem;
-        }
-    }
-    /* Button-type file upload */
-    &[class^="button-"] {
-        position: relative;
-        font-weight: $font-weight-normal;
-        margin-bottom: 1.2rem;
-        [type="file"] {
-            visibility: hidden;
-            position: absolute;
-            opacity: 0;
+        &[type="radio"] {
+            top: 0.2rem;
+            @-moz-document url-prefix() {
+                top: 0.4rem;
+            }
         }
     }
 }
 
-
-/**
-  * Wrapper for radio & checkboxes
-  * This prevents float weirdness
-  */
-
-.input-row {
-    display: block;
+/* inline checkbox & radio */
+.checkbox-inline, .radio-inline {
+    display: inline-block;
+    margin-right: 1.2rem;
 }
 
+/* Button-type file upload */
+label.button-default,
+label.button-outlined,
+label.button-stripped {
+    position: relative;
+    font-weight: $font-weight-normal;
+    margin-bottom: 1.2rem;
+    [type="file"] {
+        visibility: hidden;
+        position: absolute;
+        opacity: 0;
+    }
+}
 
 /**
   * Text input, select input, textarea, default file input
@@ -149,7 +142,7 @@ textarea {
   * Input with button left or right
   */
 
-[class^="input-with-button"] {
+.input-with-button {
     width: 100%;
     display: table;
     margin-bottom: 1.2rem;
@@ -179,7 +172,7 @@ textarea {
         position: relative;
     }
     /* fix border-radius on left */
-    &[class$="-left"] {
+    &.button-left {
         .button-wrapper {
             .button-default,
             .button-outlined {
@@ -191,7 +184,7 @@ textarea {
         }
     }
     /* fix border-radius on right */
-    &[class$="-right"] {
+    &.button-right {
         .button-wrapper {
             .button-default,
             .button-outlined {

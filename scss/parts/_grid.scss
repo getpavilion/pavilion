@@ -8,7 +8,7 @@
 .container-pl,
 .container-tp,
 .container-tl {
-    @include container; 
+    @include container;
 }
 
 
@@ -67,7 +67,56 @@
         display: table;
         clear: both;
     }
-    [class^="col-"] {
+    .col-pp-20,
+    .col-pp-25,
+    .col-pp-33,
+    .col-pp-40,
+    .col-pp-50,
+    .col-pp-60,
+    .col-pp-66,
+    .col-pp-75,
+    .col-pp-80,
+    .col-pp-100,
+    .col-pl-20,
+    .col-pl-25,
+    .col-pl-33,
+    .col-pl-40,
+    .col-pl-50,
+    .col-pl-60,
+    .col-pl-66,
+    .col-pl-75,
+    .col-pl-80,
+    .col-pl-100,
+    .col-tp-20,
+    .col-tp-25,
+    .col-tp-33,
+    .col-tp-40,
+    .col-tp-50,
+    .col-tp-60,
+    .col-tp-66,
+    .col-tp-75,
+    .col-tp-80,
+    .col-tp-100,
+    .col-tl-20,
+    .col-tl-25,
+    .col-tl-33,
+    .col-tl-40,
+    .col-tl-50,
+    .col-tl-60,
+    .col-tl-66,
+    .col-tl-75,
+    .col-tl-80,
+    .col-tl-100,
+    .col-dt-20,
+    .col-dt-25,
+    .col-dt-33,
+    .col-dt-40,
+    .col-dt-50,
+    .col-dt-60,
+    .col-dt-66,
+    .col-dt-75,
+    .col-dt-80,
+    .col-dt-100 {
         position: relative;
         width: 100%;
         float: left;
@@ -237,6 +286,7 @@
         }
     }
 }
+
 
 /**
   * Offsets for columns
@@ -606,6 +656,7 @@
         left: 80%;
     }
 }
+
 
 /**
   * Pull classes for columns
