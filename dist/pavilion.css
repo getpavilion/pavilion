@@ -2351,6 +2351,13 @@ select:focus,
 textarea:focus {
   border-color: #426AFB;
 }
+input:not([type="checkbox"]):not([type="radio"]),
+select:not([type="checkbox"]):not([type="radio"]),
+textarea:not([type="checkbox"]):not([type="radio"]) {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
 input[type="file"],
 select[type="file"],
 textarea[type="file"] {
@@ -2358,6 +2365,31 @@ textarea[type="file"] {
   line-height: 0;
   border: 0;
   padding: 0;
+}
+input[type="password"],
+select[type="password"],
+textarea[type="password"] {
+  font-family: verdana;
+}
+input[type="password"]::-webkit-input-placeholder,
+select[type="password"]::-webkit-input-placeholder,
+textarea[type="password"]::-webkit-input-placeholder {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+input[type="password"]:-moz-placeholder,
+select[type="password"]:-moz-placeholder,
+textarea[type="password"]:-moz-placeholder {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+input[type="password"]::-moz-placeholder,
+select[type="password"]::-moz-placeholder,
+textarea[type="password"]::-moz-placeholder {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+input[type="password"]:-ms-input-placeholder,
+select[type="password"]:-ms-input-placeholder,
+textarea[type="password"]:-ms-input-placeholder {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 input::-webkit-input-placeholder,
 select::-webkit-input-placeholder,
