@@ -113,12 +113,33 @@ textarea {
     &:focus {
         border-color: $primary-color;
     }
+    &:not([type="checkbox"]):not([type="radio"]) {
+        appearance: none;    
+    }
     /* standard file type input */
     &[type="file"] {
         margin: 0.8rem 0 2rem;
         line-height: 0;
         border: 0;
         padding: 0;
+    }
+    &[type="password"] {
+        font-family: verdana;
+        &::-webkit-input-placeholder {
+            font-family: $base-font-family;
+        }
+
+        &:-moz-placeholder { /* Firefox 18- */
+           font-family: $base-font-family;
+        }
+
+        &::-moz-placeholder {  /* Firefox 19+ */
+           font-family: $base-font-family;
+        }
+
+        &:-ms-input-placeholder {  
+           font-family: $base-font-family;
+        }
     }
     &::-webkit-input-placeholder {
        color: darken($soft-gray, 30%);
