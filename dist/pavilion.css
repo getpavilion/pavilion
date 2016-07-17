@@ -2354,7 +2354,6 @@ textarea {
   font-size: inherit;
   display: block;
   width: 100%;
-  background-color: transparent;
   border: 1px solid #bcbcbc;
   border-radius: 3px;
   box-shadow: none;
@@ -2373,6 +2372,7 @@ textarea:not([type="checkbox"]):not([type="radio"]) {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  background-color: white;
 }
 input[type="file"],
 select[type="file"],
