@@ -110,7 +110,6 @@ textarea {
     font-size: inherit;
     display: block;
     width: 100%;
-    background-color: transparent;
     border: $border-input-and-button solid $medium-gray;
     border-radius: $small-radius;
     box-shadow: none;
@@ -121,7 +120,8 @@ textarea {
         border-color: $primary-color;
     }
     &:not([type="checkbox"]):not([type="radio"]) {
-        appearance: none;    
+        appearance: none;
+        background-color: white; 
     }
     /* standard file type input */
     &[type="file"] {
