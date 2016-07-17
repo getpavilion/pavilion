@@ -6,15 +6,12 @@
 .button-default {
     @include button; /* Include standard button styles, see mixins */
     background-color: $primary-color;
-    border-color: $primary-color;
     color: white;
     &:hover, &:visited, &:focus {
         background-color: darken($primary-color, 10%);
-        border-color: darken($primary-color, 10%);
     }
     &:active {
         background-color: darken($primary-color, 12%);
-        border-color: darken($primary-color, 12%);
     }
 }
 
@@ -24,19 +21,18 @@
     border-color: $primary-color;
     color: $primary-color;
     &:hover, &:visited, &:focus {
-        border-color: darken($primary-color, 10%);
         color: darken($primary-color, 10%);
+        border-color: darken($primary-color, 10%);
     }
     &:active {
-        border-color: darken($primary-color, 12%);
         color: darken($primary-color, 12%);
+        border-color: darken($primary-color, 10%);
     }
 }
 
 .button-stripped {
     @include button; /* Include standard button styles, see mixins */
     background-color: transparent;
-    border-color: transparent;
     color: $primary-color;
     &:hover {
         color: darken($primary-color, 10%);
