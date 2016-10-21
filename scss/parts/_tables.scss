@@ -9,9 +9,9 @@ table {
     background-color: transparent;
     border-collapse: collapse;
     margin-bottom: 1.3em;
-    > thead {
-        > tr {
-            > th {
+    thead {
+        tr {
+            th {
                 text-align: left;
                 padding: 0.6rem 0;
                 vertical-align: top;
@@ -20,9 +20,9 @@ table {
             }
         }
     }
-    > tbody {
-        > tr {
-            > td, th {
+    tbody {
+        tr {
+            td, th {
                 text-align: left;
                 padding: 0.6rem 0;
                 vertical-align: top;
@@ -33,9 +33,9 @@ table {
             }
         }
     }
-    > tfoot {
-        > tr {
-            > td {
+    tfoot {
+        tr {
+            td {
                 font-weight: $font-weight-bold;
                 text-align: left;
                 padding: 0.6rem 0;

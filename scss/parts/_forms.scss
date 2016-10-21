@@ -48,7 +48,7 @@ label {
     position: relative;
     display: table;
     cursor: pointer;
-    font-weight: $font-weight-normal;
+    font-weight: $font-weight-regular;
     input {
         position: absolute;
         width: auto;
@@ -89,7 +89,7 @@ label.button-default,
 label.button-outlined,
 label.button-stripped {
     position: relative;
-    font-weight: $font-weight-normal;
+    font-weight: $font-weight-regular;
     margin-bottom: 1.2rem;
     [type="file"] {
         visibility: hidden;
@@ -106,7 +106,7 @@ input,
 select,
 textarea {
     font-family: inherit;
-    font-weight: $font-weight-normal;
+    font-weight: $font-weight-regular;
     font-size: inherit;
     display: block;
     width: 100%;
@@ -247,6 +247,10 @@ select {
     background-repeat: no-repeat;
     background-position: right center;
     background-origin: content-box;
+    @media (min-width: $size-switch) {
+        height: calc(3rem + 2px);    
+    }
+    height: 3.8rem;
     &::-ms-expand {
         display: none;
     }

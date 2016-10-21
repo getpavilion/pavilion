@@ -33,7 +33,7 @@ a {
 .summary {
     font-size: 1.1em;
     font-weight: $font-weight-bold;
-    @media (min-width: $tablet-portrait-size) {
+    @media (min-width: $size-switch) {
         font-size: 1.1429em;
         font-weight: $font-weight-light;
     }
@@ -47,7 +47,7 @@ a {
 .split {
     column-count: 0;
     column-gap: 0;
-    @media (min-width: $tablet-portrait-size) {
+    @media (min-width: $size-switch) {
         column-count: 2;
         column-gap: 1rem;
     }
@@ -66,6 +66,8 @@ h6 {
     margin: 1.414em 0 0.5em;
     font-weight: inherit;
     line-height: 1.2;
+    color: $heading-color;
+    font-family: $heading-font-family;
 }
 
 h1, .h1 {
@@ -88,13 +90,7 @@ h4, .h4 {
 }
 
 h5, .h5 {
-    &:not(.h5) {
-        font-weight: $font-weight-bold;
-    }
     font-size: $h5;
-    code, kbd, pre {
-        font-weight: $font-weight-normal;
-    }
 }
 
 small, h6, .h6 {
