@@ -13,7 +13,7 @@
         margin-left: -1rem;
     }
     &:before {
-        content: " ";
+        // content: " ";
         display: table;
     }
     &:after {
@@ -448,25 +448,25 @@
 }
 
 
-// justify content
+// justify items
 
-.flex-justify-content-start {
+.flex-justify-items-start {
     justify-content: flex-start
 }
 
-.flex-justify-content-end {
+.flex-justify-items-end {
     justify-content: flex-end
 }
 
-.flex-justify-content-center {
+.flex-justify-items-center {
     justify-content: center
 }
 
-.flex-justify-content-between {
+.flex-justify-items-between {
     justify-content: space-between
 }
 
-.flex-justify-content-around {
+.flex-justify-items-around {
     justify-content: space-around
 }
 

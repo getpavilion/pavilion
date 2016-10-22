@@ -1484,7 +1484,6 @@ body {
   }
 }
 .row-flex:before {
-  content: " ";
   display: table;
 }
 .row-flex:after {
@@ -2055,27 +2054,27 @@ body {
       flex-wrap: wrap-reverse;
 }
 
-.flex-justify-content-start {
+.flex-justify-items-start {
   -ms-flex-pack: start;
       justify-content: flex-start;
 }
 
-.flex-justify-content-end {
+.flex-justify-items-end {
   -ms-flex-pack: end;
       justify-content: flex-end;
 }
 
-.flex-justify-content-center {
+.flex-justify-items-center {
   -ms-flex-pack: center;
       justify-content: center;
 }
 
-.flex-justify-content-between {
+.flex-justify-items-between {
   -ms-flex-pack: justify;
       justify-content: space-between;
 }
 
-.flex-justify-content-around {
+.flex-justify-items-around {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
