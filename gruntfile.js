@@ -62,7 +62,7 @@ module.exports = function(grunt) {
             mincss: {
                 options: {
                     browsers: [
-                        'last 3 versions'
+                        'last 2 versions'
                     ],
                     map: {
                         inline: false

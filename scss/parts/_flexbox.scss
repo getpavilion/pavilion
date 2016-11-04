@@ -1,26 +1,19 @@
 /**
-  * Flexbox default class
-  * See mixins for the properties
-  */
-
-.display-flex {
-    @include flexbox;
-}
-
-/**
   * Rows & Columns for the grid
   */
 
 .row-flex {
-    @include flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     margin-right: -1.5rem;
     margin-left: -1.5rem;
-    @media(min-width: $tablet-portrait-size) {
+    @media(min-width: $size-switch) {
         margin-right: -1rem;
         margin-left: -1rem;
     }
     &:before {
-        content: " ";
+        // content: " ";
         display: table;
     }
     &:after {
@@ -34,70 +27,94 @@
         flex: 1;
         padding-right: 1.5rem;
         padding-left: 1.5rem;
-        @media(min-width: $tablet-portrait-size) {
+        @media(min-width: $size-switch) {
             padding-right: 1rem;
             padding-left: 1rem;
         }
     }
+    .col-pp-10,
     .col-pp-20,
     .col-pp-25,
+    .col-pp-30,
     .col-pp-33,
     .col-pp-40,
     .col-pp-50,
     .col-pp-60,
+    .col-pp-70,
     .col-pp-66,
     .col-pp-75,
     .col-pp-80,
+    .col-pp-90,
     .col-pp-100,
+    .col-pl-10,
     .col-pl-20,
     .col-pl-25,
+    .col-pl-30,
     .col-pl-33,
     .col-pl-40,
     .col-pl-50,
     .col-pl-60,
     .col-pl-66,
+    .col-pl-70,
     .col-pl-75,
     .col-pl-80,
+    .col-pl-90,
     .col-pl-100,
+    .col-tp-10,
     .col-tp-20,
     .col-tp-25,
+    .col-tp-30,
     .col-tp-33,
     .col-tp-40,
     .col-tp-50,
     .col-tp-60,
     .col-tp-66,
+    .col-tp-70,
     .col-tp-75,
     .col-tp-80,
+    .col-tp-90,
     .col-tp-100,
+    .col-tl-10,
     .col-tl-20,
     .col-tl-25,
+    .col-tl-30,
     .col-tl-33,
     .col-tl-40,
     .col-tl-50,
     .col-tl-60,
     .col-tl-66,
+    .col-tl-70,
     .col-tl-75,
     .col-tl-80,
+    .col-tl-90,
     .col-tl-100,
+    .col-dt-10,
     .col-dt-20,
     .col-dt-25,
+    .col-dt-30,
     .col-dt-33,
     .col-dt-40,
     .col-dt-50,
     .col-dt-60,
     .col-dt-66,
+    .col-dt-70,
     .col-dt-75,
     .col-dt-80,
+    .col-dt-90,
     .col-dt-100 {
         position: relative;
         flex: 0 0 100%;
         max-width: 100%;
         padding-right: 1.5rem;
         padding-left: 1.5rem;
-        @media(min-width: $tablet-portrait-size) {
+        @media(min-width: $size-switch) {
             padding-right: 1rem;
             padding-left: 1rem;
         }
+    }
+    .col-pp-10 {
+        flex: 0 0 10%;
+        max-width: 10%;
     }
     .col-pp-20 {
         flex: 0 0 20%;
@@ -106,6 +123,10 @@
     .col-pp-25 {
         flex: 0 0 25%;
         max-width: 25%;
+    }
+    .col-pp-30 {
+        flex: 0 0 30%;
+        max-width: 30%;
     }
     .col-pp-33 {
         flex: 0 0 33.3333%;
@@ -127,6 +148,10 @@
         flex: 0 0 66.6666%;
         max-width: 66.6666%;
     }
+    .col-pp-70 {
+        flex: 0 0 70%;
+        max-width: 70%;
+    }
     .col-pp-75 {
         flex: 0 0 75%;
         max-width: 75%;
@@ -135,11 +160,19 @@
         flex: 0 0 80%;
         max-width: 80%;
     }
+    .col-pp-90 {
+        flex: 0 0 90%;
+        max-width: 90%;
+    }
     .col-pp-100 {
         flex: 0 0 100%;
         max-width: 100%;
     }
     @media(min-width: $phone-landscape-size) {
+        .col-pl-10 {
+            flex: 0 0 10%;
+            max-width: 10%;
+        }
         .col-pl-20 {
             flex: 0 0 20%;
             max-width: 20%;
@@ -147,6 +180,10 @@
         .col-pl-25 {
             flex: 0 0 25%;
             max-width: 25%;
+        }
+        .col-pl-30 {
+            flex: 0 0 30%;
+            max-width: 30%;
         }
         .col-pl-33 {
             flex: 0 0 33.3333%;
@@ -168,6 +205,10 @@
             flex: 0 0 66.6666%;
             max-width: 66.6666%;
         }
+        .col-pl-70 {
+            flex: 0 0 70%;
+            max-width: 70%;
+        }
         .col-pl-75 {
             flex: 0 0 75%;
             max-width: 75%;
@@ -176,12 +217,20 @@
             flex: 0 0 80%;
             max-width: 80%;
         }
+        .col-pl-90 {
+            flex: 0 0 90%;
+            max-width: 90%;
+        }
         .col-pl-100 {
             flex: 0 0 100%;
             max-width: 100%;
         }
     }
     @media(min-width: $tablet-portrait-size) {
+        .col-tp-10 {
+            flex: 0 0 10%;
+            max-width: 10%;
+        }
         .col-tp-20 {
             flex: 0 0 20%;
             max-width: 20%;
@@ -189,6 +238,10 @@
         .col-tp-25 {
             flex: 0 0 25%;
             max-width: 25%;
+        }
+        .col-tp-30 {
+            flex: 0 0 30%;
+            max-width: 30%;
         }
         .col-tp-33 {
             flex: 0 0 33.3333%;
@@ -210,6 +263,10 @@
             flex: 0 0 66.6666%;
             max-width: 66.6666%;
         }
+        .col-tp-70 {
+            flex: 0 0 70%;
+            max-width: 70%;
+        }
         .col-tp-75 {
             flex: 0 0 75%;
             max-width: 75%;
@@ -218,12 +275,20 @@
             flex: 0 0 80%;
             max-width: 80%;
         }
+        .col-tp-90 {
+            flex: 0 0 90%;
+            max-width: 90%;
+        }
         .col-tp-100 {
             flex: 0 0 100%;
             max-width: 100%;
         }
     }
     @media(min-width: $tablet-landscape-size) {
+        .col-tl-10 {
+            flex: 0 0 10%;
+            max-width: 10%;
+        }
         .col-tl-20 {
             flex: 0 0 20%;
             max-width: 20%;
@@ -231,6 +296,10 @@
         .col-tl-25 {
             flex: 0 0 25%;
             max-width: 25%;
+        }
+        .col-tl-30 {
+            flex: 0 0 30%;
+            max-width: 30%;
         }
         .col-tl-33 {
             flex: 0 0 33.3333%;
@@ -252,6 +321,10 @@
             flex: 0 0 66.6666%;
             max-width: 66.6666%;
         }
+        .col-tl-70 {
+            flex: 0 0 70%;
+            max-width: 70%;
+        }
         .col-tl-75 {
             flex: 0 0 75%;
             max-width: 75%;
@@ -260,12 +333,20 @@
             flex: 0 0 80%;
             max-width: 80%;
         }
+        .col-tl-90 {
+            flex: 0 0 90%;
+            max-width: 90%;
+        }
         .col-tl-100 {
             flex: 0 0 100%;
             max-width: 100%;
         }
     }
     @media(min-width: $desktop-size) {
+        .col-dt-10 {
+            flex: 0 0 10%;
+            max-width: 10%;
+        }
         .col-dt-20 {
             flex: 0 0 20%;
             max-width: 20%;
@@ -273,6 +354,10 @@
         .col-dt-25 {
             flex: 0 0 25%;
             max-width: 25%;
+        }
+        .col-dt-30 {
+            flex: 0 0 30%;
+            max-width: 30%;
         }
         .col-dt-33 {
             flex: 0 0 33.3333%;
@@ -294,6 +379,10 @@
             flex: 0 0 66.6666%;
             max-width: 66.6666%;
         }
+        .col-dt-70 {
+            flex: 0 0 70%;
+            max-width: 70%;
+        }
         .col-dt-75 {
             flex: 0 0 75%;
             max-width: 75%;
@@ -301,6 +390,10 @@
         .col-dt-80 {
             flex: 0 0 80%;
             max-width: 80%;
+        }
+        .col-dt-90 {
+            flex: 0 0 90%;
+            max-width: 90%;
         }
         .col-dt-100 {
             flex: 0 0 100%;
@@ -310,61 +403,170 @@
 }
 
 /**
-  * Flex positioning classes for flex containers.
-  * Targets all child flex items.
+  * Flexbox main class
   */
 
-.row-flex,
 .display-flex {
+    display: flex;
+}
 
-    /* On all items - add to parent container */
+.display-inline-flex {
+    display: inline-flex;
+}
 
-    &.items-top {
-        align-items: flex-start;
-    }
-    &.items-center-v {
-        align-items: center;
-    }
-    &.items-bottom {
-        align-items: flex-end;
-    }
-    &.items-baseline {
-        align-items: baseline;
-    }
-    &.items-left {
-        justify-content: flex-start;
-    }
-    &.items-center-h {
-        justify-content: center;
-    }
-    &.items-right {
-        justify-content: flex-end;
-    }
-    &.items-spaced-around {
-        justify-content: space-around;
-    }
-    &.items-spaced-between {
-        justify-content: space-between;
-    }
+/**
+  * Flex Parent Configuration
+  */
 
-    /* On individual items */
+// flex direction
 
-    .item-top {
-        align-self: flex-start;
-    }
-    .item-center-v {
-        align-self: center;
-    }
-    .item-bottom {
-        align-self: flex-end;
-    }
-    .item-baseline {
-        align-self: baseline;
-    }
-    .item-first {
-        order: -1;
-    }
-    .item-last {
-        order: 1;
-    }
+.flex-direction-row {
+    flex-direction: row; // default in pavilion
+}
+
+.flex-direction-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.flex-direction-column-reverse {
+    flex-direction: column-reverse;
+}
+
+
+// flex wrap
+
+.flex-wrap {
+    flex-wrap: wrap; // default in pavilion
+}
+
+.flex-no-wrap {
+    flex-wrap: nowrap; 
+}
+
+.flex-wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+
+// justify content
+
+.items-left, // 1.0.27 class
+.flex-justify-content-start {   
+    justify-content: flex-start; 
+}
+
+.items-right, // 1.0.27 class
+.flex-justify-content-end {     
+    justify-content: flex-end; 
+}
+
+.items-center-h, // 1.0.27 class
+.flex-justify-content-center {  
+    justify-content: center; 
+}
+
+.items-spaced-between, // 1.0.27 class
+.flex-justify-content-between { 
+    justify-content: space-between; 
+}
+
+.items-spaced-around, // 1.0.27 class
+.flex-justify-content-around {  
+    justify-content: space-around; 
+}
+
+// align items
+.items-top, // 1.0.27 class
+.flex-align-items-start {   
+    align-items: flex-start; 
+}
+
+.items-bottom, // 1.0.27 class
+.flex-align-items-end { 
+    align-items: flex-end; 
+}
+
+.items-center-v, // 1.0.27 class
+.flex-align-items-center { 
+    align-items: center; 
+}
+
+.items-baseline, // 1.0.27 class
+.flex-align-items-baseline { 
+    align-items: baseline; 
+}
+
+.flex-align-items-stretch {
+    align-items: stretch; 
+}
+
+
+// align content
+
+.flex-align-content-start {
+    align-content: flex-start; 
+}
+
+.flex-align-content-end {  
+    align-content: flex-end; 
+}
+
+.flex-align-content-center {   
+    align-content: center; 
+}
+
+.flex-align-content-between {  
+    align-content: space-between; 
+}
+
+.flex-align-content-around {   
+    align-content: space-around; 
+}
+
+.flex-align-content-stretch {  
+    align-content: stretch; 
+}
+
+/**
+  * Flex Children Configuration
+  * flex-order, flex-grow, flex-shrink, flex-basis are not included.
+  */
+
+.flex-align-self-auto { 
+    align-self: auto;
+}
+
+.item-top, // 1.0.27 class
+.flex-align-self-start {    
+    align-self: flex-start;
+}
+
+.item-bottom, // 1.0.27 class
+.flex-align-self-end {  
+    align-self: flex-end;
+}
+
+.item-center-v, // 1.0.27 class
+.flex-align-self-center {   
+    align-self: center;
+}
+
+.item-baseline, // 1.0.27 class
+.flex-align-self-baseline { 
+    align-self: baseline;
+}
+
+.flex-align-self-stretch {  
+    align-self: stretch;
+}
+
+.item-first { // 1.0.27 class
+    order: -1;
+}
+.item-last { // 1.0.27 class
+    order: 1;
 }

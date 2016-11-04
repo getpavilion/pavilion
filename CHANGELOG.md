@@ -1,3 +1,18 @@
+v1.0.28
+=======================================================
+(november 4 2016)
+
+In this version the flexbox utility classes had a major overhaul to reflect the flexbox layout model more
+accuratly. The old flexbox utility classes will still work. For now. 
+Other updates include new columns (10%, 70% and 90%) and some new form elements.
+
+- Added new flexbox classes
+- Added multi select for forms
+- Added new columns (10, 70, 90)
+- Updated Normalize to 5.0.0
+- Updated documentation to reflect all the changes
+
+
 v1.0.26 / v1.0.27
 =======================================================
 (july 17 2016)

@@ -8,7 +8,7 @@
     padding-right: 1rem;
     padding-right: 1.5rem;
     padding-left: 1.5rem;
-    @media(min-width: $tablet-portrait-size) {
+    @media(min-width: $size-switch) {
         padding-right: 1rem;
         padding-left: 1rem;
     }
@@ -39,10 +39,6 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     cursor: pointer;
-    i.fa {
-        margin: 0 0 0 0.3rem;
-        /* for font awesome icons in buttons, fix margin */
-    }
     &:active {
         transform: scale(0.97);
     }
@@ -74,15 +70,4 @@
     &:after {
         clear: both;
     }
-}
-
-/**
-  * Flexbox
-  */
-
-@mixin flexbox {
-    display: flex;
-    flex: 1;
-    flex-wrap: wrap;
-    flex-direction: row;
 }
