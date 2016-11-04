@@ -1,4 +1,4 @@
-v1.0.28
+v1.0.28 / v1.0.30
 =======================================================
 (november 4 2016)
 
@@ -11,6 +11,8 @@ Other updates include new columns (10%, 70% and 90%) and some new form elements.
 - Added new columns (10, 70, 90)
 - Updated Normalize to 5.0.0
 - Updated documentation to reflect all the changes
+- Fixed weird flex-column pixelrounding
+- Extended the variables.scss file with more variables, more fun!
 
 
 v1.0.26 / v1.0.27
