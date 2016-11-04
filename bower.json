@@ -5,7 +5,7 @@
   "homepage": "http://www.pavilion.io",
   "license": "MIT",
   "author": "Baasdesign <info@baasdesign.com>",
-  "main": "dist/pavilion.min.css",
+  "main": "dist/pavilion.css",
   "repository": "getpavilion/pavilion",
   "keywords": [
     "responsive",
