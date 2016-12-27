@@ -2682,6 +2682,11 @@ pre code, pre kbd {
 .button-stripped:active {
   color: #063bfa;
 }
+
+.button-full-width {
+  display: block;
+  width: 100%;
+}
 ul, ol, dl {
   margin: 0 0 1.3em 0;
   padding: 0;
@@ -2948,7 +2953,7 @@ hr {
   margin-top: 1.2rem;
   margin-bottom: 1.2rem;
   border: 0;
-  border-top: 2px solid #EFEFEF;
+  border-top: 1px solid #BCBCBC;
 }
 input[disabled="true"], input[disabled="disabled"], input[disabled],
 select[disabled="true"],
