@@ -39,6 +39,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     cursor: pointer;
+    text-decoration: none;
     &:active {
         transform: scale(0.97);
     }

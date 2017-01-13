@@ -7,11 +7,18 @@
     @include button; /* Include standard button styles, see mixins */
     background-color: $primary-color;
     color: white;
-    &:hover, &:visited, &:focus {
+    /* Visited style for when an <a> tag is styled as a button */
+    &:visited {
+        background-color: $primary-color;
+        color: white;
+    }
+    &:hover, &:focus {
         background-color: darken($primary-color, 10%);
+        color: white;
     }
     &:active {
         background-color: darken($primary-color, 12%);
+        color: white;
     }
 }
 
@@ -20,13 +27,17 @@
     background-color: transparent;
     border-color: $primary-color;
     color: $primary-color;
-    &:hover, &:visited, &:focus {
+    /* Visited style for when an <a> tag is styled as a button */
+    &:visited {
+        color: $primary-color;
+    }
+    &:hover, &:focus {
         color: darken($primary-color, 10%);
         border-color: darken($primary-color, 10%);
     }
     &:active {
         color: darken($primary-color, 12%);
-        border-color: darken($primary-color, 10%);
+        border-color: darken($primary-color, 12%);
     }
 }
 
@@ -34,11 +45,11 @@
     @include button; /* Include standard button styles, see mixins */
     background-color: transparent;
     color: $primary-color;
-    &:hover {
-        color: darken($primary-color, 10%);
+    /* Visited style for when an <a> tag is styled as a button */
+    &:visited {
+        color: $primary-color;
     }
-    &:visited, &:focus {
-        text-decoration: underline;
+    &:hover, &:focus {
         color: darken($primary-color, 10%);
     }
     &:active {
@@ -49,4 +60,9 @@
 .button-full-width {
     display: block;
     width: 100%;
+}
+
+.button-center {
+    display: block;
+    margin: 0 auto 1rem auto;
 }
