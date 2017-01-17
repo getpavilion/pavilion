@@ -1,0 +1,35 @@
+/**
+  * Clearfix
+  */
+
+.clearfix {
+    @include clearfix;
+}
+
+/**
+  * Floats
+  */
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+/**
+  * Text align
+  */
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}

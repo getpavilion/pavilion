@@ -2188,9 +2188,21 @@ table tfoot tr td {
 .clearfix:after {
   clear: both;
 }
-.show-elements {
-  outline: 1px solid rgba(0, 0, 0, 0.3);
+.float-left {
+  float: left;
 }
-.show-elements * {
-  outline: 1px solid rgba(0, 0, 255, 0.4);
+
+.float-right {
+  float: right;
+}
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
 }
