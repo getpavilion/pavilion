@@ -1,15 +1,15 @@
 {
   "name": "pavilion",
   "version": "1.0.31",
-  "description": "A simple, unopinionated CSS framework, ready for the future.",
+  "description": "Pavilion CSS Framework. A solid starting point without the bloat.",
   "homepage": "http://www.pavilion.io",
   "license": "MIT",
   "author": "Baasdesign <info@baasdesign.com>",
   "main": "dist/pavilion.min.css",
   "repository": "getpavilion/pavilion",
   "scripts": {
-    "start": "grunt",
-    "test": "grunt dist"
+    "start": "",
+    "test": ""
   },
   "keywords": [
     "responsive",
@@ -27,16 +27,17 @@
     ".travis.yml"
   ],
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-autoprefixer": "^3.0.4",
-    "grunt-contrib-clean": "^1.0.0",
-    "grunt-contrib-nodeunit": "^1.0.0",
-    "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-notify": "^0.4.5",
-    "grunt-stripcomments": "^0.4.0",
-    "load-grunt-tasks": "^3.4.1",
-    "time-grunt": "^1.3.0"
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cssbeautify": "^0.1.3",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.0",
+    "gulp-strip-css-comments": "^1.2.0",
+    "gulp-total-task-time": "^0.1.0",
+    "gulp-watch": "^4.3.11"
   },
   "engines": {
     "node": ">=0.12.0"
