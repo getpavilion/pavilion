@@ -1,25 +1,34 @@
 'use strict';
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
-var sourcemaps = require('gulp-sourcemaps');
-var cssmin = require('gulp-cssmin');
-var rename = require('gulp-rename');
-var del = require('del');
-var taskTime = require('gulp-total-task-time');
-var stripCssComments = require('gulp-strip-css-comments');
-var cssbeautify = require('gulp-cssbeautify');
-var watch = require('gulp-watch');
+var gulp              = require('gulp'),
+    sass              = require('gulp-sass'),
+    autoprefixer      = require('gulp-autoprefixer'),
+    sourcemaps        = require('gulp-sourcemaps'),
+    cssmin            = require('gulp-cssmin'),
+    rename            = require('gulp-rename'),
+    del               = require('del'),
+    taskTime          = require('gulp-total-task-time'),
+    stripCssComments  = require('gulp-strip-css-comments'),
+    cssbeautify       = require('gulp-cssbeautify'),
+    header            = require('gulp-header'),
+    pkg               = require('./package.json'),
+    watch             = require('gulp-watch');
 
+/* Header banner */
+var banner = ['/**',
+            '  * Pavilion CSS Framework',
+            '  * Version: <%= pkg.version %>',
+            '  * Website: <%= pkg.homepage %>',
+            '  * License: <%= pkg.license %>',
+            '  */',
+            '\n'].join('\n');
+
+/* Record total task time */
 taskTime.init();
 
-/* Clean folders */
+/* Clean 'dist' and 'demo/css' folders */
 gulp.task('clean', function() {
-    return del([
-        'dist/*',
-        'demo/css/*'
-    ]);
+    return del(['dist/*','demo/css/*']);
 });
 
 /* Compile SCSS, Autoprefix, Stripcomments, Beautify, Minify. */
@@ -35,6 +44,7 @@ gulp.task('scss-dist', function() {
             preserve: false
         }))
         .pipe(cssbeautify())
+        .pipe(header(banner, { pkg : pkg }))
         .pipe(gulp.dest('dist/'))
         .pipe(gulp.dest('demo/css'))
         .pipe(cssmin())
