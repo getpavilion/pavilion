@@ -1656,13 +1656,13 @@ h5,
 h6 {
     margin: 1.414em 0 0.5em;
     font-weight: inherit;
-    line-height: 1.2;
+    line-height: 1.35;
     color: #333;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h1, .h1 {
-    font-size: 3.157em;
+    font-size: 2.074em;
 }
 
 h1:not(.h1), .h1:not(.h1) {
@@ -1670,19 +1670,19 @@ h1:not(.h1), .h1:not(.h1) {
 }
 
 h2, .h2 {
-    font-size: 2.369em;
+    font-size: 1.728em;
 }
 
 h3, .h3 {
-    font-size: 1.777em;
+    font-size: 1.44em;
 }
 
 h4, .h4 {
-    font-size: 1.333em;
+    font-size: 1.2em;
 }
 
 h5, .h5 {
-    font-size: 1em;
+    font-size: 1.05em;
 }
 
 small, h6, .h6 {
@@ -1717,7 +1717,7 @@ blockquote footer cite {
 
 code, kbd, pre {
     font-family: "Lucida Console", Monaco, monospace;
-    font-size: 0.82em;
+    font-size: 0.861em;
     border-radius: 3px;
 }
 
@@ -1754,23 +1754,23 @@ mark {
 
 @media (max-width: 539px) {
     .h1-pp {
-        font-size: 3.157em;
+        font-size: 2.074em;
     }
 
     .h2-pp {
-        font-size: 2.369em;
+        font-size: 1.728em;
     }
 
     .h3-pp {
-        font-size: 1.777em;
+        font-size: 1.44em;
     }
 
     .h4-pp {
-        font-size: 1.333em;
+        font-size: 1.2em;
     }
 
     .h5-pp {
-        font-size: 1em;
+        font-size: 1.05em;
     }
 
     .h6-pp {
@@ -1780,23 +1780,23 @@ mark {
 
 @media (min-width: 540px) and (max-width: 767px) {
     .h1-pl {
-        font-size: 3.157em;
+        font-size: 2.074em;
     }
 
     .h2-pl {
-        font-size: 2.369em;
+        font-size: 1.728em;
     }
 
     .h3-pl {
-        font-size: 1.777em;
+        font-size: 1.44em;
     }
 
     .h4-pl {
-        font-size: 1.333em;
+        font-size: 1.2em;
     }
 
     .h5-pl {
-        font-size: 1em;
+        font-size: 1.05em;
     }
 
     .h6-pl {
@@ -1806,23 +1806,23 @@ mark {
 
 @media (min-width: 768px) and (max-width: 990px) {
     .h1-tp {
-        font-size: 3.157em;
+        font-size: 2.074em;
     }
 
     .h2-tp {
-        font-size: 2.369em;
+        font-size: 1.728em;
     }
 
     .h3-tp {
-        font-size: 1.777em;
+        font-size: 1.44em;
     }
 
     .h4-tp {
-        font-size: 1.333em;
+        font-size: 1.2em;
     }
 
     .h5-tp {
-        font-size: 1em;
+        font-size: 1.05em;
     }
 
     .h6-tp {
@@ -1832,23 +1832,23 @@ mark {
 
 @media (min-width: 991px) and (max-width: 1199px) {
     .h1-tl {
-        font-size: 3.157em;
+        font-size: 2.074em;
     }
 
     .h2-tl {
-        font-size: 2.369em;
+        font-size: 1.728em;
     }
 
     .h3-tl {
-        font-size: 1.777em;
+        font-size: 1.44em;
     }
 
     .h4-tl {
-        font-size: 1.333em;
+        font-size: 1.2em;
     }
 
     .h5-tl {
-        font-size: 1em;
+        font-size: 1.05em;
     }
 
     .h6-tl {
@@ -1858,23 +1858,23 @@ mark {
 
 @media (min-width: 1200px) {
     .h1-dt {
-        font-size: 3.157em;
+        font-size: 2.074em;
     }
 
     .h2-dt {
-        font-size: 2.369em;
+        font-size: 1.728em;
     }
 
     .h3-dt {
-        font-size: 1.777em;
+        font-size: 1.44em;
     }
 
     .h4-dt {
-        font-size: 1.333em;
+        font-size: 1.2em;
     }
 
     .h5-dt {
-        font-size: 1em;
+        font-size: 1.05em;
     }
 
     .h6-dt {
@@ -2063,7 +2063,7 @@ fieldset {
 }
 
 fieldset legend {
-    font-size: 1.333em;
+    font-size: 1.2em;
     margin: 1.414em 0 0.5em;
     display: block;
     width: 100%;
