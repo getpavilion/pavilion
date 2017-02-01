@@ -4,8 +4,6 @@
 
 @mixin container {
     margin: 0 auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
     padding-right: 1.5rem;
     padding-left: 1.5rem;
     @media(min-width: $size-switch) {

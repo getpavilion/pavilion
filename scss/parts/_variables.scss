@@ -1,12 +1,18 @@
 /**
-  * Component & Type sizing, normal and small.
+  * Rem units: normal and small, defined on the <html> tag. Switches to small on $size-switch
+  * Rem's are used in Pavilion for box model sizing, positioning and adjustments.
   */
 
-$remsize-normal: 15px; /* Adjust this to adjust your REM sizes on tablets and larger screens, 1REM equals the size you set here. */
-$emsize-normal: 18px;  /* Adjust this to adjust your EM sizes on tablets and larger screens. EM is used for typography. 1EM equals the size you set here.*/
+$remsize-normal: 15px;
+$remsize-small: 10px;
 
-$remsize-small: 10px; /* Adjust this to adjust your REM sizes on phones, 1REM equals the size you set here. */
-$emsize-small: 16px;  /* Adjust this to adjust your EM sizes on phones. EM is used for typography. 1EM equals the size you set here.*/
+/**
+  * Em units: normal and small, defined on the <body> tag. Switches to small on $size-switch
+  * Em's are used in Pavilion for typographic elements.
+  */
+
+$emsize-normal: 18px;
+$emsize-small: 16px;
 
 /**
   * Line-height 
@@ -82,7 +88,14 @@ $font-weight-medium: 500;
 $font-weight-bold: 700;
 
 /**
-  * Base font stack
+  * Base and heading font-weights
+  */
+
+$base-font-weight: $font-weight-regular; 
+$heading-font-weight: $base-font-weight;
+
+/**
+  * Base and heading font stack
   */
 
 $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;

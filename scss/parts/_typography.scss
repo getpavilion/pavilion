@@ -35,9 +35,9 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 1.414em 0 0.5em;
-    font-weight: inherit;
-    line-height: 1.35;
+    margin: 1.6em 0 0.5em;
+    font-weight: $heading-font-weight;
+    line-height: $line-height-normal * 0.9;
     color: $heading-color;
     font-family: $heading-font-family;
 }
@@ -74,9 +74,9 @@ small, h6, .h6 {
   */
 
 blockquote {
-    border-left: 4px solid $primary-color;
-    padding: 0.2em 0 0.2em 1em;
-    margin: 1em 0 1.3em 0;
+    border-left: 2px solid $body-copy-color;
+    margin-left: 0;
+    padding-left: 1em;
     ol:last-of-type,
     p:last-of-type,
     ul:last-of-type {
