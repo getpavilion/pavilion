@@ -74,9 +74,8 @@ small, h6, .h6 {
   */
 
 blockquote {
-    border-left: 2px solid $body-copy-color;
-    margin-left: 0;
-    padding-left: 1em;
+    margin: 0 0 1.3em 0;
+    padding: 0 1.3em;
     ol:last-of-type,
     p:last-of-type,
     ul:last-of-type {
