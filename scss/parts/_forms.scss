@@ -20,7 +20,7 @@ fieldset {
     margin: 1rem 0;
     legend {        
         font-size: $h4;
-        margin: 1.414em 0 0.5em;
+        margin: 1.6em 0 0.5em;
         display: block;
         width: 100%;
     }
@@ -37,14 +37,14 @@ label {
     font-weight: $font-weight-bold;
     display: block;
     color: $body-copy-color;
-    line-height: normal;
+    line-height: $base-line-height;
     margin-bottom: 0.5em;
 }
 
 .checkbox, .radio {
-    padding-left: 25px;
+    padding-left: 25px; /* fixed padding because radio's and checkboxes don't scale */
     margin-top: 0;
-    margin-bottom: 1.1rem;
+    margin-bottom: 1rem;
     position: relative;
     display: table;
     cursor: pointer;
@@ -56,15 +56,15 @@ label {
         left: 0;
         cursor: pointer;
         &[type="checkbox"] {
-            top: 0.3rem;
+            top: calc(1em / 3);
             @-moz-document url-prefix() {
-                top: 0.35rem;
+                top: calc(1em / 2.6);
             }
         }
         &[type="radio"] {
-            top: 0.2rem;
+            top: calc(1em / 4);
             @-moz-document url-prefix() {
-                top: 0.32rem;
+                top: calc(1em / 2.7);
             }
         }
     }
@@ -74,14 +74,6 @@ label {
 .checkbox-inline, .radio-inline {
     display: inline-block;
     margin-right: 1.2rem;
-    input {
-        &[type="radio"] {
-            top: 0.2rem;
-            @-moz-document url-prefix() {
-                top: 0.32rem;
-            }
-        }
-    }
 }
 
 /* Button-type file upload */
@@ -113,9 +105,9 @@ textarea {
     border: $border-input-and-button solid $medium-gray;
     border-radius: $small-radius;
     box-shadow: none;
-    line-height: $line-height-normal;
+    line-height: $base-line-height;
     padding: $padding-input-and-button;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.3rem;
     &:focus {
         border-color: $primary-color;
     }
@@ -126,7 +118,8 @@ textarea {
     /* standard file type input */
     &[type="file"] {
         margin: 0.8rem 0 2rem;
-        line-height: 0;
+        line-height: 1.5;
+        font-size: 11px;
         border: 0;
         padding: 0;
     }
@@ -136,11 +129,11 @@ textarea {
             font-family: $base-font-family;
         }
 
-        &:-moz-placeholder { /* Firefox 18- */
+        &:-moz-placeholder { 
            font-family: $base-font-family;
         }
 
-        &::-moz-placeholder {  /* Firefox 19+ */
+        &::-moz-placeholder {
            font-family: $base-font-family;
         }
 
@@ -152,11 +145,11 @@ textarea {
        color: darken($medium-gray, 10%);
     }
 
-    &:-moz-placeholder { /* Firefox 18- */
+    &:-moz-placeholder {
        color: darken($medium-gray, 10%);  
     }
 
-    &::-moz-placeholder {  /* Firefox 19+ */
+    &::-moz-placeholder {
        color: darken($medium-gray, 10%);  
     }
 
@@ -199,7 +192,6 @@ textarea {
         margin: 0;
         position: relative;
     }
-    /* fix border-radius on left */
     &.button-left {
         .button-wrapper {
             .button-default,
@@ -211,7 +203,6 @@ textarea {
             border-radius: 0 $small-radius $small-radius 0;
         }
     }
-    /* fix border-radius on right */
     &.button-right {
         .button-wrapper {
             .button-default,
@@ -232,12 +223,14 @@ textarea {
 
 textarea {
     width: 100% !important;
-    min-height: 150px;
+    min-height: 10rem;
 }
 
 
 /**
   * Extra styles for the select input
+  * Browser do not style selects in the same way as regular single line inputs
+  * so additional css is required.
   */
 
 select {
@@ -249,10 +242,10 @@ select {
         background-repeat: no-repeat;
         background-position: right center;
         background-origin: content-box;
-        @media (min-width: $size-switch) {
-            height: calc(3rem + 2px);    
-        }
         height: 3.8rem;
+        @media (min-width: $size-switch) {
+            height: calc(3rem + 2px);
+        }
     }
     &::-ms-expand {
         display: none;
@@ -267,7 +260,7 @@ select {
 
 
 /**
-  * Devider
+  * Horizontal rule
   */
 
 hr {
@@ -279,7 +272,7 @@ hr {
 
 
 /**
-  * Disabled styles
+  * Disabled styles for inputs
   */
 
 input,
@@ -294,11 +287,9 @@ textarea {
             color: $medium-gray;
         }
         &:-moz-placeholder {
-            /* Firefox 18- */
             color: $medium-gray;
         }
         &::-moz-placeholder {
-            /* Firefox 19+ */
             color: $medium-gray;
         }
         &:-ms-input-placeholder {
