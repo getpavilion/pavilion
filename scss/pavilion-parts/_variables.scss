@@ -15,40 +15,42 @@ $emsize-normal: 18px;
 $emsize-small: 16px;
 
 /**
-  * Paddings/borders for buttons and inputs.
-  */
-  
-$padding-input-and-button-y: 0.6rem;
-$padding-input-and-button-x: 1rem;
-$padding-input-and-button: $padding-input-and-button-y $padding-input-and-button-x;
-
-$border-input-and-button: 1px; /* Borders for buttons and inputs are set to 1px by default. */
-
-/**
   * Breakpoints
   */
 
-$phone-landscape-size: 540px;    /* Phone landscape minimum. */
-$tablet-portrait-size: 768px;    /* Tablet portrait minimum. */
-$tablet-landscape-size: 991px;   /* Tablet landscape minimum. */
-$desktop-size: 1200px;           /* Desktop minimum. */
+$phone-landscape-size: 540px;         /* Phone landscape minimum. */
+$tablet-portrait-size: 768px;         /* Tablet portrait minimum. */
+$tablet-landscape-size: 991px;        /* Tablet landscape minimum. */
+$desktop-size: 1200px;                /* Desktop minimum. */
 
-$breakmargin: 20px;              /* Margin added to the breakpoint. */
-$size-switch: $tablet-portrait-size; /* Breakpoint at which the EM & REM sizes switch to small. */
+$breakmargin: 20px;                   /* Margin added to the breakpoint. */
+$size-switch: $tablet-portrait-size;  /* Breakpoint at which the EM & REM sizes switch to small. */
 
 /**
   * Colors and tints.
   */
 
-$body-copy-color: #333; /* Standard text color. */
+$body-copy-color: #333;
+$primary-color: #426AFB;
 $heading-color: $body-copy-color;
 
 $soft-gray: #EFEFEF;
 $medium-gray: #BCBCBC;
 $hard-gray: #565656;
 
-$primary-color: #426AFB;
-$accent-color: #2980b9;
+/**
+  * Paddings for buttons and inputs.
+  */
+  
+$padding-input-and-button-y: 0.6rem;
+$padding-input-and-button-x: 1rem;
+$padding-input-and-button: $padding-input-and-button-y $padding-input-and-button-x;
+
+/**
+  * Border width for buttons, inputs and horizontal rules.
+  */
+
+$default-border-width: 1px;
 
 /**
   * Border radius.

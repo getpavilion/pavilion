@@ -1,6 +1,6 @@
 /**
- * Basic styling for the forms
- */
+  * Basic styling for the forms
+  */
 
 form {
     width: 100%;
@@ -102,7 +102,7 @@ textarea {
     font-size: inherit;
     display: block;
     width: 100%;
-    border: $border-input-and-button solid $medium-gray;
+    border: $default-border-width solid $medium-gray;
     border-radius: $small-radius;
     box-shadow: none;
     line-height: $base-line-height;
@@ -267,7 +267,7 @@ hr {
     margin-top: 1.2rem;
     margin-bottom: 1.2rem;
     border: 0;
-    border-top: $border-input-and-button solid $medium-gray;
+    border-top: $default-border-width solid $medium-gray;
 }
 
 
