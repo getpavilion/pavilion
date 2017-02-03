@@ -5,7 +5,7 @@
 
 html {
     font-size: $remsize-small; /* Small rem-size */
-    @media(min-width: $tablet-portrait-size) {
+    @media(min-width: $size-switch) {
         font-size: $remsize-normal; /* Regular font-size */
     }
 }
@@ -23,10 +23,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-tap-highlight-color: transparent;
-    line-height: $line-height-normal;
+    line-height: $base-line-height;
     color: $body-copy-color;
     font-size: $emsize-small; /* Small font-size */
-    @media(min-width: $tablet-portrait-size) {
+    @media(min-width: $size-switch) {
         font-size: $emsize-normal; /* Regular font-size */
     }
 }
