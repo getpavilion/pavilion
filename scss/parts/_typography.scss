@@ -19,7 +19,11 @@ p {
 a {
     color: $primary-color;
     outline: none;
-    &:hover, &:focus, &:visited {
+    &:visited {
+        color: $primary-color;
+        outline: none;
+    }
+    &:hover, &:focus {
         color: darken($primary-color, 15%);
         outline: none;
     }
@@ -37,7 +41,7 @@ h5,
 h6 {
     margin: 1.6em 0 0.5em;
     font-weight: $heading-font-weight;
-    line-height: $line-height-normal * 0.9;
+    line-height: $base-line-height * 0.9;
     color: $heading-color;
     font-family: $heading-font-family;
 }
@@ -74,8 +78,9 @@ small, h6, .h6 {
   */
 
 blockquote {
+    border-left: 2px solid $body-copy-color;
     margin: 0 0 1.3em 0;
-    padding: 0 1.3em;
+    padding: 0 1em;
     ol:last-of-type,
     p:last-of-type,
     ul:last-of-type {
@@ -120,7 +125,7 @@ pre {
     padding: 0.7rem 1rem;
     display: block;
     background-color: $soft-gray;
-    line-height: $line-height-normal;
+    line-height: $base-line-height;
     overflow: auto;
     white-space: pre;
     code, kbd {
