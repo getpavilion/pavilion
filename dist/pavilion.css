@@ -285,8 +285,6 @@ body {
 .container-tp,
 .container-tl {
     margin: 0 auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
     padding-right: 1.5rem;
     padding-left: 1.5rem;
 }
@@ -1643,7 +1641,12 @@ a {
     outline: none;
 }
 
-a:hover, a:focus, a:visited {
+a:visited {
+    color: #426AFB;
+    outline: none;
+}
+
+a:hover, a:focus {
     color: #0537ec;
     outline: none;
 }
@@ -1654,8 +1657,8 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 1.414em 0 0.5em;
-    font-weight: inherit;
+    margin: 1.6em 0 0.5em;
+    font-weight: 400;
     line-height: 1.35;
     color: #333;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1690,9 +1693,9 @@ small, h6, .h6 {
 }
 
 blockquote {
-    border-left: 4px solid #426AFB;
-    padding: 0.2em 0 0.2em 1em;
-    margin: 1em 0 1.3em 0;
+    border-left: 2px solid #333;
+    margin: 0 0 1.3em 0;
+    padding: 0 1em;
 }
 
 blockquote ol:last-of-type,
@@ -2022,32 +2025,34 @@ mark {
     width: 100%;
 }
 
-ul, ol, dl {
+ul, ol {
+    margin: 0 0 1.3em 1em;
+    padding: 0;
+}
+
+ul li, ol li {
+    margin-bottom: 0.2em;
+}
+
+ul ul, ul ol, ol ul, ol ol {
+    margin: 0.4em 0 0.4em 1em;
+}
+
+dl {
     margin: 0 0 1.3em 0;
     padding: 0;
-    list-style-position: inside;
 }
 
-ul:not(ol), ol:not(ol), dl:not(ol) {
-    list-style-type: circle;
+dl dt {
+    margin-bottom: 0.2em;
 }
 
-ul li, ol li, dl li {
-    margin-bottom: 0.3em;
+dl dd {
+    margin: 0 0 0.2em 1em;
 }
 
-ul dt, ol dt, dl dt {
-    margin-top: 0.3em;
-}
-
-ul dd, ol dd, dl dd {
-    margin-left: 2rem;
-}
-
-ul ul, ul ol, ul dl, ol ul, ol ol, ol dl, dl ul, dl ol, dl dl {
-    margin: 0.5rem 0 0.4rem;
-    padding-left: 2rem;
-    font-size: 90%;
+dl dl {
+    margin: 0.4em 0 0.4em 1em;
 }
 
 form {
@@ -2064,7 +2069,7 @@ fieldset {
 
 fieldset legend {
     font-size: 1.2em;
-    margin: 1.414em 0 0.5em;
+    margin: 1.6em 0 0.5em;
     display: block;
     width: 100%;
 }
@@ -2073,14 +2078,14 @@ label {
     font-weight: 700;
     display: block;
     color: #333;
-    line-height: normal;
+    line-height: 1.5;
     margin-bottom: 0.5em;
 }
 
 .checkbox, .radio {
     padding-left: 25px;
     margin-top: 0;
-    margin-bottom: 1.1rem;
+    margin-bottom: 1rem;
     position: relative;
     display: table;
     cursor: pointer;
@@ -2096,38 +2101,28 @@ label {
 }
 
 .checkbox input[type="checkbox"], .radio input[type="checkbox"] {
-    top: 0.3rem;
+    top: calc(1em / 3);
 }
 
 @-moz-document url-prefix() {
     .checkbox input[type="checkbox"], .radio input[type="checkbox"] {
-        top: 0.35rem;
+        top: calc(1em / 2.6);
     }
 }
 
 .checkbox input[type="radio"], .radio input[type="radio"] {
-    top: 0.2rem;
+    top: calc(1em / 4);
 }
 
 @-moz-document url-prefix() {
     .checkbox input[type="radio"], .radio input[type="radio"] {
-        top: 0.32rem;
+        top: calc(1em / 2.7);
     }
 }
 
 .checkbox-inline, .radio-inline {
     display: inline-block;
     margin-right: 1.2rem;
-}
-
-.checkbox-inline input[type="radio"], .radio-inline input[type="radio"] {
-    top: 0.2rem;
-}
-
-@-moz-document url-prefix() {
-    .checkbox-inline input[type="radio"], .radio-inline input[type="radio"] {
-        top: 0.32rem;
-    }
 }
 
 label.button-default,
@@ -2159,7 +2154,7 @@ textarea {
     box-shadow: none;
     line-height: 1.5;
     padding: 0.6rem 1rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.3rem;
 }
 
 input:focus,
@@ -2181,7 +2176,8 @@ input[type="file"],
 select[type="file"],
 textarea[type="file"] {
     margin: 0.8rem 0 2rem;
-    line-height: 0;
+    line-height: 1.5;
+    font-size: 11px;
     border: 0;
     padding: 0;
 }
@@ -2297,7 +2293,7 @@ textarea:-ms-input-placeholder {
 
 textarea {
     width: 100% !important;
-    min-height: 150px;
+    min-height: 10rem;
 }
 
 select {
