@@ -105,7 +105,7 @@ blockquote {
 
 code, kbd, pre {
     font-family: $mono-font-family;
-    font-size: $h5 * 0.82;
+    font-size: calc(#{$h5} * 0.82);
     border-radius: $small-radius;
 }
 
