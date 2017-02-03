@@ -15,12 +15,6 @@ $emsize-normal: 18px;
 $emsize-small: 16px;
 
 /**
-  * Line-height 
-  */
-
-$line-height-normal: 1.5; 
-
-/**
   * Paddings/borders for buttons and inputs
   */
   
@@ -93,6 +87,12 @@ $font-weight-bold: 700;
 
 $base-font-weight: $font-weight-regular; 
 $heading-font-weight: $base-font-weight;
+
+/**
+  * Base line-height 
+  */
+
+$base-line-height: 1.5; 
 
 /**
   * Base and heading font stack
