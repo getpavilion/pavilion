@@ -23,6 +23,8 @@
   */
 
 @function scale($scale){
-  $x: pow($scale-ratio, $scale);
-  @return $x#{em}
+  
+  $headingSize: pow($scale-ratio, $scale);
+  
+  @return $headingSize#{em}
 }
