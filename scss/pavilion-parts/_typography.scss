@@ -78,14 +78,9 @@ small, h6, .h6 {
   */
 
 blockquote {
-    border-left: 2px solid $body-copy-color;
+    border-left: 2px solid $medium-gray;
     margin: 0 0 1.3em 0;
     padding: 0 1em;
-    ol:last-of-type,
-    p:last-of-type,
-    ul:last-of-type {
-        margin-bottom: 0;
-    }
     footer {
         &:before {
             content: '\2014 \00A0';
@@ -93,9 +88,6 @@ blockquote {
         margin-top: 0.5em;
         font-size: $h6;
         color: darken($medium-gray, 20%);
-        cite {
-            font-style: italic;
-        }
     }
 }
 
