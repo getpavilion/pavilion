@@ -67,12 +67,12 @@ $large-radius: 10px; /* Not used, but will come in handy. */
 
 $scale-ratio: 1.200;
 
-$h1: scale(4); 
-$h2: scale(3); 
-$h3: scale(2); 
-$h4: scale(1); 
-$h5: scale(0); /* equals 1em. */
-$h6: scale(-1);
+$h1: fontscale(4); 
+$h2: fontscale(3); 
+$h3: fontscale(2); 
+$h4: fontscale(1); 
+$h5: fontscale(0); /* equals 1em. */
+$h6: fontscale(-1);
 
 /**
   * Font-weights, you can set your own values to match your font.

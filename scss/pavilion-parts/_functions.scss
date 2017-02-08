@@ -22,7 +22,7 @@
   * Modular typography scale function
   */
 
-@function scale($scale){
+@function fontscale($scale){
   
   $headingSize: pow($scale-ratio, $scale);
   
