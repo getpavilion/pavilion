@@ -22,22 +22,22 @@
 }
 
 /**
-  * Button
+  * Standard button
   */
 
 @mixin button {
     display: inline-block;
-    border: $default-border-width solid transparent;
-    border-radius: $small-radius;
+    text-decoration: none;
     font-family: inherit;
-    padding: $padding-input-and-button;
     line-height: $base-line-height;
     margin-right: 1rem;
     margin-bottom: 1rem;
+    padding: $padding-input-and-button;
+    border: $default-border-width solid transparent;
+    border-radius: $small-radius;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     cursor: pointer;
-    text-decoration: none;
     &:active {
         transform: scale(0.97);
     }
