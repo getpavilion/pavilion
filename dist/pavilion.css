@@ -1693,15 +1693,9 @@ small, h6, .h6 {
 }
 
 blockquote {
-    border-left: 2px solid #333;
+    border-left: 2px solid #BCBCBC;
     margin: 0 0 1.3em 0;
     padding: 0 1em;
-}
-
-blockquote ol:last-of-type,
-blockquote p:last-of-type,
-blockquote ul:last-of-type {
-    margin-bottom: 0;
 }
 
 blockquote footer {
@@ -1712,10 +1706,6 @@ blockquote footer {
 
 blockquote footer:before {
     content: '\2014 \00A0';
-}
-
-blockquote footer cite {
-    font-style: italic;
 }
 
 code, kbd, pre {
@@ -1887,17 +1877,17 @@ mark {
 
 .button-default {
     display: inline-block;
-    border: 1px solid transparent;
-    border-radius: 3px;
+    text-decoration: none;
     font-family: inherit;
-    padding: 0.6rem 1rem;
     line-height: 1.5;
     margin-right: 1rem;
     margin-bottom: 1rem;
+    padding: 0.6rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 3px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     cursor: pointer;
-    text-decoration: none;
     background-color: #426AFB;
     color: white;
 }
@@ -1933,17 +1923,17 @@ mark {
 
 .button-outlined {
     display: inline-block;
-    border: 1px solid transparent;
-    border-radius: 3px;
+    text-decoration: none;
     font-family: inherit;
-    padding: 0.6rem 1rem;
     line-height: 1.5;
     margin-right: 1rem;
     margin-bottom: 1rem;
+    padding: 0.6rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 3px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     cursor: pointer;
-    text-decoration: none;
     background-color: transparent;
     border-color: #426AFB;
     color: #426AFB;
@@ -1979,17 +1969,17 @@ mark {
 
 .button-stripped {
     display: inline-block;
-    border: 1px solid transparent;
-    border-radius: 3px;
+    text-decoration: none;
     font-family: inherit;
-    padding: 0.6rem 1rem;
     line-height: 1.5;
     margin-right: 1rem;
     margin-bottom: 1rem;
+    padding: 0.6rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 3px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     cursor: pointer;
-    text-decoration: none;
     background-color: transparent;
     color: #426AFB;
 }
