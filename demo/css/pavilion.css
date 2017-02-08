@@ -1693,7 +1693,7 @@ small, h6, .h6 {
 }
 
 blockquote {
-    border-left: 2px solid #BCBCBC;
+    border-left: 2px solid #333;
     margin: 0 0 1.3em 0;
     padding: 0 1em;
 }
@@ -1893,7 +1893,7 @@ mark {
 }
 
 .button-default:active {
-    transform: 1.44em;
+    transform: scale(0.97);
 }
 
 .button-default[disabled="true"], .button-default[disabled="disabled"], .button-default[disabled] {
@@ -1940,7 +1940,7 @@ mark {
 }
 
 .button-outlined:active {
-    transform: 1.44em;
+    transform: scale(0.97);
 }
 
 .button-outlined[disabled="true"], .button-outlined[disabled="disabled"], .button-outlined[disabled] {
@@ -1985,7 +1985,7 @@ mark {
 }
 
 .button-stripped:active {
-    transform: 1.44em;
+    transform: scale(0.97);
 }
 
 .button-stripped[disabled="true"], .button-stripped[disabled="disabled"], .button-stripped[disabled] {
