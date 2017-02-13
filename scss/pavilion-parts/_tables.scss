@@ -13,7 +13,7 @@ table {
         tr {
             th {
                 text-align: left;
-                padding: 0.6rem 0;
+                padding: 0.6rem;
                 vertical-align: top;
                 font-weight: $font-weight-bold;
                 border-bottom: 1px solid $soft-gray;
@@ -24,7 +24,7 @@ table {
         tr {
             td, th {
                 text-align: left;
-                padding: 0.6rem 0;
+                padding: 0.6rem;
                 vertical-align: top;
                 border-bottom: 1px solid $soft-gray;
                 &:not(td) {
@@ -38,7 +38,7 @@ table {
             td {
                 font-weight: $font-weight-bold;
                 text-align: left;
-                padding: 0.6rem 0;
+                padding: 0.6rem;
                 vertical-align: top;
                 border-bottom: none;
             }

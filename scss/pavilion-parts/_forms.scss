@@ -34,11 +34,11 @@ fieldset {
   */
 
 label {
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-regular;
     display: block;
     color: $body-copy-color;
     line-height: $base-line-height;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.5rem;
 }
 
 .checkbox, .radio {
@@ -82,7 +82,7 @@ label.button-outlined,
 label.button-stripped {
     position: relative;
     font-weight: $font-weight-regular;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
     [type="file"] {
         visibility: hidden;
         position: absolute;
@@ -107,7 +107,7 @@ textarea {
     box-shadow: none;
     line-height: $base-line-height;
     padding: $padding-input-and-button;
-    margin-bottom: 1.3rem;
+    margin-bottom: 1.5rem;
     &:focus {
         border-color: $primary-color;
     }
@@ -141,20 +141,21 @@ textarea {
            font-family: $base-font-family;
         }
     }
+    /* colors for placeholders are hard coded for usability ensurance */
     &::-webkit-input-placeholder {
-       color: darken($medium-gray, 10%);
+       color: #a3a3a3;
     }
 
     &:-moz-placeholder {
-       color: darken($medium-gray, 10%);  
+       color: #a3a3a3;  
     }
 
     &::-moz-placeholder {
-       color: darken($medium-gray, 10%);  
+       color: #a3a3a3;  
     }
 
     &:-ms-input-placeholder {  
-       color: darken($medium-gray, 10%);  
+       color: #a3a3a3;  
     }
 }
 
@@ -166,7 +167,7 @@ textarea {
 .input-with-button {
     width: 100%;
     display: table;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
     border-collapse: separate;
     label {
         width: 100%;
@@ -258,43 +259,29 @@ select {
     }
 }
 
-
 /**
   * Horizontal rule
   */
 
 hr {
-    margin-top: 1.2rem;
-    margin-bottom: 1.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
     border: 0;
     border-top: $default-border-width solid $medium-gray;
 }
 
-
 /**
   * Disabled styles for inputs
   */
-
+label,
 input,
 select,
 textarea {
     &[disabled="true"],
     &[disabled="disabled"],
-    &[disabled] {
+    &[disabled],
+    &.disabled {
         pointer-events: none;
         opacity: 0.5;
-        &::-webkit-input-placeholder {
-            color: $medium-gray;
-        }
-        &:-moz-placeholder {
-            color: $medium-gray;
-        }
-        &::-moz-placeholder {
-            color: $medium-gray;
-        }
-        &:-ms-input-placeholder {
-            color: $medium-gray;
-        }
     }
 }
-
