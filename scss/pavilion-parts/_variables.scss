@@ -11,8 +11,8 @@ $remsize-small: 10px;
   * Em's are used in Pavilion for typographic elements.
   */
 
-$emsize-normal: 18px;
-$emsize-small: 16px;
+$emsize-normal: 16px;
+$emsize-small: 14px;
 
 /**
   * Breakpoints
@@ -24,40 +24,26 @@ $tablet-landscape-size: 991px;        /* Tablet landscape minimum. */
 $desktop-size: 1200px;                /* Desktop minimum. */
 
 $breakmargin: 20px;                   /* Margin added to the breakpoint. */
-$size-switch: $tablet-portrait-size;  /* Breakpoint at which the EM & REM sizes switch to small. */
+$size-switch: $tablet-portrait-size;  /* Breakpoint at which the EM & REM sizes switch from small to normal. */
+
+/**
+  * Border width and radius for buttons and inputs.
+  */
+
+$default-border-width: 1px; /* also used on horizontal rules */
+$default-border-radius: 4px;
 
 /**
   * Colors and tints.
   */
 
-$body-copy-color: #333;
+$body-copy-color: #333333;
 $primary-color: #426AFB;
 $heading-color: $body-copy-color;
 
 $soft-gray: #EFEFEF;
-$medium-gray: #BCBCBC;
-$hard-gray: #565656;
-
-/**
-  * Paddings for buttons and inputs.
-  */
-  
-$padding-input-and-button-y: 0.5rem;
-$padding-input-and-button-x: 0.8rem;
-$padding-input-and-button: $padding-input-and-button-y $padding-input-and-button-x;
-
-/**
-  * Border width for buttons, inputs and horizontal rules.
-  */
-
-$default-border-width: 1px;
-
-/**
-  * Border radius.
-  */
-
-$small-radius: 3px; /* Used on buttons, form elements, etc. */
-$large-radius: 10px; /* Not used, but will come in handy. */
+$medium-gray: darken($soft-gray, 20%);
+$hard-gray: darken($medium-gray, 20%);
 
 /**
   * Heading sizes with modular scaling.
