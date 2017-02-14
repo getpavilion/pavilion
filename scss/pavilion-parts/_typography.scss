@@ -98,7 +98,7 @@ blockquote {
 code, kbd, pre {
     font-family: $mono-font-family;
     font-size: calc(#{$h5} * 0.82);
-    border-radius: $small-radius;
+    border-radius: $default-border-radius;
 }
 
 code, kbd {
@@ -128,7 +128,7 @@ pre {
   
 mark {
     background-color: #ffffa8; /* Give <mark> a slightly softer yellow */
-    border-radius: $small-radius;
+    border-radius: $default-border-radius;
 }
 
 /**
