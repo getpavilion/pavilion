@@ -1,7 +1,7 @@
 {
   "name": "pavilion",
   "version": "1.0.31",
-  "description": "A simple, unopinionated CSS framework, ready for the future.",
+  "description": "Pavilion CSS Framework. A solid starting point without the bloat.",
   "homepage": "http://www.pavilion.io",
   "license": "MIT",
   "author": "Baasdesign <info@baasdesign.com>",
@@ -14,7 +14,9 @@
     "bootstrap",
     "scss",
     "css",
-    "web"
+    "web",
+    "pavilion",
+    "skeleton"
   ],
   "ignore": [
     "prepros.cfg",
