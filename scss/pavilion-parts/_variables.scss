@@ -18,13 +18,13 @@ $emsize-small: 14px;
   * Breakpoints
   */
 
-$phone-landscape-size: 540px;         /* Phone landscape minimum. */
-$tablet-portrait-size: 768px;         /* Tablet portrait minimum. */
-$tablet-landscape-size: 991px;        /* Tablet landscape minimum. */
-$desktop-size: 1200px;                /* Desktop minimum. */
+$phone-landscape-size: 540px;         /* Minimum screenwidth for phone landscape. */
+$tablet-portrait-size: 768px;         /* Minimum screenwidth for tablet portrait. */
+$tablet-landscape-size: 991px;        /* Minimum screenwidth for tablet landscape. */
+$desktop-size: 1200px;                /* Minimum screenwidth for desktop. */
 
-$breakmargin: 20px;                   /* Margin added to the breakpoint. */
-$size-switch: $tablet-portrait-size;  /* Breakpoint at which the EM & REM sizes switch from small to normal. */
+$breakmargin: 20px;                   /* Margin added to each breakpoints minimum width. */
+$size-switch: $tablet-portrait-size;  /* Minimum screenwidth at which the EM & REM sizes switch from small to normal. */
 
 /**
   * Border width and radius for buttons and inputs.
@@ -61,7 +61,7 @@ $h5: fontscale(0); /* equals 1em. */
 $h6: fontscale(-1);
 
 /**
-  * Font-weights, you can set your own values to match your font.
+  * Font-weights, you can set your own values to match your font specs.
   */
 
 $font-weight-light: 300;

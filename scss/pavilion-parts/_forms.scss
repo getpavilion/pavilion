@@ -1,5 +1,5 @@
 /**
-  * Basic styling for the forms
+  * Form tag base
   */
 
 form {
@@ -11,13 +11,13 @@ form {
 
 /**
   * Fieldsets for extra margin's on the top and bottom.
-  * Legends are used as headers, equal to a h4 element
+  * Legends are used as headers, equal to an h4 element
   */
 
 fieldset {
     border: 0;
     padding: 0;
-    margin: 1rem 0;
+    margin: 0 0 1rem 0;
     legend {        
         font-size: $h4;
         margin: 1.6em 0 0.5em;
@@ -34,10 +34,7 @@ fieldset {
   */
 
 label {
-    font-weight: $font-weight-regular;
     display: block;
-    color: $body-copy-color;
-    line-height: $base-line-height;
     margin-bottom: 0.5rem;
 }
 
@@ -48,7 +45,6 @@ label {
     position: relative;
     display: table;
     cursor: pointer;
-    font-weight: $font-weight-regular;
     input {
         position: absolute;
         width: auto;
@@ -98,13 +94,11 @@ input,
 select,
 textarea {
     font-family: inherit;
-    font-weight: $font-weight-regular;
     font-size: inherit;
     display: block;
     width: 100%;
     border: $default-border-width solid $medium-gray;
     border-radius: $default-border-radius;
-    box-shadow: none;
     line-height: $base-line-height;
     padding: 0.5rem 0.8rem;
     margin-bottom: 1.5rem;
@@ -112,7 +106,6 @@ textarea {
         border-color: $primary-color;
     }
     &:not([type="checkbox"]):not([type="radio"]) {
-        appearance: none;
         -webkit-appearance: none;
         -moz-appearance: none;
         -o-appearance: none;

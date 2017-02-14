@@ -4,7 +4,7 @@
   */
 
 .button-default {
-    @include button; /* Include standard button styles, see mixins */
+    @include button;
     background-color: $primary-color;
     color: white;
     /* Visited style for when an <a> tag is styled as a button */
@@ -23,7 +23,7 @@
 }
 
 .button-outlined {
-    @include button; /* Include standard button styles, see mixins */
+    @include button;
     background-color: transparent;
     border-color: $primary-color;
     color: $primary-color;
@@ -42,7 +42,7 @@
 }
 
 .button-stripped {
-    @include button; /* Include standard button styles, see mixins */
+    @include button;
     background-color: transparent;
     color: $primary-color;
     /* Visited style for when an <a> tag is styled as a button */
