@@ -103,16 +103,20 @@ textarea {
     display: block;
     width: 100%;
     border: $default-border-width solid $medium-gray;
-    border-radius: $small-radius;
+    border-radius: $default-border-radius;
     box-shadow: none;
     line-height: $base-line-height;
-    padding: $padding-input-and-button;
+    padding: 0.5rem 0.8rem;
     margin-bottom: 1.5rem;
     &:focus {
         border-color: $primary-color;
     }
     &:not([type="checkbox"]):not([type="radio"]) {
         appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -o-appearance: none;
+        -ms-appearance: none;
         background-color: white; 
     }
     /* standard file type input */
@@ -197,22 +201,22 @@ textarea {
         .button-wrapper {
             .button-default,
             .button-outlined {
-                border-radius: $small-radius 0 0 $small-radius;
+                border-radius: $default-border-radius 0 0 $default-border-radius;
             }
         }
         input[type="text"] {
-            border-radius: 0 $small-radius $small-radius 0;
+            border-radius: 0 $default-border-radius $default-border-radius 0;
         }
     }
     &.button-right {
         .button-wrapper {
             .button-default,
             .button-outlined {
-                border-radius: 0 $small-radius $small-radius 0;
+                border-radius: 0 $default-border-radius $default-border-radius 0;
             }
         }
         input[type="text"] {
-            border-radius: $small-radius 0 0 $small-radius;
+            border-radius: $default-border-radius 0 0 $default-border-radius;
         }
     }
 }
@@ -243,19 +247,16 @@ select {
         background-repeat: no-repeat;
         background-position: right center;
         background-origin: content-box;
-        height: 3.8rem;
+        height: 3.5rem;
         @media (min-width: $size-switch) {
-            height: calc(3rem + 2px);
+            height: 2.87rem;
         }
     }
     &::-ms-expand {
         display: none;
     }
     @-moz-document url-prefix() {
-        padding-top: $padding-input-and-button-y + 0.1rem;
-        padding-bottom: $padding-input-and-button-y + 0.1rem;
-        padding-left: $padding-input-and-button-x;
-        padding-right: $padding-input-and-button-x;
+        padding: 0.6rem 0.8rem;
     }
 }
 
