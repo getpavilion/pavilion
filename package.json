@@ -18,7 +18,9 @@
     "bootstrap",
     "scss",
     "css",
-    "web"
+    "web",
+    "pavilion",
+    "skeleton"
   ],
   "ignore": [
     "prepros.cfg",
