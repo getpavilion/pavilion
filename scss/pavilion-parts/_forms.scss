@@ -17,7 +17,7 @@ form {
 fieldset {
     border: 0;
     padding: 0;
-    margin: 0 0 1rem 0;
+    margin: 0 0 1rem;
     legend {        
         font-size: $h4;
         margin: 1.6em 0 0.5em;
@@ -39,7 +39,7 @@ label {
 }
 
 .checkbox, .radio {
-    padding-left: 25px; /* fixed padding because radio's and checkboxes don't scale */
+    padding-left: 25px; /* fixed padding because radio's and checkboxes don't scale well */
     margin-top: 0;
     margin-bottom: 1rem;
     position: relative;
@@ -175,10 +175,10 @@ textarea {
         width: 1%;
         white-space: nowrap;
         position: relative;
-        .button-default,
-        .button-outlined {
+        .button {
             margin: 0;
             min-width: 100%;
+            padding: 0.5rem 1rem;
             &:active {
                 transform: none;
             }
@@ -192,8 +192,7 @@ textarea {
     }
     &.button-left {
         .button-wrapper {
-            .button-default,
-            .button-outlined {
+            .button {
                 border-radius: $default-border-radius 0 0 $default-border-radius;
             }
         }
@@ -203,8 +202,7 @@ textarea {
     }
     &.button-right {
         .button-wrapper {
-            .button-default,
-            .button-outlined {
+            .button {
                 border-radius: 0 $default-border-radius $default-border-radius 0;
             }
         }

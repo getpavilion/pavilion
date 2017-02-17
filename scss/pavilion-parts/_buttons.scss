@@ -3,61 +3,62 @@
   * All of the buttons include the standard button styles. See mixins.
   */
 
-.button-default {
+.button {
     @include button;
-    background-color: $primary-color;
-    color: white;
-    /* Visited style for when an <a> tag is styled as a button */
-    &:visited {
+    
+    &.button-default {
         background-color: $primary-color;
         color: white;
+        &:visited {
+            background-color: $primary-color;
+            color: white;
+        }
+        &:hover,
+        &:focus {
+            background-color: darken($primary-color, 10%);
+            color: white;
+        }
+        &:active {
+            background-color: darken($primary-color, 12%);
+            color: white;
+        }
     }
-    &:hover, &:focus {
-        background-color: darken($primary-color, 10%);
-        color: white;
-    }
-    &:active {
-        background-color: darken($primary-color, 12%);
-        color: white;
-    }
-}
-
-.button-outlined {
-    @include button;
-    background-color: transparent;
-    border-color: $primary-color;
-    color: $primary-color;
-    /* Visited style for when an <a> tag is styled as a button */
-    &:visited {
+    
+    &.button-outlined {
+        background-color: transparent;
+        border-color: $primary-color;
         color: $primary-color;
+        &:visited {
+            color: $primary-color;
+        }
+        &:hover,
+        &:focus {
+            color: darken($primary-color, 10%);
+            border-color: darken($primary-color, 10%);
+        }
+        &:active {
+            color: darken($primary-color, 12%);
+            border-color: darken($primary-color, 12%);
+        }
     }
-    &:hover, &:focus {
-        color: darken($primary-color, 10%);
-        border-color: darken($primary-color, 10%);
-    }
-    &:active {
-        color: darken($primary-color, 12%);
-        border-color: darken($primary-color, 12%);
-    }
-}
-
-.button-stripped {
-    @include button;
-    background-color: transparent;
-    color: $primary-color;
-    /* Visited style for when an <a> tag is styled as a button */
-    &:visited {
+    
+    &.button-stripped {
+        background-color: transparent;
         color: $primary-color;
+        &:visited {
+            color: $primary-color;
+        }
+        &:hover,
+        &:focus {
+            color: darken($primary-color, 10%);
+        }
+        &:active {
+            color: darken($primary-color, 12%);
+        }
     }
-    &:hover, &:focus {
-        color: darken($primary-color, 10%);
+    
+    &.button-full-width {
+        display: block;
+        width: 100%;
     }
-    &:active {
-        color: darken($primary-color, 12%);
-    }
-}
-
-.button-full-width {
-    display: block;
-    width: 100%;
 }
