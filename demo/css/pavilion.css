@@ -263,14 +263,14 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-tap-highlight-color: transparent;
     -webkit-tap-highlight-color: transparent;
-    line-height: 1.5;
+    line-height: 1.45;
     color: #333333;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 @media (min-width: 768px) {
     body {
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 
@@ -1659,7 +1659,7 @@ h5,
 h6 {
     margin: 1.6em 0 0.5em;
     font-weight: 400;
-    line-height: 1.35;
+    line-height: 1.305;
     color: #333333;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -1730,7 +1730,7 @@ pre {
     padding: 0.7rem 1rem;
     display: block;
     background-color: #EFEFEF;
-    line-height: 1.5;
+    line-height: 1.45;
     overflow: auto;
     white-space: pre;
 }
@@ -1875,11 +1875,11 @@ mark {
     }
 }
 
-.button-default {
+.button {
     display: inline-block;
     text-decoration: none;
     font-family: inherit;
-    line-height: 1.5;
+    line-height: 1.45;
     margin-right: 1rem;
     margin-bottom: 1rem;
     padding: 0.5rem 1rem;
@@ -1888,129 +1888,80 @@ mark {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     cursor: pointer;
-    background-color: #426AFB;
-    color: white;
 }
 
-.button-default:active {
+.button:active {
     transform: scale(0.97);
 }
 
-.button-default[disabled="true"], .button-default[disabled="disabled"], .button-default[disabled] {
+.button[disabled="true"], .button[disabled="disabled"], .button[disabled] {
     pointer-events: none;
     opacity: 0.5;
 }
 
-.button-default.h1, .button-default.h2, .button-default.h3, .button-default.h4, .button-default.h5, .button-default.h6 {
+.button.h1, .button.h2, .button.h3, .button.h4, .button.h5, .button.h6 {
     padding-left: 0.9em;
     padding-right: 0.9em;
 }
 
-.button-default:visited {
+.button.button-default {
     background-color: #426AFB;
     color: white;
 }
 
-.button-default:hover, .button-default:focus {
+.button.button-default:visited {
+    background-color: #426AFB;
+    color: white;
+}
+
+.button.button-default:hover, .button.button-default:focus {
     background-color: #1043fa;
     color: white;
 }
 
-.button-default:active {
+.button.button-default:active {
     background-color: #063bfa;
     color: white;
 }
 
-.button-outlined {
-    display: inline-block;
-    text-decoration: none;
-    font-family: inherit;
-    line-height: 1.5;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-    padding: 0.5rem 1rem;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    cursor: pointer;
+.button.button-outlined {
     background-color: transparent;
     border-color: #426AFB;
     color: #426AFB;
 }
 
-.button-outlined:active {
-    transform: scale(0.97);
-}
-
-.button-outlined[disabled="true"], .button-outlined[disabled="disabled"], .button-outlined[disabled] {
-    pointer-events: none;
-    opacity: 0.5;
-}
-
-.button-outlined.h1, .button-outlined.h2, .button-outlined.h3, .button-outlined.h4, .button-outlined.h5, .button-outlined.h6 {
-    padding-left: 0.9em;
-    padding-right: 0.9em;
-}
-
-.button-outlined:visited {
+.button.button-outlined:visited {
     color: #426AFB;
 }
 
-.button-outlined:hover, .button-outlined:focus {
+.button.button-outlined:hover, .button.button-outlined:focus {
     color: #1043fa;
     border-color: #1043fa;
 }
 
-.button-outlined:active {
+.button.button-outlined:active {
     color: #063bfa;
     border-color: #063bfa;
 }
 
-.button-stripped {
-    display: inline-block;
-    text-decoration: none;
-    font-family: inherit;
-    line-height: 1.5;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-    padding: 0.5rem 1rem;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    cursor: pointer;
+.button.button-stripped {
     background-color: transparent;
     color: #426AFB;
 }
 
-.button-stripped:active {
-    transform: scale(0.97);
-}
-
-.button-stripped[disabled="true"], .button-stripped[disabled="disabled"], .button-stripped[disabled] {
-    pointer-events: none;
-    opacity: 0.5;
-}
-
-.button-stripped.h1, .button-stripped.h2, .button-stripped.h3, .button-stripped.h4, .button-stripped.h5, .button-stripped.h6 {
-    padding-left: 0.9em;
-    padding-right: 0.9em;
-}
-
-.button-stripped:visited {
+.button.button-stripped:visited {
     color: #426AFB;
 }
 
-.button-stripped:hover, .button-stripped:focus {
+.button.button-stripped:hover, .button.button-stripped:focus {
     color: #1043fa;
 }
 
-.button-stripped:active {
+.button.button-stripped:active {
     color: #063bfa;
 }
 
-.button-full-width {
+.button.button-full-width {
     display: block;
     width: 100%;
 }
@@ -2054,7 +2005,7 @@ form {
 fieldset {
     border: 0;
     padding: 0;
-    margin: 1rem 0;
+    margin: 0 0 1rem;
 }
 
 fieldset legend {
@@ -2065,10 +2016,7 @@ fieldset legend {
 }
 
 label {
-    font-weight: 400;
     display: block;
-    color: #333333;
-    line-height: 1.5;
     margin-bottom: 0.5rem;
 }
 
@@ -2079,7 +2027,6 @@ label {
     position: relative;
     display: table;
     cursor: pointer;
-    font-weight: 400;
 }
 
 .checkbox input, .radio input {
@@ -2135,14 +2082,12 @@ input,
 select,
 textarea {
     font-family: inherit;
-    font-weight: 400;
     font-size: inherit;
     display: block;
     width: 100%;
     border: 1px solid #bcbcbc;
     border-radius: 4px;
-    box-shadow: none;
-    line-height: 1.5;
+    line-height: 1.45;
     padding: 0.5rem 0.8rem;
     margin-bottom: 1.5rem;
 }
@@ -2156,7 +2101,6 @@ textarea:focus {
 input:not([type="checkbox"]):not([type="radio"]),
 select:not([type="checkbox"]):not([type="radio"]),
 textarea:not([type="checkbox"]):not([type="radio"]) {
-    appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     -o-appearance: none;
@@ -2247,14 +2191,13 @@ textarea:-ms-input-placeholder {
     position: relative;
 }
 
-.input-with-button .button-wrapper .button-default,
-.input-with-button .button-wrapper .button-outlined {
+.input-with-button .button-wrapper .button {
     margin: 0;
     min-width: 100%;
+    padding: 0.5rem 1rem;
 }
 
-.input-with-button .button-wrapper .button-default:active,
-.input-with-button .button-wrapper .button-outlined:active {
+.input-with-button .button-wrapper .button:active {
     transform: none;
 }
 
@@ -2265,8 +2208,7 @@ textarea:-ms-input-placeholder {
     position: relative;
 }
 
-.input-with-button.button-left .button-wrapper .button-default,
-.input-with-button.button-left .button-wrapper .button-outlined {
+.input-with-button.button-left .button-wrapper .button {
     border-radius: 4px 0 0 4px;
 }
 
@@ -2274,8 +2216,7 @@ textarea:-ms-input-placeholder {
     border-radius: 0 4px 4px 0;
 }
 
-.input-with-button.button-right .button-wrapper .button-default,
-.input-with-button.button-right .button-wrapper .button-outlined {
+.input-with-button.button-right .button-wrapper .button {
     border-radius: 0 4px 4px 0;
 }
 
