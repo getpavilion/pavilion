@@ -43,3 +43,111 @@
 .text-right {
     text-align: right;
 }
+
+/**
+  * Showing and hiding / specific viewports
+  */
+
+.show {
+    display: block !important;
+}
+
+.hide,
+.show-pp,
+.show-pl,
+.show-tp,
+.show-tl,
+.show-dt {
+    display: none !important;
+}
+
+@media(max-width: $phone-landscape-size - 1) {
+    .show-pp {
+        display: block !important;
+    }
+    .hide-pp {
+        display: none !important;
+    }
+    
+    .text-pp-center {
+        text-align: center;
+    }
+    .text-pp-left {
+        text-align: left;
+    }
+    .text-pp-right {
+        text-align: right;
+    }
+}
+@media(min-width: $phone-landscape-size) and (max-width: $tablet-portrait-size - 1) {
+    .show-pl {
+        display: block !important;
+    }
+    .hide-pl {
+        display: none !important;
+    }
+    
+    .text-pl-center {
+        text-align: center;
+    }
+    .text-pl-left {
+        text-align: left;
+    }
+    .text-pl-right {
+        text-align: right;
+    }
+}
+@media(min-width: $tablet-portrait-size) and (max-width: $tablet-landscape-size - 1) {
+    .show-tp {
+        display: block !important;
+    }
+    .hide-tp {
+        display: none !important;
+    }
+    
+    .text-tp-center {
+        text-align: center;
+    }
+    .text-tp-left {
+        text-align: left;
+    }
+    .text-tp-right {
+        text-align: right;
+    }
+}
+@media(min-width: $tablet-landscape-size) and (max-width: $desktop-size - 1) {
+    .show-tl {
+        display: block !important;
+    }
+    .hide-tl {
+        display: none !important;
+    }
+    
+    .text-tl-center {
+        text-align: center;
+    }
+    .text-tl-left {
+        text-align: left;
+    }
+    .text-tl-right {
+        text-align: right;
+    }
+}
+@media(min-width: $desktop-size) {
+    .show-dt {
+        display: block !important;
+    }
+    .hide-dt {
+        display: none !important;
+    }
+    
+    .text-dt-center {
+        text-align: center;
+    }
+    .text-dt-left {
+        text-align: left;
+    }
+    .text-dt-right {
+        text-align: right;
+    }
+}

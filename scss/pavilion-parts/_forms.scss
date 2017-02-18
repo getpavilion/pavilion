@@ -1,29 +1,19 @@
 /**
-  * Form tag base
+  * Base tag
   */
 
 form {
-    width: 100%;
-    display: block;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-
 /**
-  * Fieldsets for extra margin's on the top and bottom.
-  * Legends are used as headers, equal to an h4 element
+  * form elements for extra bottom margin to structure forms.
   */
 
-fieldset {
+.form-part {
     border: 0;
     padding: 0;
-    margin: 0 0 1rem;
-    legend {        
-        font-size: $h4;
-        margin: 1.6em 0 0.5em;
-        display: block;
-        width: 100%;
-    }
+    margin: 0 0 1.5rem;
 }
 
 /**
@@ -70,20 +60,7 @@ label {
 .checkbox-inline, .radio-inline {
     display: inline-block;
     margin-right: 1.2rem;
-}
-
-/* Button-type file upload */
-label.button-default,
-label.button-outlined,
-label.button-stripped {
-    position: relative;
-    font-weight: $font-weight-regular;
-    margin-bottom: 1.5rem;
-    [type="file"] {
-        visibility: hidden;
-        position: absolute;
-        opacity: 0;
-    }
+    margin-bottom: 0;
 }
 
 /**
@@ -97,11 +74,10 @@ textarea {
     font-size: inherit;
     display: block;
     width: 100%;
-    border: $default-border-width solid $medium-gray;
+    border: $default-border-width solid $soft-gray;
     border-radius: $default-border-radius;
     line-height: $base-line-height;
     padding: 0.5rem 0.8rem;
-    margin-bottom: 1.5rem;
     &:focus {
         border-color: $primary-color;
     }
@@ -114,11 +90,11 @@ textarea {
     }
     /* standard file type input */
     &[type="file"] {
-        margin: 0.8rem 0 2rem;
-        line-height: 1.5;
-        font-size: 11px;
+        line-height: 1;
+        font-size: 16px; /* enforce for consistent behavior */
         border: 0;
-        padding: 0;
+        padding-left: 0;
+        padding-right: 0;
     }
     &[type="password"] {
         font-family: verdana;
@@ -140,19 +116,19 @@ textarea {
     }
     /* colors for placeholders are hard coded for usability ensurance */
     &::-webkit-input-placeholder {
-       color: #a3a3a3;
+       color: $hard-gray;
     }
 
     &:-moz-placeholder {
-       color: #a3a3a3;  
+       color: $hard-gray;  
     }
 
     &::-moz-placeholder {
-       color: #a3a3a3;  
+       color: $hard-gray;  
     }
 
     &:-ms-input-placeholder {  
-       color: #a3a3a3;  
+       color: $hard-gray;  
     }
 }
 
@@ -164,7 +140,6 @@ textarea {
 .input-with-button {
     width: 100%;
     display: table;
-    margin-bottom: 1.5rem;
     border-collapse: separate;
     label {
         width: 100%;
@@ -259,7 +234,7 @@ hr {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     border: 0;
-    border-top: $default-border-width solid $medium-gray;
+    border-top: $default-border-width solid $soft-gray;
 }
 
 /**
@@ -275,5 +250,6 @@ textarea {
     &.disabled {
         pointer-events: none;
         opacity: 0.5;
+        cursor: default;
     }
 }

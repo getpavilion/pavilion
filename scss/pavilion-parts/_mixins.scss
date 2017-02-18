@@ -35,8 +35,6 @@
     padding: 0.5rem 1rem;
     border: $default-border-width solid transparent;
     border-radius: $default-border-radius;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     cursor: pointer;
     &:active {
         transform: scale(0.97);

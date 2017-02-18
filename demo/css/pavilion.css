@@ -259,8 +259,6 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
     text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     -webkit-tap-highlight-color: transparent;
     -webkit-tap-highlight-color: transparent;
     line-height: 1.45;
@@ -1632,23 +1630,25 @@ body {
 
 p {
     margin-top: 0;
-    margin-bottom: 1.3em;
+    margin-bottom: 1em;
     font-size: 1em;
 }
 
 a {
-    color: #426AFB;
+    color: #0080ff;
     outline: none;
+    text-decoration: none;
 }
 
 a:visited {
-    color: #426AFB;
+    color: #0080ff;
     outline: none;
 }
 
 a:hover, a:focus {
-    color: #0537ec;
+    color: #005ab3;
     outline: none;
+    text-decoration: underline;
 }
 
 h1,
@@ -1694,14 +1694,14 @@ small, h6, .h6 {
 
 blockquote {
     border-left: 2px solid #333333;
-    margin: 0 0 1.3em 0;
+    margin: 0 0 1em 0;
     padding: 0 1em;
 }
 
 blockquote footer {
     margin-top: 0.5em;
     font-size: 0.83333em;
-    color: #898989;
+    color: #737373;
 }
 
 blockquote footer:before {
@@ -1718,7 +1718,7 @@ code, kbd {
     padding: 0.2em 0.5em;
     display: inline;
     vertical-align: baseline;
-    background: #EFEFEF;
+    background: #D9D9D9;
 }
 
 kbd {
@@ -1729,7 +1729,7 @@ kbd {
 pre {
     padding: 0.7rem 1rem;
     display: block;
-    background-color: #EFEFEF;
+    background-color: #D9D9D9;
     line-height: 1.45;
     overflow: auto;
     white-space: pre;
@@ -1885,8 +1885,6 @@ mark {
     padding: 0.5rem 1rem;
     border: 1px solid transparent;
     border-radius: 4px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     cursor: pointer;
 }
 
@@ -1905,60 +1903,60 @@ mark {
 }
 
 .button.button-default {
-    background-color: #426AFB;
+    background-color: #0080ff;
     color: white;
 }
 
 .button.button-default:visited {
-    background-color: #426AFB;
+    background-color: #0080ff;
     color: white;
 }
 
 .button.button-default:hover, .button.button-default:focus {
-    background-color: #1043fa;
+    background-color: #0066cc;
     color: white;
 }
 
 .button.button-default:active {
-    background-color: #063bfa;
+    background-color: #0061c2;
     color: white;
 }
 
 .button.button-outlined {
     background-color: transparent;
-    border-color: #426AFB;
-    color: #426AFB;
+    border-color: #0080ff;
+    color: #0080ff;
 }
 
 .button.button-outlined:visited {
-    color: #426AFB;
+    color: #0080ff;
 }
 
 .button.button-outlined:hover, .button.button-outlined:focus {
-    color: #1043fa;
-    border-color: #1043fa;
+    color: #0066cc;
+    border-color: #0066cc;
 }
 
 .button.button-outlined:active {
-    color: #063bfa;
-    border-color: #063bfa;
+    color: #0061c2;
+    border-color: #0061c2;
 }
 
 .button.button-stripped {
     background-color: transparent;
-    color: #426AFB;
+    color: #0080ff;
 }
 
 .button.button-stripped:visited {
-    color: #426AFB;
+    color: #0080ff;
 }
 
 .button.button-stripped:hover, .button.button-stripped:focus {
-    color: #1043fa;
+    color: #0066cc;
 }
 
 .button.button-stripped:active {
-    color: #063bfa;
+    color: #0061c2;
 }
 
 .button.button-full-width {
@@ -1967,7 +1965,7 @@ mark {
 }
 
 ul, ol {
-    margin: 0 0 1.3em 1em;
+    margin: 0 0 1em 1em;
     padding: 0;
 }
 
@@ -1980,7 +1978,7 @@ ul ul, ul ol, ol ul, ol ol {
 }
 
 dl {
-    margin: 0 0 1.3em 0;
+    margin: 0 0 1em 0;
     padding: 0;
 }
 
@@ -1997,22 +1995,13 @@ dl dl {
 }
 
 form {
-    width: 100%;
-    display: block;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-fieldset {
+.form-part {
     border: 0;
     padding: 0;
-    margin: 0 0 1rem;
-}
-
-fieldset legend {
-    font-size: 1.2em;
-    margin: 1.6em 0 0.5em;
-    display: block;
-    width: 100%;
+    margin: 0 0 1.5rem;
 }
 
 label {
@@ -2060,22 +2049,7 @@ label {
 .checkbox-inline, .radio-inline {
     display: inline-block;
     margin-right: 1.2rem;
-}
-
-label.button-default,
-label.button-outlined,
-label.button-stripped {
-    position: relative;
-    font-weight: 400;
-    margin-bottom: 1.5rem;
-}
-
-label.button-default [type="file"],
-label.button-outlined [type="file"],
-label.button-stripped [type="file"] {
-    visibility: hidden;
-    position: absolute;
-    opacity: 0;
+    margin-bottom: 0;
 }
 
 input,
@@ -2085,17 +2059,16 @@ textarea {
     font-size: inherit;
     display: block;
     width: 100%;
-    border: 1px solid #bcbcbc;
+    border: 1px solid #D9D9D9;
     border-radius: 4px;
     line-height: 1.45;
     padding: 0.5rem 0.8rem;
-    margin-bottom: 1.5rem;
 }
 
 input:focus,
 select:focus,
 textarea:focus {
-    border-color: #426AFB;
+    border-color: #0080ff;
 }
 
 input:not([type="checkbox"]):not([type="radio"]),
@@ -2111,11 +2084,11 @@ textarea:not([type="checkbox"]):not([type="radio"]) {
 input[type="file"],
 select[type="file"],
 textarea[type="file"] {
-    margin: 0.8rem 0 2rem;
-    line-height: 1.5;
-    font-size: 11px;
+    line-height: 1;
+    font-size: 16px;
     border: 0;
-    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 input[type="password"],
@@ -2151,31 +2124,30 @@ textarea[type="password"]:-ms-input-placeholder {
 input::-webkit-input-placeholder,
 select::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-    color: #a3a3a3;
+    color: #737373;
 }
 
 input:-moz-placeholder,
 select:-moz-placeholder,
 textarea:-moz-placeholder {
-    color: #a3a3a3;
+    color: #737373;
 }
 
 input::-moz-placeholder,
 select::-moz-placeholder,
 textarea::-moz-placeholder {
-    color: #a3a3a3;
+    color: #737373;
 }
 
 input:-ms-input-placeholder,
 select:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
-    color: #a3a3a3;
+    color: #737373;
 }
 
 .input-with-button {
     width: 100%;
     display: table;
-    margin-bottom: 1.5rem;
     border-collapse: separate;
 }
 
@@ -2263,7 +2235,7 @@ hr {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     border: 0;
-    border-top: 1px solid #bcbcbc;
+    border-top: 1px solid #D9D9D9;
 }
 
 label[disabled="true"], label[disabled="disabled"], label[disabled], label.disabled,
@@ -2281,6 +2253,7 @@ textarea[disabled],
 textarea.disabled {
     pointer-events: none;
     opacity: 0.5;
+    cursor: default;
 }
 
 table {
@@ -2288,7 +2261,7 @@ table {
     width: 100%;
     background-color: transparent;
     border-collapse: collapse;
-    margin-bottom: 1.3em;
+    margin-bottom: 1.5rem;
 }
 
 table thead tr th {
@@ -2296,14 +2269,14 @@ table thead tr th {
     padding: 0.6rem;
     vertical-align: top;
     font-weight: 700;
-    border-bottom: 1px solid #EFEFEF;
+    border-bottom: 1px solid #D9D9D9;
 }
 
 table tbody tr td, table tbody tr th {
     text-align: left;
     padding: 0.6rem;
     vertical-align: top;
-    border-bottom: 1px solid #EFEFEF;
+    border-bottom: 1px solid #D9D9D9;
 }
 
 table tbody tr td:not(td), table tbody tr th:not(td) {
@@ -2351,4 +2324,127 @@ table tfoot tr td {
 
 .text-right {
     text-align: right;
+}
+
+.show {
+    display: block !important;
+}
+
+.hide,
+.show-pp,
+.show-pl,
+.show-tp,
+.show-tl,
+.show-dt {
+    display: none !important;
+}
+
+@media (max-width: 539px) {
+    .show-pp {
+        display: block !important;
+    }
+
+    .hide-pp {
+        display: none !important;
+    }
+
+    .text-pp-center {
+        text-align: center;
+    }
+
+    .text-pp-left {
+        text-align: left;
+    }
+
+    .text-pp-right {
+        text-align: right;
+    }
+}
+
+@media (min-width: 540px) and (max-width: 767px) {
+    .show-pl {
+        display: block !important;
+    }
+
+    .hide-pl {
+        display: none !important;
+    }
+
+    .text-pl-center {
+        text-align: center;
+    }
+
+    .text-pl-left {
+        text-align: left;
+    }
+
+    .text-pl-right {
+        text-align: right;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 990px) {
+    .show-tp {
+        display: block !important;
+    }
+
+    .hide-tp {
+        display: none !important;
+    }
+
+    .text-tp-center {
+        text-align: center;
+    }
+
+    .text-tp-left {
+        text-align: left;
+    }
+
+    .text-tp-right {
+        text-align: right;
+    }
+}
+
+@media (min-width: 991px) and (max-width: 1199px) {
+    .show-tl {
+        display: block !important;
+    }
+
+    .hide-tl {
+        display: none !important;
+    }
+
+    .text-tl-center {
+        text-align: center;
+    }
+
+    .text-tl-left {
+        text-align: left;
+    }
+
+    .text-tl-right {
+        text-align: right;
+    }
+}
+
+@media (min-width: 1200px) {
+    .show-dt {
+        display: block !important;
+    }
+
+    .hide-dt {
+        display: none !important;
+    }
+
+    .text-dt-center {
+        text-align: center;
+    }
+
+    .text-dt-left {
+        text-align: left;
+    }
+
+    .text-dt-right {
+        text-align: right;
+    }
 }

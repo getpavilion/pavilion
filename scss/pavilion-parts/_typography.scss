@@ -12,13 +12,14 @@
 
 p {
     margin-top: 0;
-    margin-bottom: 1.3em;
+    margin-bottom: 1em;
     font-size: 1em;
 }
 
 a {
     color: $primary-color;
     outline: none;
+    text-decoration: none;
     &:visited {
         color: $primary-color;
         outline: none;
@@ -26,6 +27,7 @@ a {
     &:hover, &:focus {
         color: darken($primary-color, 15%);
         outline: none;
+        text-decoration: underline;
     }
 }
 
@@ -79,7 +81,7 @@ small, h6, .h6 {
 
 blockquote {
     border-left: 2px solid $body-copy-color;
-    margin: 0 0 1.3em 0;
+    margin: 0 0 1em 0;
     padding: 0 1em;
     footer {
         &:before {
