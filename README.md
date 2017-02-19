@@ -7,10 +7,24 @@
 
 ## A solid startingpoint without the bloat.
 
-Pavilion is a CSS framework for developers who tend to never use the hundreds of pre-made UI components other CSS frameworks ship with. Pre-made UI elements never really suit your needs and you’ll end up customizing them anyway. Therefore Pavilion only ships with basic, common components. The rest is up to you.
 
-Written in SCSS, Pavilion lays down the groundwork with tried and tested core settings for accesability, readability and responsiveness. It includes an easy to understand grid system to create the layouts you need. Basic components like buttons, lists, forms and tables have appealing yet minimal styling.
+##### TLDR;
 
-All of Pavilion’s CSS properties and settings — may it be for typography or for breakpoints — are derived from its core `variables.scss` file. This makes customizing Pavilion a walk in the park — not an annoying CSS puzzle.
+- Lightweight. Only 26kb minified.
+- Versatile fully responsive grid system.
+- Responsive, modular typography.
+- Only basic elements with minimal styling.
+- Tools & utilities to speed up production.
+- Tried and tested core settings.
+- Easy to customize.
+
+Pavilion is a simple CSS framework for developers who tend to never use the countless pre-defined UI components other frameworks ship with. If you are looking for a a simple, lightweight and customizable CSS starting point without the bloat, Pavilion might be for you.
+
+Pavilion includes tried and tested core settings for readability, accessibility and responsiveness. A versatile yet easy to understand fully responsive grid system to create the layouts you need — including reordering and offsets. 
+
+Typography is calculated trough a modular type calculator and common elements like forms, buttons, tables and lists have appealing yet minimal styling which makes them easy to customize. When it comes to customizing, you can tweak and configure the `variables.scss` file to make Pavilion just how you want it to be. Lastly Pavilion includes handy tools and utilities like a viewport indicator and common helper classes to speed up production. All carefully picked to avoid bloat. 
+
+Pavilion lays down the groundwork — the rest is up to you.
+
 
 [Go to the docs](http://www.pavilion.io/docs)
