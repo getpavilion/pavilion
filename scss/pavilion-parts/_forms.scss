@@ -1,29 +1,19 @@
 /**
- * Basic styling for the forms
- */
-
-form {
-    width: 100%;
-    display: block;
-    margin-bottom: 1rem;
-}
-
-
-/**
-  * Fieldsets for extra margin's on the top and bottom.
-  * Legends are used as headers, equal to a h4 element
+  * Base tag
   */
 
-fieldset {
+form {
+    margin-bottom: 1.5rem;
+}
+
+/**
+  * form elements for extra bottom margin to structure forms.
+  */
+
+.form-part {
     border: 0;
     padding: 0;
-    margin: 1rem 0;
-    legend {        
-        font-size: $h4;
-        margin: 1.414em 0 0.5em;
-        display: block;
-        width: 100%;
-    }
+    margin: 0 0 1.5rem;
 }
 
 /**
@@ -34,21 +24,17 @@ fieldset {
   */
 
 label {
-    font-weight: $font-weight-bold;
     display: block;
-    color: $body-copy-color;
-    line-height: normal;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.5rem;
 }
 
 .checkbox, .radio {
-    padding-left: 25px;
+    padding-left: 25px; /* fixed padding because radio's and checkboxes don't scale well */
     margin-top: 0;
-    margin-bottom: 1.1rem;
+    margin-bottom: 1rem;
     position: relative;
     display: table;
     cursor: pointer;
-    font-weight: $font-weight-regular;
     input {
         position: absolute;
         width: auto;
@@ -56,15 +42,15 @@ label {
         left: 0;
         cursor: pointer;
         &[type="checkbox"] {
-            top: 0.3rem;
+            top: calc(1em / 3);
             @-moz-document url-prefix() {
-                top: 0.35rem;
+                top: calc(1em / 2.6);
             }
         }
         &[type="radio"] {
-            top: 0.2rem;
+            top: calc(1em / 4);
             @-moz-document url-prefix() {
-                top: 0.32rem;
+                top: calc(1em / 2.7);
             }
         }
     }
@@ -74,28 +60,7 @@ label {
 .checkbox-inline, .radio-inline {
     display: inline-block;
     margin-right: 1.2rem;
-    input {
-        &[type="radio"] {
-            top: 0.2rem;
-            @-moz-document url-prefix() {
-                top: 0.32rem;
-            }
-        }
-    }
-}
-
-/* Button-type file upload */
-label.button-default,
-label.button-outlined,
-label.button-stripped {
-    position: relative;
-    font-weight: $font-weight-regular;
-    margin-bottom: 1.2rem;
-    [type="file"] {
-        visibility: hidden;
-        position: absolute;
-        opacity: 0;
-    }
+    margin-bottom: 0;
 }
 
 /**
@@ -106,29 +71,30 @@ input,
 select,
 textarea {
     font-family: inherit;
-    font-weight: $font-weight-regular;
     font-size: inherit;
     display: block;
     width: 100%;
-    border: $border-input-and-button solid $medium-gray;
-    border-radius: $small-radius;
-    box-shadow: none;
-    line-height: $line-height-normal;
-    padding: $padding-input-and-button;
-    margin-bottom: 1.2rem;
+    border: $default-border-width solid $soft-gray;
+    border-radius: $default-border-radius;
+    line-height: $base-line-height;
+    padding: 0.5rem 0.8rem;
     &:focus {
         border-color: $primary-color;
     }
     &:not([type="checkbox"]):not([type="radio"]) {
-        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -o-appearance: none;
+        -ms-appearance: none;
         background-color: white; 
     }
     /* standard file type input */
     &[type="file"] {
-        margin: 0.8rem 0 2rem;
-        line-height: 0;
+        line-height: 1;
+        font-size: 16px; /* enforce for consistent behavior */
         border: 0;
-        padding: 0;
+        padding-left: 0;
+        padding-right: 0;
     }
     &[type="password"] {
         font-family: verdana;
@@ -136,11 +102,11 @@ textarea {
             font-family: $base-font-family;
         }
 
-        &:-moz-placeholder { /* Firefox 18- */
+        &:-moz-placeholder { 
            font-family: $base-font-family;
         }
 
-        &::-moz-placeholder {  /* Firefox 19+ */
+        &::-moz-placeholder {
            font-family: $base-font-family;
         }
 
@@ -148,20 +114,21 @@ textarea {
            font-family: $base-font-family;
         }
     }
+    /* colors for placeholders are hard coded for usability ensurance */
     &::-webkit-input-placeholder {
-       color: darken($medium-gray, 10%);
+       color: $hard-gray;
     }
 
-    &:-moz-placeholder { /* Firefox 18- */
-       color: darken($medium-gray, 10%);  
+    &:-moz-placeholder {
+       color: $hard-gray;  
     }
 
-    &::-moz-placeholder {  /* Firefox 19+ */
-       color: darken($medium-gray, 10%);  
+    &::-moz-placeholder {
+       color: $hard-gray;  
     }
 
     &:-ms-input-placeholder {  
-       color: darken($medium-gray, 10%);  
+       color: $hard-gray;  
     }
 }
 
@@ -173,7 +140,6 @@ textarea {
 .input-with-button {
     width: 100%;
     display: table;
-    margin-bottom: 1.2rem;
     border-collapse: separate;
     label {
         width: 100%;
@@ -184,10 +150,10 @@ textarea {
         width: 1%;
         white-space: nowrap;
         position: relative;
-        .button-default,
-        .button-outlined {
+        .button {
             margin: 0;
             min-width: 100%;
+            padding: 0.5rem 1rem;
             &:active {
                 transform: none;
             }
@@ -199,28 +165,24 @@ textarea {
         margin: 0;
         position: relative;
     }
-    /* fix border-radius on left */
     &.button-left {
         .button-wrapper {
-            .button-default,
-            .button-outlined {
-                border-radius: $small-radius 0 0 $small-radius;
+            .button {
+                border-radius: $default-border-radius 0 0 $default-border-radius;
             }
         }
         input[type="text"] {
-            border-radius: 0 $small-radius $small-radius 0;
+            border-radius: 0 $default-border-radius $default-border-radius 0;
         }
     }
-    /* fix border-radius on right */
     &.button-right {
         .button-wrapper {
-            .button-default,
-            .button-outlined {
-                border-radius: 0 $small-radius $small-radius 0;
+            .button {
+                border-radius: 0 $default-border-radius $default-border-radius 0;
             }
         }
         input[type="text"] {
-            border-radius: $small-radius 0 0 $small-radius;
+            border-radius: $default-border-radius 0 0 $default-border-radius;
         }
     }
 }
@@ -232,12 +194,14 @@ textarea {
 
 textarea {
     width: 100% !important;
-    min-height: 150px;
+    min-height: 10rem;
 }
 
 
 /**
   * Extra styles for the select input
+  * Browser do not style selects in the same way as regular single line inputs
+  * so additional css is required.
   */
 
 select {
@@ -249,61 +213,43 @@ select {
         background-repeat: no-repeat;
         background-position: right center;
         background-origin: content-box;
+        height: 3.5rem;
         @media (min-width: $size-switch) {
-            height: calc(3rem + 2px);    
+            height: 2.87rem;
         }
-        height: 3.8rem;
     }
     &::-ms-expand {
         display: none;
     }
     @-moz-document url-prefix() {
-        padding-top: $padding-input-and-button-y + 0.1rem;
-        padding-bottom: $padding-input-and-button-y + 0.1rem;
-        padding-left: $padding-input-and-button-x;
-        padding-right: $padding-input-and-button-x;
+        padding: 0.6rem 0.8rem;
     }
 }
 
-
 /**
-  * Devider
+  * Horizontal rule
   */
 
 hr {
-    margin-top: 1.2rem;
-    margin-bottom: 1.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
     border: 0;
-    border-top: $border-input-and-button solid $medium-gray;
+    border-top: $default-border-width solid $soft-gray;
 }
 
-
 /**
-  * Disabled styles
+  * Disabled styles for inputs
   */
-
+label,
 input,
 select,
 textarea {
     &[disabled="true"],
     &[disabled="disabled"],
-    &[disabled] {
+    &[disabled],
+    &.disabled {
         pointer-events: none;
         opacity: 0.5;
-        &::-webkit-input-placeholder {
-            color: $medium-gray;
-        }
-        &:-moz-placeholder {
-            /* Firefox 18- */
-            color: $medium-gray;
-        }
-        &::-moz-placeholder {
-            /* Firefox 19+ */
-            color: $medium-gray;
-        }
-        &:-ms-input-placeholder {
-            color: $medium-gray;
-        }
+        cursor: default;
     }
 }
-

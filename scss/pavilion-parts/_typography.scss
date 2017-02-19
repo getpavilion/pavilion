@@ -1,0 +1,243 @@
+/**
+  * Fix outlines on focus & visited
+  */
+
+*:focus, *:visited {
+    outline: none !important;
+}
+
+/**
+  * Pargraphs & links
+  */
+
+p {
+    margin-top: 0;
+    margin-bottom: 1em;
+    font-size: 1em;
+}
+
+a {
+    color: $primary-color;
+    outline: none;
+    text-decoration: none;
+    &:visited {
+        color: $primary-color;
+        outline: none;
+    }
+    &:hover, &:focus {
+        color: darken($primary-color, 15%);
+        outline: none;
+        text-decoration: underline;
+    }
+}
+
+/**
+  * Headings & corresponding classes
+  */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 1.6em 0 0.5em;
+    font-weight: $heading-font-weight;
+    line-height: $base-line-height * 0.9;
+    color: $heading-color;
+    font-family: $heading-font-family;
+}
+
+h1, .h1 {
+    &:not(.h1) {
+        margin-top: 0;
+    }
+    font-size: $h1;
+}
+
+h2, .h2 {
+    font-size: $h2;
+}
+
+h3, .h3 {
+    font-size: $h3;
+}
+
+h4, .h4 {
+    font-size: $h4;
+}
+
+h5, .h5 {
+    font-size: $h5;
+}
+
+small, h6, .h6 {
+    font-size: $h6;
+}
+
+/**
+  * Blockquotes with a footer
+  */
+
+blockquote {
+    border-left: 2px solid $body-copy-color;
+    margin: 0 0 1em 0;
+    padding: 0 1em;
+    footer {
+        &:before {
+            content: '\2014 \00A0';
+        }
+        margin-top: 0.5em;
+        font-size: $h6;
+        color: darken($medium-gray, 20%);
+    }
+}
+
+/**
+  * Formatting
+  */
+
+code, kbd, pre {
+    font-family: $mono-font-family;
+    font-size: calc(#{$h5} * 0.82);
+    border-radius: $default-border-radius;
+}
+
+code, kbd {
+    padding: 0.2em 0.5em;
+    display: inline;
+    vertical-align: baseline;
+    background: $soft-gray;
+}
+
+kbd {
+    background: $body-copy-color;
+    color: white;
+}
+
+pre {
+    padding: 0.7rem 1rem;
+    display: block;
+    background-color: $soft-gray;
+    line-height: $base-line-height;
+    overflow: auto;
+    white-space: pre;
+    code, kbd {
+        font-size: inherit;
+        background-color: transparent;
+    }
+}
+  
+mark {
+    background-color: #ffffa8; /* Give <mark> a slightly softer yellow */
+    border-radius: $default-border-radius;
+}
+
+/**
+  * Responsive typography
+  */
+
+@media(max-width: $phone-landscape-size - 1) {
+    .h1-pp { 
+        font-size: $h1; 
+    }
+    .h2-pp { 
+        font-size: $h2; 
+    }
+    .h3-pp { 
+        font-size: $h3; 
+    }
+    .h4-pp { 
+        font-size: $h4; 
+    }
+    .h5-pp { 
+        font-size: $h5; 
+    }
+    .h6-pp { 
+        font-size: $h6; 
+    }
+}
+
+@media(min-width: $phone-landscape-size) and (max-width: $tablet-portrait-size - 1) {
+    .h1-pl { 
+        font-size: $h1; 
+    }
+    .h2-pl { 
+        font-size: $h2; 
+    }
+    .h3-pl { 
+        font-size: $h3; 
+    }
+    .h4-pl { 
+        font-size: $h4; 
+    }
+    .h5-pl { 
+        font-size: $h5; 
+    }
+    .h6-pl { 
+        font-size: $h6; 
+    }
+}
+
+@media(min-width: $tablet-portrait-size) and (max-width: $tablet-landscape-size - 1) {
+    .h1-tp { 
+        font-size: $h1; 
+    }
+    .h2-tp { 
+        font-size: $h2; 
+    }
+    .h3-tp { 
+        font-size: $h3; 
+    }
+    .h4-tp { 
+        font-size: $h4; 
+    }
+    .h5-tp { 
+        font-size: $h5; 
+    }
+    .h6-tp { 
+        font-size: $h6; 
+    }
+}
+
+@media(min-width: $tablet-landscape-size) and (max-width: $desktop-size - 1) {
+    .h1-tl { 
+        font-size: $h1; 
+    }
+    .h2-tl { 
+        font-size: $h2; 
+    }
+    .h3-tl { 
+        font-size: $h3; 
+    }
+    .h4-tl { 
+        font-size: $h4; 
+    }
+    .h5-tl { 
+        font-size: $h5; 
+    }
+    .h6-tl { 
+        font-size: $h6; 
+    }
+}
+
+@media(min-width: $desktop-size) {
+    .h1-dt { 
+        font-size: $h1; 
+    }
+    .h2-dt { 
+        font-size: $h2; 
+    }
+    .h3-dt { 
+        font-size: $h3; 
+    }
+    .h4-dt { 
+        font-size: $h4; 
+    }
+    .h5-dt { 
+        font-size: $h5; 
+    }
+    .h6-dt { 
+        font-size: $h6; 
+    }
+}

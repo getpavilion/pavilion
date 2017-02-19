@@ -1,3 +1,27 @@
+v2.0.0
+=======================================================
+(february 14 2017)
+
+- Removed the entire flexbox module ([see issue 6](https://github.com/getpavilion/pavilion/issues/6))
+- Removed most of the utilities, too bloated and not in line with the Pavilion principles.
+- Removed opinionated classes like .split, .summary and dropcaps.
+- Added the proper styling for links styled as buttons
+- Added responsive typography
+- Added modular typography calculation
+- Added .center-block class to utils for centering elements easy.
+- Changed reordering columns: push, pulls and offsets are now breakpoint specific instead of bleeding upward.
+- Changed variables.scss: new structure and names.
+- Exchanged Grunt for Gulp for speed gains
+- A lot of minor fixes and changes.
+- New website.
+
+v1.0.31
+=======================================================
+(december 27 2016)
+
+- Added class for full width buttons
+
+
 v1.0.28 / v1.0.30
 =======================================================
 (november 4 2016)

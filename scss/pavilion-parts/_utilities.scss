@@ -1,0 +1,194 @@
+/**
+  * Clearfix
+  */
+
+.clearfix {
+    @include clearfix;
+}
+
+
+/**
+  * Floats
+  */
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+
+/**
+  * Center block
+  */
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/**
+  * Text align
+  */
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+
+/**
+  * Showing and hiding / specific viewports
+  */
+
+.show {
+    display: block !important;
+}
+
+.hide,
+.show-pp,
+.show-pl,
+.show-tp,
+.show-tl,
+.show-dt {
+    display: none !important;
+}
+
+@media(max-width: $phone-landscape-size - 1) {
+    .show-pp {
+        display: block !important;
+    }
+    .hide-pp {
+        display: none !important;
+    }
+    .text-center-pp {
+        text-align: center;
+    }
+    .text-left-pp {
+        text-align: left;
+    }
+    .text-right-pp {
+        text-align: right;
+    }
+}
+
+@media(min-width: $phone-landscape-size) and (max-width: $tablet-portrait-size - 1) {
+    .show-pl {
+        display: block !important;
+    }
+    .hide-pl {
+        display: none !important;
+    }
+    .text-center-pl {
+        text-align: center;
+    }
+    .text-left-pl {
+        text-align: left;
+    }
+    .text-right-pl {
+        text-align: right;
+    }
+}
+
+@media(min-width: $tablet-portrait-size) and (max-width: $tablet-landscape-size - 1) {
+    .show-tp {
+        display: block !important;
+    }
+    .hide-tp {
+        display: none !important;
+    }
+    .text-center-tp {
+        text-align: center;
+    }
+    .text-left-tp {
+        text-align: left;
+    }
+    .text-right-tp {
+        text-align: right;
+    }
+}
+
+@media(min-width: $tablet-landscape-size) and (max-width: $desktop-size - 1) {
+    .show-tl {
+        display: block !important;
+    }
+    .hide-tl {
+        display: none !important;
+    }
+    .text-center-tl {
+        text-align: center;
+    }
+    .text-left-tl {
+        text-align: left;
+    }
+    .text-right-tl {
+        text-align: right;
+    }
+}
+
+@media(min-width: $desktop-size) {
+    .show-dt {
+        display: block !important;
+    }
+    .hide-dt {
+        display: none !important;
+    }
+    .text-center-dt {
+        text-align: center;
+    }
+    .text-left-dt {
+        text-align: left;
+    }
+    .text-right-dt {
+        text-align: right;
+    }
+}
+
+.show-elements {
+    outline: 1px solid rgba(#000, 0.3);
+    * {
+        outline: 1px solid rgba(blue, 0.4);
+    }
+}
+
+.show-size {
+    outline: none !important;
+    &:after {
+        font-family: $mono-font-family;
+        font-size: $h6;
+        padding: 0.5rem;
+        background-color: $soft-gray;
+        border-radius: $default-border-radius;
+        display: block;
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
+        outline: none !important;
+        @media(max-width: $phone-landscape-size - 1) {
+            content: "Phone portrait size"
+        }
+        @media(min-width: $phone-landscape-size) and (max-width: $tablet-portrait-size - 1) {
+            content: "Phone landscape size"
+        }
+        @media(min-width: $tablet-portrait-size) and (max-width: $tablet-landscape-size - 1) {
+            content: "Tablet portrait size"
+        }
+        @media(min-width: $tablet-landscape-size) and (max-width: $desktop-size - 1) {
+            content: "Tablet landscape size"
+        }
+        @media(min-width: $desktop-size) {
+            content: "Desktop size"
+        }
+    }
+}

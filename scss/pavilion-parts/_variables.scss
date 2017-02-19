@@ -1,0 +1,91 @@
+/**
+  * Rem units: normal and small, defined on the <html> tag. Switches to small on $size-switch.
+  * Rem's are used in Pavilion for box model sizing, positioning and adjustments.
+  */
+
+$remsize-normal: 15px;
+$remsize-small: 10px;
+
+/**
+  * Em units: normal and small, defined on the <body> tag. Switches to small on $size-switch.
+  * Em's are used in Pavilion for typographic elements.
+  */
+
+$emsize-normal: 18px;
+$emsize-small: 15px;
+
+/**
+  * Breakpoints
+  */
+
+$phone-landscape-size: 540px;         /* Minimum screenwidth for phone landscape. */
+$tablet-portrait-size: 768px;         /* Minimum screenwidth for tablet portrait. */
+$tablet-landscape-size: 991px;        /* Minimum screenwidth for tablet landscape. */
+$desktop-size: 1200px;                /* Minimum screenwidth for desktop. */
+
+$breakmargin: 20px;                   /* Margin added to each breakpoints minimum width. */
+$size-switch: $tablet-portrait-size;  /* Minimum screenwidth at which the EM & REM sizes switch from small to normal. */
+
+/**
+  * Border width and radius for buttons and inputs.
+  */
+
+$default-border-width: 1px; /* also used on horizontal rules */
+$default-border-radius: 4px;
+
+/**
+  * Colors and tints.
+  */
+
+$body-copy-color: #333333;
+$primary-color: #0080ff;
+$heading-color: $body-copy-color;
+
+$soft-gray: #D9D9D9;
+$medium-gray: darken($soft-gray, 20%);
+$hard-gray: darken($medium-gray, 20%);
+
+/**
+  * Heading sizes with modular scaling.
+  * Increase or decrease the number behind the decimal point.
+  * For scale ratios see: http://type-scale.com/
+  */
+
+$scale-ratio: 1.200;
+
+$h1: fontscale(4); 
+$h2: fontscale(3); 
+$h3: fontscale(2); 
+$h4: fontscale(1); 
+$h5: fontscale(0); /* equals 1em. */
+$h6: fontscale(-1);
+
+/**
+  * Font-weights, you can set your own values to match your font specs.
+  */
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+/**
+  * Base and heading font-weights.
+  */
+
+$base-font-weight: $font-weight-regular; 
+$heading-font-weight: $base-font-weight;
+
+/**
+  * Base line-height.
+  */
+
+$base-line-height: 1.45; 
+
+/**
+  * Base and heading font stack.
+  */
+
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$heading-font-family: $base-font-family;
+$mono-font-family: "Lucida Console", Monaco, monospace;

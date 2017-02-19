@@ -1,32 +1,30 @@
 /**
-  * Set the REM size on the HTML
-  * Smaller size on $tablet-portrait-size
+  * HTML tag properties
+  * REM size normal and small are set here for component sizing.
   */
 
 html {
     font-size: $remsize-small; /* Small rem-size */
-    @media(min-width: $tablet-portrait-size) {
+    @media(min-width: $size-switch) {
         font-size: $remsize-normal; /* Regular font-size */
     }
 }
 
 /**
   * Body properties
-  * EM size is set here for typography
+  * EM size is set here for typography elements.
   */
 
 body {
     font-family: $base-font-family;
-    font-weight: $font-weight-regular;
+    font-weight: $base-font-weight;
     text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-tap-highlight-color: transparent;
-    line-height: $line-height-normal;
+    line-height: $base-line-height;
     color: $body-copy-color;
     font-size: $emsize-small; /* Small font-size */
-    @media(min-width: $tablet-portrait-size) {
+    @media(min-width: $size-switch) {
         font-size: $emsize-normal; /* Regular font-size */
     }
 }

@@ -1,0 +1,64 @@
+/**
+  * Three button styles: default, outlined and stripped.
+  * All of the buttons include the standard button styles. See mixins.
+  */
+
+.button {
+    @include button;
+    
+    &.button-default {
+        background-color: $primary-color;
+        color: white;
+        &:visited {
+            background-color: $primary-color;
+            color: white;
+        }
+        &:hover,
+        &:focus {
+            background-color: darken($primary-color, 10%);
+            color: white;
+        }
+        &:active {
+            background-color: darken($primary-color, 12%);
+            color: white;
+        }
+    }
+    
+    &.button-outlined {
+        background-color: transparent;
+        border-color: $primary-color;
+        color: $primary-color;
+        &:visited {
+            color: $primary-color;
+        }
+        &:hover,
+        &:focus {
+            color: darken($primary-color, 10%);
+            border-color: darken($primary-color, 10%);
+        }
+        &:active {
+            color: darken($primary-color, 12%);
+            border-color: darken($primary-color, 12%);
+        }
+    }
+    
+    &.button-stripped {
+        background-color: transparent;
+        color: $primary-color;
+        &:visited {
+            color: $primary-color;
+        }
+        &:hover,
+        &:focus {
+            color: darken($primary-color, 10%);
+        }
+        &:active {
+            color: darken($primary-color, 12%);
+        }
+    }
+    
+    &.button-full-width {
+        display: block;
+        width: 100%;
+    }
+}

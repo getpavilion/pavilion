@@ -1,15 +1,16 @@
 // Mixins & variables first
-@import "parts/variables";
-@import "parts/mixins";
+@import "pavilion-parts/functions";
+@import "pavilion-parts/mixins";
+@import "pavilion-parts/variables";
 
-// Core parts
-@import "parts/normalize";
-@import "parts/base";
-@import "parts/grid";
-@import "parts/flexbox";
-@import "parts/typography";
-@import "parts/helpers";
-@import "parts/buttons";
-@import "parts/lists";
-@import "parts/forms";
-@import "parts/tables";
+
+// Core pavilion-parts
+@import "pavilion-parts/normalize";
+@import "pavilion-parts/base";
+@import "pavilion-parts/grid";
+@import "pavilion-parts/typography";
+@import "pavilion-parts/buttons";
+@import "pavilion-parts/lists";
+@import "pavilion-parts/forms";
+@import "pavilion-parts/tables";
+@import "pavilion-parts/utilities";

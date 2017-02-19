@@ -4,8 +4,6 @@
 
 @mixin container {
     margin: 0 auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
     padding-right: 1.5rem;
     padding-left: 1.5rem;
     @media(min-width: $size-switch) {
@@ -24,20 +22,19 @@
 }
 
 /**
-  * Button
+  * Standard button
   */
 
 @mixin button {
     display: inline-block;
-    border: $border-input-and-button solid transparent;
-    border-radius: $small-radius;
+    text-decoration: none;
     font-family: inherit;
-    padding: $padding-input-and-button;
-    line-height: $line-height-normal;
+    line-height: $base-line-height;
     margin-right: 1rem;
     margin-bottom: 1rem;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    padding: 0.5rem 1rem;
+    border: $default-border-width solid transparent;
+    border-radius: $default-border-radius;
     cursor: pointer;
     &:active {
         transform: scale(0.97);
