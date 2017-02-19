@@ -2348,15 +2348,15 @@ table tfoot tr td {
         display: none !important;
     }
 
-    .text-pp-center {
+    .text-center-pp {
         text-align: center;
     }
 
-    .text-pp-left {
+    .text-left-pp {
         text-align: left;
     }
 
-    .text-pp-right {
+    .text-right-pp {
         text-align: right;
     }
 }
@@ -2370,15 +2370,15 @@ table tfoot tr td {
         display: none !important;
     }
 
-    .text-pl-center {
+    .text-center-pl {
         text-align: center;
     }
 
-    .text-pl-left {
+    .text-left-pl {
         text-align: left;
     }
 
-    .text-pl-right {
+    .text-right-pl {
         text-align: right;
     }
 }
@@ -2392,15 +2392,15 @@ table tfoot tr td {
         display: none !important;
     }
 
-    .text-tp-center {
+    .text-center-tp {
         text-align: center;
     }
 
-    .text-tp-left {
+    .text-left-tp {
         text-align: left;
     }
 
-    .text-tp-right {
+    .text-right-tp {
         text-align: right;
     }
 }
@@ -2414,15 +2414,15 @@ table tfoot tr td {
         display: none !important;
     }
 
-    .text-tl-center {
+    .text-center-tl {
         text-align: center;
     }
 
-    .text-tl-left {
+    .text-left-tl {
         text-align: left;
     }
 
-    .text-tl-right {
+    .text-right-tl {
         text-align: right;
     }
 }
@@ -2436,15 +2436,70 @@ table tfoot tr td {
         display: none !important;
     }
 
-    .text-dt-center {
+    .text-center-dt {
         text-align: center;
     }
 
-    .text-dt-left {
+    .text-left-dt {
         text-align: left;
     }
 
-    .text-dt-right {
+    .text-right-dt {
         text-align: right;
+    }
+}
+
+.show-elements {
+    outline: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.show-elements * {
+    outline: 1px solid rgba(0, 0, 255, 0.4);
+}
+
+.show-size {
+    outline: none !important;
+}
+
+.show-size:after {
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 0.83333em;
+    padding: 0.5rem;
+    background-color: #D9D9D9;
+    border-radius: 4px;
+    display: block;
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    outline: none !important;
+}
+
+@media (max-width: 539px) {
+    .show-size:after {
+        content: "Phone portrait size";
+    }
+}
+
+@media (min-width: 540px) and (max-width: 767px) {
+    .show-size:after {
+        content: "Phone landscape size";
+    }
+}
+
+@media (min-width: 768px) and (max-width: 990px) {
+    .show-size:after {
+        content: "Tablet portrait size";
+    }
+}
+
+@media (min-width: 991px) and (max-width: 1199px) {
+    .show-size:after {
+        content: "Tablet landscape size";
+    }
+}
+
+@media (min-width: 1200px) {
+    .show-size:after {
+        content: "Desktop size";
     }
 }
