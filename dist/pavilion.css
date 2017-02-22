@@ -1624,10 +1624,6 @@ body {
     }
 }
 
-*:focus, *:visited {
-    outline: none !important;
-}
-
 p {
     margin-top: 0;
     margin-bottom: 1em;
@@ -1636,18 +1632,15 @@ p {
 
 a {
     color: #0080ff;
-    outline: none;
     text-decoration: none;
 }
 
 a:visited {
     color: #0080ff;
-    outline: none;
 }
 
-a:hover, a:focus {
+a:focus, a:hover {
     color: #005ab3;
-    outline: none;
     text-decoration: underline;
 }
 
@@ -1877,7 +1870,7 @@ mark {
 
 .button {
     display: inline-block;
-    text-decoration: none;
+    text-decoration: none !important;
     font-family: inherit;
     line-height: 1.45;
     margin-right: 1rem;
@@ -1888,13 +1881,12 @@ mark {
     cursor: pointer;
 }
 
-.button:active {
-    transform: scale(0.97);
+.button:focus {
+    outline: none;
 }
 
-.button[disabled="true"], .button[disabled="disabled"], .button[disabled] {
-    pointer-events: none;
-    opacity: 0.5;
+.button:active {
+    transform: scale(0.97);
 }
 
 .button.h1, .button.h2, .button.h3, .button.h4, .button.h5, .button.h6 {
@@ -1998,15 +1990,15 @@ form {
     margin-bottom: 1.5rem;
 }
 
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
 .form-part {
     border: 0;
     padding: 0;
     margin: 0 0 1.5rem;
-}
-
-label {
-    display: block;
-    margin-bottom: 0.5rem;
 }
 
 .checkbox, .radio {
@@ -2052,7 +2044,17 @@ label {
     margin-bottom: 0;
 }
 
-input,
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="url"],
+input[type="number"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="datetime-local"],
 select,
 textarea {
     font-family: inherit;
@@ -2063,137 +2065,102 @@ textarea {
     border-radius: 4px;
     line-height: 1.45;
     padding: 0.5rem 0.8rem;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-    border-color: #0080ff;
-}
-
-input:not([type="checkbox"]):not([type="radio"]),
-select:not([type="checkbox"]):not([type="radio"]),
-textarea:not([type="checkbox"]):not([type="radio"]) {
     -webkit-appearance: none;
     -moz-appearance: none;
-    -o-appearance: none;
-    -ms-appearance: none;
+    appearance: none;
     background-color: white;
 }
 
-input[type="file"],
-select[type="file"],
-textarea[type="file"] {
+input[type="text"]::-webkit-input-placeholder,
+input[type="search"]::-webkit-input-placeholder,
+input[type="email"]::-webkit-input-placeholder,
+input[type="password"]::-webkit-input-placeholder,
+input[type="tel"]::-webkit-input-placeholder,
+input[type="url"]::-webkit-input-placeholder,
+input[type="number"]::-webkit-input-placeholder,
+input[type="date"]::-webkit-input-placeholder,
+input[type="month"]::-webkit-input-placeholder,
+input[type="time"]::-webkit-input-placeholder,
+input[type="datetime-local"]::-webkit-input-placeholder,
+select::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #737373;
+    opacity: 1;
+}
+
+input[type="text"]:-ms-input-placeholder,
+input[type="search"]:-ms-input-placeholder,
+input[type="email"]:-ms-input-placeholder,
+input[type="password"]:-ms-input-placeholder,
+input[type="tel"]:-ms-input-placeholder,
+input[type="url"]:-ms-input-placeholder,
+input[type="number"]:-ms-input-placeholder,
+input[type="date"]:-ms-input-placeholder,
+input[type="month"]:-ms-input-placeholder,
+input[type="time"]:-ms-input-placeholder,
+input[type="datetime-local"]:-ms-input-placeholder,
+select:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #737373;
+    opacity: 1;
+}
+
+input[type="text"]::placeholder,
+input[type="search"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="url"]::placeholder,
+input[type="number"]::placeholder,
+input[type="date"]::placeholder,
+input[type="month"]::placeholder,
+input[type="time"]::placeholder,
+input[type="datetime-local"]::placeholder,
+select::placeholder,
+textarea::placeholder {
+    color: #737373;
+    opacity: 1;
+}
+
+input[type="text"]:focus,
+input[type="search"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="datetime-local"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #0080ff;
+    outline: none;
+}
+
+input[type="password"] {
+    font-family: verdana;
+}
+
+input[type="password"]::-webkit-input-placeholder {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+input[type="password"]:-ms-input-placeholder {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+input[type="password"]::placeholder {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+input[type="file"] {
     line-height: 1;
     font-size: 16px;
     border: 0;
     padding-left: 0;
     padding-right: 0;
-}
-
-input[type="password"],
-select[type="password"],
-textarea[type="password"] {
-    font-family: verdana;
-}
-
-input[type="password"]::-webkit-input-placeholder,
-select[type="password"]::-webkit-input-placeholder,
-textarea[type="password"]::-webkit-input-placeholder {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-input[type="password"]:-moz-placeholder,
-select[type="password"]:-moz-placeholder,
-textarea[type="password"]:-moz-placeholder {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-input[type="password"]::-moz-placeholder,
-select[type="password"]::-moz-placeholder,
-textarea[type="password"]::-moz-placeholder {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-input[type="password"]:-ms-input-placeholder,
-select[type="password"]:-ms-input-placeholder,
-textarea[type="password"]:-ms-input-placeholder {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-input::-webkit-input-placeholder,
-select::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-    color: #737373;
-}
-
-input:-moz-placeholder,
-select:-moz-placeholder,
-textarea:-moz-placeholder {
-    color: #737373;
-}
-
-input::-moz-placeholder,
-select::-moz-placeholder,
-textarea::-moz-placeholder {
-    color: #737373;
-}
-
-input:-ms-input-placeholder,
-select:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
-    color: #737373;
-}
-
-.input-with-button {
-    width: 100%;
-    display: table;
-    border-collapse: separate;
-}
-
-.input-with-button label {
-    width: 100%;
-    display: table-caption;
-}
-
-.input-with-button .button-wrapper {
-    display: table-cell;
-    width: 1%;
-    white-space: nowrap;
-    position: relative;
-}
-
-.input-with-button .button-wrapper .button {
-    margin: 0;
-    min-width: 100%;
-    padding: 0.5rem 1rem;
-}
-
-.input-with-button .button-wrapper .button:active {
-    transform: none;
-}
-
-.input-with-button input[type="text"] {
-    width: 100%;
-    display: table-cell;
-    margin: 0;
-    position: relative;
-}
-
-.input-with-button.button-left .button-wrapper .button {
-    border-radius: 4px 0 0 4px;
-}
-
-.input-with-button.button-left input[type="text"] {
-    border-radius: 0 4px 4px 0;
-}
-
-.input-with-button.button-right .button-wrapper .button {
-    border-radius: 0 4px 4px 0;
-}
-
-.input-with-button.button-right input[type="text"] {
-    border-radius: 4px 0 0 4px;
 }
 
 textarea {
@@ -2203,7 +2170,6 @@ textarea {
 
 select {
     cursor: pointer;
-    overflow: scroll;
 }
 
 select:not([multiple]) {
@@ -2231,6 +2197,10 @@ select::-ms-expand {
     }
 }
 
+progress, meter, input[type="range"] {
+    width: 100%;
+}
+
 hr {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
@@ -2238,22 +2208,16 @@ hr {
     border-top: 1px solid #D9D9D9;
 }
 
-label[disabled="true"], label[disabled="disabled"], label[disabled], label.disabled,
-input[disabled="true"],
-input[disabled="disabled"],
-input[disabled],
-input.disabled,
-select[disabled="true"],
-select[disabled="disabled"],
-select[disabled],
-select.disabled,
-textarea[disabled="true"],
-textarea[disabled="disabled"],
-textarea[disabled],
-textarea.disabled {
+.disabled,
+[disabled] {
     pointer-events: none;
-    opacity: 0.5;
     cursor: default;
+    opacity: 0.5;
+}
+
+.disabled [disabled],
+[disabled] [disabled] {
+    opacity: 1;
 }
 
 table {

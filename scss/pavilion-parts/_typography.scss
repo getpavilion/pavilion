@@ -14,12 +14,9 @@ a {
     &:visited {
         color: $primary-color;
     }
-    &:focus {
+    &:focus, &:hover {
         color: darken($primary-color, 15%);
         text-decoration: underline;
-    }
-    &:hover {
-        color: darken($primary-color, 15%);
     }
 }
 
