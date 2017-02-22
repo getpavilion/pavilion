@@ -1,12 +1,4 @@
 /**
-  * Fix outlines on focus & visited
-  */
-
-*:focus, *:visited {
-    outline: none !important;
-}
-
-/**
   * Pargraphs & links
   */
 
@@ -18,16 +10,16 @@ p {
 
 a {
     color: $primary-color;
-    outline: none;
     text-decoration: none;
     &:visited {
         color: $primary-color;
-        outline: none;
     }
-    &:hover, &:focus {
+    &:focus {
         color: darken($primary-color, 15%);
-        outline: none;
         text-decoration: underline;
+    }
+    &:hover {
+        color: darken($primary-color, 15%);
     }
 }
 

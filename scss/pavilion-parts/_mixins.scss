@@ -27,7 +27,7 @@
 
 @mixin button {
     display: inline-block;
-    text-decoration: none;
+    text-decoration: none !important;
     font-family: inherit;
     line-height: $base-line-height;
     margin-right: 1rem;
