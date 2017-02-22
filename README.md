@@ -8,7 +8,7 @@
 ## A solid startingpoint without the bloat.
 
 
-##### TLDR;
+##### TL;DR
 
 - Lightweight. Only 26kb minified.
 - Versatile fully responsive grid system.

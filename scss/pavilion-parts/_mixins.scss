@@ -27,7 +27,7 @@
 
 @mixin button {
     display: inline-block;
-    text-decoration: none;
+    text-decoration: none !important;
     font-family: inherit;
     line-height: $base-line-height;
     margin-right: 1rem;
@@ -36,12 +36,11 @@
     border: $default-border-width solid transparent;
     border-radius: $default-border-radius;
     cursor: pointer;
+    &:focus {
+        outline: none;
+    }
     &:active {
         transform: scale(0.97);
-    }
-    &[disabled="true"], &[disabled="disabled"], &[disabled] {
-        pointer-events: none;
-        opacity: 0.5;
     }
     &.h1,
     &.h2,
