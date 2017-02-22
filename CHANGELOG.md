@@ -1,3 +1,9 @@
+v2.0.1 & v2.0.2
+=======================================================
+- Removed form inputs with buttons on the left and right (opinionated)
+- Fixed form usability issues with :focus
+- Fixed minor bugs
+
 v2.0.0
 =======================================================
 (february 14 2017)
