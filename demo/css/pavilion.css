@@ -1,6 +1,6 @@
 /**
   * Pavilion CSS Framework
-  * Version: 2.0.1
+  * Version: 2.0.3
   * Website: http://www.pavilion.io
   * License: MIT
   */
@@ -263,7 +263,7 @@ body {
     -webkit-tap-highlight-color: transparent;
     line-height: 1.45;
     color: #333333;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 @media (min-width: 768px) {
@@ -1652,7 +1652,6 @@ h5,
 h6 {
     margin: 1.6em 0 0.5em;
     font-weight: 400;
-    line-height: 1.305;
     color: #333333;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
